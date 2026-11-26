@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="exclamdown" format="2">
+  <advance width="1180"/>
+  <unicode hex="00A1"/>
+  <outline>
+    <contour>
+      <point x="671.0" y="637.0" type="line"/>
+      <point x="509.0" y="637.0" type="line"/>
+      <point x="491.0" y="-368.0" type="line"/>
+      <point x="689.0" y="-368.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="469.0" y="967.0" type="curve" smooth="yes"/>
+      <point x="469.0" y="900.0"/>
+      <point x="523.0" y="846.0"/>
+      <point x="590.0" y="846.0" type="curve" smooth="yes"/>
+      <point x="657.0" y="846.0"/>
+      <point x="711.0" y="900.0"/>
+      <point x="711.0" y="967.0" type="curve" smooth="yes"/>
+      <point x="711.0" y="1034.0"/>
+      <point x="657.0" y="1088.0"/>
+      <point x="590.0" y="1088.0" type="curve" smooth="yes"/>
+      <point x="523.0" y="1088.0"/>
+      <point x="469.0" y="1034.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>! rotated about x-height / 2</string>
+    </dict>
+  </lib>
+</glyph>

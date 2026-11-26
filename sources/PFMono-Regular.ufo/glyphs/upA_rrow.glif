@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="upArrow" format="2">
+  <advance width="1180"/>
+  <unicode hex="2191"/>
+  <outline>
+    <contour>
+      <point x="197.0" y="848.0" type="line"/>
+      <point x="697.0" y="1349.0" type="line"/>
+      <point x="590.0" y="1456.0" type="line"/>
+      <point x="90.0" y="956.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="983.0" y="848.0" type="line"/>
+      <point x="1090.0" y="956.0" type="line"/>
+      <point x="690.0" y="1356.0" type="line"/>
+      <point x="583.0" y="1248.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="666.0" y="0.0" type="line"/>
+      <point x="666.0" y="1350.0" type="line"/>
+      <point x="514.0" y="1350.0" type="line"/>
+      <point x="514.0" y="0.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>→ turned upright, baseline to cap height</string>
+    </dict>
+  </lib>
+</glyph>

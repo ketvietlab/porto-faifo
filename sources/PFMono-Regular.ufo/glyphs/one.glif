@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="one" format="2">
+  <advance width="1180"/>
+  <unicode hex="0031"/>
+  <outline>
+    <contour>
+      <point x="537.0" y="0.0" type="line"/>
+      <point x="729.0" y="0.0" type="line"/>
+      <point x="729.0" y="1456.0" type="line"/>
+      <point x="537.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="537.0" y="1456.0" type="line"/>
+      <point x="197.0" y="1220.0" type="line"/>
+      <point x="197.0" y="1006.0" type="line"/>
+      <point x="633.0" y="1308.0" type="line"/>
+      <point x="633.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="283.0" y="0.0" type="line"/>
+      <point x="983.0" y="0.0" type="line"/>
+      <point x="983.0" y="168.0" type="line"/>
+      <point x="283.0" y="168.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>mono: H stem + straight flag + slab foot</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lari" format="2">
+  <advance width="1180"/>
+  <unicode hex="20BE"/>
+  <outline>
+    <contour>
+      <point x="946.0" y="999.0" type="line"/>
+      <point x="894.0" y="1288.0"/>
+      <point x="754.0" y="1456.0"/>
+      <point x="554.0" y="1456.0" type="curve" smooth="yes"/>
+      <point x="310.0" y="1456.0"/>
+      <point x="140.0" y="1158.0"/>
+      <point x="140.0" y="728.0" type="curve" smooth="yes"/>
+      <point x="140.0" y="298.0"/>
+      <point x="310.0" y="0.0"/>
+      <point x="554.0" y="0.0" type="curve" smooth="yes"/>
+      <point x="688.0" y="0.0"/>
+      <point x="795.0" y="76.0"/>
+      <point x="867.0" y="213.0" type="curve"/>
+      <point x="627.0" y="213.0" type="line"/>
+      <point x="605.0" y="193.0"/>
+      <point x="581.0" y="183.0"/>
+      <point x="554.0" y="183.0" type="curve" smooth="yes"/>
+      <point x="441.0" y="183.0"/>
+      <point x="359.0" y="412.0"/>
+      <point x="359.0" y="728.0" type="curve" smooth="yes"/>
+      <point x="359.0" y="1044.0"/>
+      <point x="441.0" y="1273.0"/>
+      <point x="554.0" y="1273.0" type="curve" smooth="yes"/>
+      <point x="638.0" y="1273.0"/>
+      <point x="699.0" y="1173.0"/>
+      <point x="729.0" y="999.0" type="curve"/>
+    </contour>
+    <contour>
+      <point x="264.0" y="0.0" type="line"/>
+      <point x="1040.0" y="0.0" type="line"/>
+      <point x="1040.0" y="183.0" type="line"/>
+      <point x="264.0" y="183.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="398.0" y="1099.0" type="line"/>
+      <point x="544.0" y="1099.0" type="line"/>
+      <point x="544.0" y="1606.0" type="line"/>
+      <point x="398.0" y="1606.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="564.0" y="1099.0" type="line"/>
+      <point x="710.0" y="1099.0" type="line"/>
+      <point x="710.0" y="1606.0" type="line"/>
+      <point x="564.0" y="1606.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>C ring on a baseline bar + two bars through its top; tabular</string>
+    </dict>
+  </lib>
+</glyph>

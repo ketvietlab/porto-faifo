@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="four" format="2">
+  <advance width="1180"/>
+  <unicode hex="0034"/>
+  <outline>
+    <contour>
+      <point x="699.0" y="0.0" type="line"/>
+      <point x="891.0" y="0.0" type="line"/>
+      <point x="891.0" y="1456.0" type="line"/>
+      <point x="699.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="123.0" y="313.0" type="line"/>
+      <point x="1057.0" y="313.0" type="line"/>
+      <point x="1057.0" y="468.0" type="line"/>
+      <point x="123.0" y="468.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="123.0" y="468.0" type="line"/>
+      <point x="265.0" y="468.0" type="line"/>
+      <point x="699.0" y="1212.0" type="line"/>
+      <point x="699.0" y="1456.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>mono: closed 4, diagonal x0.64, bar x0.9</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="leftRightArrow" format="2">
+  <advance width="2155"/>
+  <unicode hex="2194"/>
+  <outline>
+    <contour>
+      <point x="1345.0" y="1049.0" type="line"/>
+      <point x="1845.0" y="549.0" type="line"/>
+      <point x="1951.0" y="655.0" type="line"/>
+      <point x="1451.0" y="1156.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1345.0" y="261.0" type="line"/>
+      <point x="1451.0" y="155.0" type="line"/>
+      <point x="1852.0" y="556.0" type="line"/>
+      <point x="1746.0" y="662.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="810.0" y="261.0" type="line"/>
+      <point x="310.0" y="761.0" type="line"/>
+      <point x="204.0" y="655.0" type="line"/>
+      <point x="704.0" y="155.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="810.0" y="1049.0" type="line"/>
+      <point x="704.0" y="1156.0" type="line"/>
+      <point x="303.0" y="754.0" type="line"/>
+      <point x="409.0" y="648.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="309.0" y="580.0" type="line"/>
+      <point x="1846.0" y="580.0" type="line"/>
+      <point x="1846.0" y="730.0" type="line"/>
+      <point x="309.0" y="730.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>→ with a head at both ends, 1.2 cap long</string>
+    </dict>
+  </lib>
+</glyph>

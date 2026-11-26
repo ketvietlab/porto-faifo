@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="leftWhiteTriangle" format="2">
+  <advance width="1718"/>
+  <unicode hex="25C1"/>
+  <outline>
+    <contour>
+      <point x="1514.0" y="0.0" type="line"/>
+      <point x="1514.0" y="1456.0" type="line"/>
+      <point x="204.0" y="728.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1339.0" y="297.0" type="line"/>
+      <point x="564.0" y="728.0" type="line"/>
+      <point x="1339.0" y="1159.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>triangle 1.0 x 0.9 cap, pointing left, outlined</string>
+    </dict>
+  </lib>
+</glyph>

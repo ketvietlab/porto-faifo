@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="tugrik" format="2">
+  <advance width="1307"/>
+  <unicode hex="20AE"/>
+  <outline>
+    <contour>
+      <point x="154.0" y="1268.0" type="line"/>
+      <point x="1153.0" y="1268.0" type="line"/>
+      <point x="1153.0" y="1456.0" type="line"/>
+      <point x="154.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="544.0" y="0.0" type="line"/>
+      <point x="764.0" y="0.0" type="line"/>
+      <point x="764.0" y="1278.0" type="line"/>
+      <point x="544.0" y="1278.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="410.0" y="419.0" type="line"/>
+      <point x="410.0" y="258.0" type="line"/>
+      <point x="897.0" y="455.0" type="line"/>
+      <point x="897.0" y="616.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="410.0" y="739.0" type="line"/>
+      <point x="410.0" y="578.0" type="line"/>
+      <point x="897.0" y="775.0" type="line"/>
+      <point x="897.0" y="936.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>T narrowed + two bars rising 22° across the stem; tabular</string>
+    </dict>
+  </lib>
+</glyph>

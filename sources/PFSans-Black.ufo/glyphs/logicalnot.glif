@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="logicalnot" format="2">
+  <advance width="1436"/>
+  <unicode hex="00AC"/>
+  <outline>
+    <contour>
+      <point x="278.0" y="506.0" type="line"/>
+      <point x="1158.0" y="506.0" type="line"/>
+      <point x="1158.0" y="804.0" type="line"/>
+      <point x="278.0" y="804.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="860.0" y="218.0" type="line"/>
+      <point x="1158.0" y="218.0" type="line"/>
+      <point x="1158.0" y="655.0" type="line"/>
+      <point x="860.0" y="655.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>minus + drop to 0.15 cap height at the right end</string>
+    </dict>
+  </lib>
+</glyph>

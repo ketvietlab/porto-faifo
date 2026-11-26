@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="k" format="2">
+  <advance width="1180"/>
+  <unicode hex="006B"/>
+  <anchor x="606" y="0" name="bottom"/>
+  <anchor x="302" y="1520" name="top"/>
+  <outline>
+    <contour>
+      <point x="210.0" y="0.0" type="line"/>
+      <point x="394.0" y="0.0" type="line"/>
+      <point x="394.0" y="1520.0" type="line"/>
+      <point x="210.0" y="1520.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="302.0" y="372.0" type="line"/>
+      <point x="413.0" y="281.0" type="line"/>
+      <point x="1080.0" y="1088.0" type="line"/>
+      <point x="894.0" y="1088.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="685.0" y="686.0" type="line"/>
+      <point x="558.0" y="607.0" type="line"/>
+      <point x="934.0" y="0.0" type="line"/>
+      <point x="1110.0" y="0.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>mono: lighter arm and leg rooted on the stem's right half</string>
+    </dict>
+  </lib>
+</glyph>

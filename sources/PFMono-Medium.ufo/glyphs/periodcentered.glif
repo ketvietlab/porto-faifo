@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="periodcentered" format="2">
+  <advance width="1180"/>
+  <unicode hex="00B7"/>
+  <outline>
+    <contour>
+      <point x="721.0" y="511.0" type="curve" smooth="yes"/>
+      <point x="721.0" y="584.0"/>
+      <point x="662.0" y="643.0"/>
+      <point x="590.0" y="643.0" type="curve" smooth="yes"/>
+      <point x="518.0" y="643.0"/>
+      <point x="459.0" y="584.0"/>
+      <point x="459.0" y="511.0" type="curve" smooth="yes"/>
+      <point x="459.0" y="439.0"/>
+      <point x="518.0" y="380.0"/>
+      <point x="590.0" y="380.0" type="curve" smooth="yes"/>
+      <point x="662.0" y="380.0"/>
+      <point x="721.0" y="439.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>period dot at hyphen height</string>
+    </dict>
+  </lib>
+</glyph>

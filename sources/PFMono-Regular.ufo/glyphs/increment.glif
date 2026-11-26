@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="increment" format="2">
+  <advance width="1180"/>
+  <unicode hex="2206"/>
+  <outline>
+    <contour>
+      <point x="84.0" y="0.0" type="line"/>
+      <point x="1096.0" y="0.0" type="line"/>
+      <point x="636.0" y="1456.0" type="line"/>
+      <point x="544.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="312.0" y="172.0" type="line"/>
+      <point x="590.0" y="1052.0" type="line"/>
+      <point x="868.0" y="172.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>triangle on A diagonals - 20 and a cap bar; flat apex</string>
+    </dict>
+  </lib>
+</glyph>

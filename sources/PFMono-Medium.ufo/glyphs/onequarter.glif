@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="onequarter" format="2">
+  <advance width="1180"/>
+  <unicode hex="00BC"/>
+  <outline>
+    <contour>
+      <point x="232.0" y="684.0" type="line"/>
+      <point x="399.0" y="684.0" type="line"/>
+      <point x="399.0" y="1456.0" type="line"/>
+      <point x="232.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="232.0" y="1456.0" type="line"/>
+      <point x="52.0" y="1331.0" type="line"/>
+      <point x="52.0" y="1153.0" type="line"/>
+      <point x="316.0" y="1336.0" type="line"/>
+      <point x="316.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="130.0" y="684.0" type="line"/>
+      <point x="501.0" y="684.0" type="line"/>
+      <point x="501.0" y="826.0" type="line"/>
+      <point x="130.0" y="826.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="92.0" y="0.0" type="line"/>
+      <point x="234.0" y="0.0" type="line"/>
+      <point x="991.0" y="1456.0" type="line"/>
+      <point x="849.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="920.0" y="0.0" type="line"/>
+      <point x="1087.0" y="0.0" type="line"/>
+      <point x="1087.0" y="772.0" type="line"/>
+      <point x="920.0" y="772.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="581.0" y="166.0" type="line"/>
+      <point x="1128.0" y="166.0" type="line"/>
+      <point x="1128.0" y="295.0" type="line"/>
+      <point x="581.0" y="295.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="581.0" y="295.0" type="line"/>
+      <point x="712.0" y="295.0" type="line"/>
+      <point x="920.0" y="587.0" type="line"/>
+      <point x="920.0" y="772.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>mono: one.numr / four.dnom staggered in one cell (x1.00)</string>
+    </dict>
+  </lib>
+</glyph>

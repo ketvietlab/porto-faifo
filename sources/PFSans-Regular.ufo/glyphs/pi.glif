@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="pi" format="2">
+  <advance width="1340"/>
+  <unicode hex="03C0"/>
+  <outline>
+    <contour>
+      <point x="120.0" y="934.0" type="line"/>
+      <point x="1220.0" y="934.0" type="line"/>
+      <point x="1220.0" y="1088.0" type="line"/>
+      <point x="120.0" y="1088.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="252.0" y="0.0" type="line"/>
+      <point x="434.0" y="0.0" type="line"/>
+      <point x="434.0" y="944.0" type="line"/>
+      <point x="252.0" y="944.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="906.0" y="0.0" type="line"/>
+      <point x="1088.0" y="0.0" type="line"/>
+      <point x="1088.0" y="944.0" type="line"/>
+      <point x="906.0" y="944.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>x-height bar on two n stems; bar overhangs 0.12</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="foursuperior" format="2">
+  <advance width="855"/>
+  <unicode hex="2074"/>
+  <outline>
+    <component base="four.dnom" yOffset="830"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>four.dnom raised: bottom at 0.57 cap height</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="one.dnom" format="2">
+  <advance width="859"/>
+  <outline>
+    <contour>
+      <point x="348.0" y="0.0" type="line"/>
+      <point x="606.0" y="0.0" type="line"/>
+      <point x="606.0" y="772.0" type="line"/>
+      <point x="348.0" y="772.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="348.0" y="772.0" type="line"/>
+      <point x="168.0" y="647.0" type="line"/>
+      <point x="168.0" y="405.0" type="line"/>
+      <point x="477.0" y="620.0" type="line"/>
+      <point x="477.0" y="772.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>one x0.53, stroke x superiorWeight, on the baseline (frac)</string>
+    </dict>
+  </lib>
+</glyph>

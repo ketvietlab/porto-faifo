@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="rightBlackSmallTriangle" format="2">
+  <advance width="1180"/>
+  <unicode hex="25B8"/>
+  <outline>
+    <contour>
+      <point x="340.0" y="789.0" type="line"/>
+      <point x="340.0" y="233.0" type="line"/>
+      <point x="840.0" y="511.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>triangle 1.0 x 0.9 cap, pointing right, x0.38 on the bullet</string>
+    </dict>
+  </lib>
+</glyph>

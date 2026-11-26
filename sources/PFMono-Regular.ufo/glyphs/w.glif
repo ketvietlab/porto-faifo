@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="w" format="2">
+  <advance width="1180"/>
+  <unicode hex="0077"/>
+  <anchor x="590" y="0" name="bottom"/>
+  <anchor x="590" y="1088" name="top"/>
+  <outline>
+    <contour>
+      <point x="192.0" y="1088.0" type="line"/>
+      <point x="40.0" y="1088.0" type="line"/>
+      <point x="239.0" y="0.0" type="line"/>
+      <point x="391.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="239.0" y="0.0" type="line"/>
+      <point x="391.0" y="0.0" type="line"/>
+      <point x="648.0" y="827.0" type="line"/>
+      <point x="532.0" y="827.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="648.0" y="827.0" type="line"/>
+      <point x="532.0" y="827.0" type="line"/>
+      <point x="789.0" y="0.0" type="line"/>
+      <point x="941.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="789.0" y="0.0" type="line"/>
+      <point x="941.0" y="0.0" type="line"/>
+      <point x="1140.0" y="1088.0" type="line"/>
+      <point x="988.0" y="1088.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>mono: middle apex at 0.76 x-height, inner strokes x0.74</string>
+    </dict>
+  </lib>
+</glyph>

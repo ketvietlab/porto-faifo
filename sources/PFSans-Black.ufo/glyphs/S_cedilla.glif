@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Scedilla" format="2">
+  <advance width="1380"/>
+  <unicode hex="015E"/>
+  <outline>
+    <contour>
+      <point x="1265.0" y="1056.0" type="line"/>
+      <point x="1265.0" y="1321.0"/>
+      <point x="1046.0" y="1484.0"/>
+      <point x="690.0" y="1484.0" type="curve" smooth="yes"/>
+      <point x="351.0" y="1484.0"/>
+      <point x="115.0" y="1308.0"/>
+      <point x="115.0" y="1056.0" type="curve" smooth="yes"/>
+      <point x="115.0" y="825.0"/>
+      <point x="310.0" y="624.0"/>
+      <point x="672.0" y="547.0" type="curve" smooth="yes"/>
+      <point x="813.0" y="517.0"/>
+      <point x="889.0" y="465.0"/>
+      <point x="889.0" y="415.0" type="curve" smooth="yes"/>
+      <point x="889.0" y="348.0"/>
+      <point x="805.0" y="300.0"/>
+      <point x="690.0" y="300.0" type="curve" smooth="yes"/>
+      <point x="567.0" y="300.0"/>
+      <point x="491.0" y="344.0"/>
+      <point x="491.0" y="415.0" type="curve"/>
+      <point x="72.0" y="415.0" type="line"/>
+      <point x="72.0" y="140.0"/>
+      <point x="307.0" y="-28.0"/>
+      <point x="690.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1055.0" y="-28.0"/>
+      <point x="1308.0" y="154.0"/>
+      <point x="1308.0" y="415.0" type="curve" smooth="yes"/>
+      <point x="1308.0" y="645.0"/>
+      <point x="1113.0" y="847.0"/>
+      <point x="752.0" y="924.0" type="curve" smooth="yes"/>
+      <point x="610.0" y="954.0"/>
+      <point x="534.0" y="1006.0"/>
+      <point x="534.0" y="1056.0" type="curve" smooth="yes"/>
+      <point x="534.0" y="1116.0"/>
+      <point x="600.0" y="1160.0"/>
+      <point x="690.0" y="1160.0" type="curve" smooth="yes"/>
+      <point x="787.0" y="1160.0"/>
+      <point x="846.0" y="1120.0"/>
+      <point x="846.0" y="1056.0" type="curve"/>
+    </contour>
+    <contour>
+      <point x="603.0" y="-189.0" type="line"/>
+      <point x="777.0" y="-189.0" type="line"/>
+      <point x="777.0" y="40.0" type="line"/>
+      <point x="603.0" y="40.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="680.0" y="-142.0" type="line"/>
+      <point x="680.0" y="-292.0" type="line"/>
+      <point x="700.0" y="-292.0" type="line" smooth="yes"/>
+      <point x="706.0" y="-292.0"/>
+      <point x="711.0" y="-293.0"/>
+      <point x="711.0" y="-295.0" type="curve" smooth="yes"/>
+      <point x="711.0" y="-296.0"/>
+      <point x="702.0" y="-297.0"/>
+      <point x="690.0" y="-297.0" type="curve" smooth="yes"/>
+      <point x="626.0" y="-297.0"/>
+      <point x="548.0" y="-289.0"/>
+      <point x="501.0" y="-278.0" type="curve"/>
+      <point x="501.0" y="-419.0" type="line"/>
+      <point x="572.0" y="-436.0"/>
+      <point x="648.0" y="-448.0"/>
+      <point x="690.0" y="-448.0" type="curve" smooth="yes"/>
+      <point x="801.0" y="-448.0"/>
+      <point x="879.0" y="-385.0"/>
+      <point x="879.0" y="-295.0" type="curve" smooth="yes"/>
+      <point x="879.0" y="-204.0"/>
+      <point x="805.0" y="-142.0"/>
+      <point x="700.0" y="-142.0" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>precomposed, attached mark merged into the outline</string>
+    </dict>
+  </lib>
+</glyph>

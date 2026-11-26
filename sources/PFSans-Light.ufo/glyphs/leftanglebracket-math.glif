@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="leftanglebracket-math" format="2">
+  <advance width="611"/>
+  <unicode hex="27E8"/>
+  <outline>
+    <contour>
+      <point x="110.0" y="620.0" type="line"/>
+      <point x="231.0" y="620.0" type="line"/>
+      <point x="501.0" y="1640.0" type="line"/>
+      <point x="380.0" y="1640.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="231.0" y="620.0" type="line"/>
+      <point x="110.0" y="620.0" type="line"/>
+      <point x="380.0" y="-400.0" type="line"/>
+      <point x="501.0" y="-400.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>tall &lt; spanning the parentheses</string>
+    </dict>
+  </lib>
+</glyph>

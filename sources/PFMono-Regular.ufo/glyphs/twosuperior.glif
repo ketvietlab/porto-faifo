@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="twosuperior" format="2">
+  <advance width="1180"/>
+  <unicode hex="00B2"/>
+  <outline>
+    <component base="two.dnom" yOffset="830"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>two.dnom raised: bottom at 0.57 cap height</string>
+    </dict>
+  </lib>
+</glyph>

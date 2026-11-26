@@ -1,0 +1,3308 @@
+{
+ "name": "Porto Faifo Symbols",
+ "version": "1.0.0",
+ "license": "OFL-1.1",
+ "sizes": [
+  14,
+  16,
+  20,
+  24
+ ],
+ "weights": [
+  "Light",
+  "Regular",
+  "Medium",
+  "Bold"
+ ],
+ "files": "svg/<size>/<weight>/<name>.svg",
+ "symbols": [
+  {
+   "name": "search",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "search",
+   "freedesktop": [
+    "system-search"
+   ]
+  },
+  {
+   "name": "plus",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "plus",
+   "freedesktop": [
+    "list-add"
+   ]
+  },
+  {
+   "name": "minus",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "minus",
+   "freedesktop": [
+    "list-remove"
+   ]
+  },
+  {
+   "name": "close",
+   "fill": false,
+   "aliases": [
+    "window-close"
+   ],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "x",
+   "freedesktop": [
+    "window-close"
+   ]
+  },
+  {
+   "name": "check",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "check",
+   "freedesktop": [
+    "object-select"
+   ]
+  },
+  {
+   "name": "chevron-right",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "chevron-right",
+   "freedesktop": [
+    "pan-end"
+   ]
+  },
+  {
+   "name": "chevron-left",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "chevron-left",
+   "freedesktop": [
+    "pan-start"
+   ]
+  },
+  {
+   "name": "chevron-down",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "chevron-down",
+   "freedesktop": [
+    "pan-down"
+   ]
+  },
+  {
+   "name": "chevron-up",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "chevron-up",
+   "freedesktop": [
+    "pan-up"
+   ]
+  },
+  {
+   "name": "arrow-right",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "arrow-right",
+   "freedesktop": [
+    "go-next"
+   ]
+  },
+  {
+   "name": "menu",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "menu",
+   "freedesktop": [
+    "open-menu"
+   ]
+  },
+  {
+   "name": "more",
+   "fill": false,
+   "aliases": [
+    "more-horizontal"
+   ],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "ellipsis",
+   "freedesktop": [
+    "view-more-horizontal"
+   ]
+  },
+  {
+   "name": "home",
+   "fill": true,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "house",
+   "freedesktop": [
+    "go-home"
+   ]
+  },
+  {
+   "name": "user",
+   "fill": true,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "user",
+   "freedesktop": [
+    "avatar-default"
+   ]
+  },
+  {
+   "name": "settings",
+   "fill": true,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "settings",
+   "freedesktop": [
+    "preferences-system"
+   ]
+  },
+  {
+   "name": "apps",
+   "fill": true,
+   "aliases": [
+    "view-grid"
+   ],
+   "group": "Navigation",
+   "meaning": "",
+   "lucide": "layout-grid",
+   "freedesktop": [
+    "view-app-grid",
+    "view-grid"
+   ]
+  },
+  {
+   "name": "bell",
+   "fill": true,
+   "aliases": [],
+   "group": "Status",
+   "meaning": "",
+   "lucide": "bell",
+   "freedesktop": [
+    "preferences-system-notifications"
+   ]
+  },
+  {
+   "name": "info",
+   "fill": true,
+   "aliases": [],
+   "group": "Status",
+   "meaning": "",
+   "lucide": "info",
+   "freedesktop": [
+    "dialog-information"
+   ]
+  },
+  {
+   "name": "warning",
+   "fill": true,
+   "aliases": [],
+   "group": "Status",
+   "meaning": "",
+   "lucide": "triangle-alert",
+   "freedesktop": [
+    "dialog-warning"
+   ]
+  },
+  {
+   "name": "lock",
+   "fill": true,
+   "aliases": [],
+   "group": "Status",
+   "meaning": "",
+   "lucide": "lock",
+   "freedesktop": [
+    "system-lock-screen"
+   ]
+  },
+  {
+   "name": "clock",
+   "fill": true,
+   "aliases": [],
+   "group": "Status",
+   "meaning": "",
+   "lucide": "clock",
+   "freedesktop": [
+    "preferences-system-time"
+   ]
+  },
+  {
+   "name": "star",
+   "fill": true,
+   "aliases": [],
+   "group": "Status",
+   "meaning": "",
+   "lucide": "star",
+   "freedesktop": [
+    "starred"
+   ]
+  },
+  {
+   "name": "power",
+   "fill": false,
+   "aliases": [],
+   "group": "System",
+   "meaning": "",
+   "lucide": "power",
+   "freedesktop": [
+    "system-shutdown"
+   ]
+  },
+  {
+   "name": "wifi",
+   "fill": false,
+   "aliases": [
+    "wifi-high"
+   ],
+   "group": "System",
+   "meaning": "",
+   "lucide": "wifi",
+   "freedesktop": [
+    "network-wireless",
+    "network-wireless-signal-excellent"
+   ]
+  },
+  {
+   "name": "battery",
+   "fill": false,
+   "aliases": [
+    "battery-medium"
+   ],
+   "group": "System",
+   "meaning": "",
+   "lucide": "battery-medium",
+   "freedesktop": [
+    "battery",
+    "battery-good"
+   ]
+  },
+  {
+   "name": "volume",
+   "fill": false,
+   "aliases": [
+    "volume-high"
+   ],
+   "group": "System",
+   "meaning": "",
+   "lucide": "volume-2",
+   "freedesktop": [
+    "audio-volume-high"
+   ]
+  },
+  {
+   "name": "refresh",
+   "fill": false,
+   "aliases": [
+    "retry"
+   ],
+   "group": "System",
+   "meaning": "",
+   "lucide": "rotate-cw",
+   "freedesktop": [
+    "view-refresh"
+   ]
+  },
+  {
+   "name": "terminal",
+   "fill": true,
+   "aliases": [],
+   "group": "System",
+   "meaning": "",
+   "lucide": "square-terminal",
+   "freedesktop": [
+    "utilities-terminal"
+   ]
+  },
+  {
+   "name": "file",
+   "fill": true,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "file",
+   "freedesktop": [
+    "text-x-generic"
+   ]
+  },
+  {
+   "name": "file-text",
+   "fill": true,
+   "aliases": [
+    "document"
+   ],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "file-text",
+   "freedesktop": [
+    "x-office-document"
+   ]
+  },
+  {
+   "name": "folder",
+   "fill": true,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "folder",
+   "freedesktop": [
+    "folder"
+   ]
+  },
+  {
+   "name": "calendar",
+   "fill": true,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "calendar",
+   "freedesktop": [
+    "x-office-calendar"
+   ]
+  },
+  {
+   "name": "mail",
+   "fill": true,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "mail",
+   "freedesktop": [
+    "mail-unread"
+   ]
+  },
+  {
+   "name": "image",
+   "fill": false,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "image",
+   "freedesktop": [
+    "image-x-generic"
+   ]
+  },
+  {
+   "name": "trash",
+   "fill": true,
+   "aliases": [
+    "delete"
+   ],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "trash-2",
+   "freedesktop": [
+    "user-trash",
+    "edit-delete"
+   ]
+  },
+  {
+   "name": "edit",
+   "fill": true,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "pencil",
+   "freedesktop": [
+    "document-edit"
+   ]
+  },
+  {
+   "name": "download",
+   "fill": false,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "download",
+   "freedesktop": [
+    "folder-download"
+   ]
+  },
+  {
+   "name": "upload",
+   "fill": false,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "upload",
+   "freedesktop": [
+    "document-send"
+   ]
+  },
+  {
+   "name": "filter",
+   "fill": true,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "",
+   "lucide": "funnel",
+   "freedesktop": []
+  },
+  {
+   "name": "chart-bar",
+   "fill": false,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "",
+   "lucide": "chart-column",
+   "freedesktop": []
+  },
+  {
+   "name": "activity",
+   "fill": false,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "",
+   "lucide": "activity",
+   "freedesktop": [
+    "utilities-system-monitor"
+   ]
+  },
+  {
+   "name": "archive",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "",
+   "lucide": "archive",
+   "freedesktop": [
+    "application-x-archive"
+   ]
+  },
+  {
+   "name": "receipt",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "",
+   "lucide": "receipt",
+   "freedesktop": []
+  },
+  {
+   "name": "coin-dong",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "safe",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "",
+   "lucide": "vault",
+   "freedesktop": []
+  },
+  {
+   "name": "arrow-left",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "arrow-left",
+   "freedesktop": [
+    "go-previous"
+   ]
+  },
+  {
+   "name": "arrow-up",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "arrow-up",
+   "freedesktop": [
+    "go-up"
+   ]
+  },
+  {
+   "name": "arrow-up-right",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "arrow-up-right",
+   "freedesktop": []
+  },
+  {
+   "name": "folder-add",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "folder-plus",
+   "freedesktop": [
+    "folder-new"
+   ]
+  },
+  {
+   "name": "rename",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "text-cursor-input",
+   "freedesktop": [
+    "edit-rename"
+   ]
+  },
+  {
+   "name": "cut",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "scissors",
+   "freedesktop": [
+    "edit-cut"
+   ]
+  },
+  {
+   "name": "copy",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "copy",
+   "freedesktop": [
+    "edit-copy"
+   ]
+  },
+  {
+   "name": "paste",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "clipboard",
+   "freedesktop": [
+    "edit-paste"
+   ]
+  },
+  {
+   "name": "restore",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "rotate-ccw",
+   "freedesktop": []
+  },
+  {
+   "name": "undo",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "undo-2",
+   "freedesktop": [
+    "edit-undo"
+   ]
+  },
+  {
+   "name": "redo",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "redo-2",
+   "freedesktop": [
+    "edit-redo"
+   ]
+  },
+  {
+   "name": "open",
+   "fill": false,
+   "aliases": [
+    "external-link"
+   ],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "square-arrow-out-up-right",
+   "freedesktop": [
+    "document-open"
+   ]
+  },
+  {
+   "name": "panel-right",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "panel-right",
+   "freedesktop": []
+  },
+  {
+   "name": "view-list",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "list",
+   "freedesktop": [
+    "view-list"
+   ]
+  },
+  {
+   "name": "sort-ascending",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "arrow-up-narrow-wide",
+   "freedesktop": [
+    "view-sort-ascending"
+   ]
+  },
+  {
+   "name": "sort-descending",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "arrow-down-wide-narrow",
+   "freedesktop": [
+    "view-sort-descending"
+   ]
+  },
+  {
+   "name": "eject",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "",
+   "lucide": "",
+   "freedesktop": [
+    "media-eject"
+   ]
+  },
+  {
+   "name": "music",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · locations",
+   "meaning": "",
+   "lucide": "music",
+   "freedesktop": [
+    "folder-music"
+   ]
+  },
+  {
+   "name": "video",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · locations",
+   "meaning": "",
+   "lucide": "square-play",
+   "freedesktop": [
+    "folder-videos"
+   ]
+  },
+  {
+   "name": "code",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · locations",
+   "meaning": "",
+   "lucide": "code-xml",
+   "freedesktop": []
+  },
+  {
+   "name": "computer",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · locations",
+   "meaning": "",
+   "lucide": "laptop",
+   "freedesktop": [
+    "computer"
+   ]
+  },
+  {
+   "name": "drive",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · locations",
+   "meaning": "",
+   "lucide": "hard-drive",
+   "freedesktop": [
+    "drive-harddisk"
+   ]
+  },
+  {
+   "name": "usb",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · locations",
+   "meaning": "",
+   "lucide": "usb",
+   "freedesktop": [
+    "drive-removable-media"
+   ]
+  },
+  {
+   "name": "table",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · locations",
+   "meaning": "",
+   "lucide": "sheet",
+   "freedesktop": [
+    "x-office-spreadsheet"
+   ]
+  },
+  {
+   "name": "presentation",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · locations",
+   "meaning": "",
+   "lucide": "presentation",
+   "freedesktop": [
+    "x-office-presentation"
+   ]
+  },
+  {
+   "name": "window-minimize",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "",
+   "lucide": "",
+   "freedesktop": [
+    "window-minimize"
+   ]
+  },
+  {
+   "name": "window-maximize",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "",
+   "lucide": "",
+   "freedesktop": [
+    "window-maximize"
+   ]
+  },
+  {
+   "name": "window-restore",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "",
+   "lucide": "",
+   "freedesktop": [
+    "window-restore"
+   ]
+  },
+  {
+   "name": "restart",
+   "fill": false,
+   "aliases": [],
+   "group": "Session and power",
+   "meaning": "Restart",
+   "lucide": "rotate-cw",
+   "freedesktop": [
+    "system-reboot"
+   ]
+  },
+  {
+   "name": "sleep",
+   "fill": false,
+   "aliases": [],
+   "group": "Session and power",
+   "meaning": "Sleep",
+   "lucide": "moon",
+   "freedesktop": [
+    "system-suspend"
+   ]
+  },
+  {
+   "name": "log-out",
+   "fill": false,
+   "aliases": [],
+   "group": "Session and power",
+   "meaning": "Log out",
+   "lucide": "log-out",
+   "freedesktop": [
+    "system-log-out"
+   ]
+  },
+  {
+   "name": "switch-user",
+   "fill": false,
+   "aliases": [],
+   "group": "Session and power",
+   "meaning": "Switch user",
+   "lucide": "users",
+   "freedesktop": [
+    "system-switch-user"
+   ]
+  },
+  {
+   "name": "unlock",
+   "fill": true,
+   "aliases": [],
+   "group": "Session and power",
+   "meaning": "Unlock",
+   "lucide": "lock-open",
+   "freedesktop": [
+    "changes-allow"
+   ]
+  },
+  {
+   "name": "bell-off",
+   "fill": true,
+   "aliases": [],
+   "group": "Notifications",
+   "meaning": "Mute notifications / do not disturb",
+   "lucide": "bell-off",
+   "freedesktop": [
+    "notifications-disabled"
+   ]
+  },
+  {
+   "name": "check-all",
+   "fill": false,
+   "aliases": [],
+   "group": "Notifications",
+   "meaning": "Mark all as read",
+   "lucide": "check-check",
+   "freedesktop": []
+  },
+  {
+   "name": "wifi-off",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi off",
+   "lucide": "wifi-off",
+   "freedesktop": [
+    "network-wireless-disabled"
+   ]
+  },
+  {
+   "name": "wifi-none",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi on, no signal (0–5%)",
+   "lucide": "wifi-zero",
+   "freedesktop": [
+    "network-wireless-signal-none"
+   ]
+  },
+  {
+   "name": "wifi-low",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Weak signal (6–30%)",
+   "lucide": "wifi-low",
+   "freedesktop": [
+    "network-wireless-signal-weak"
+   ]
+  },
+  {
+   "name": "wifi-medium",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Medium signal (31–80%)",
+   "lucide": "wifi",
+   "freedesktop": [
+    "network-wireless-signal-ok",
+    "network-wireless-signal-good"
+   ]
+  },
+  {
+   "name": "ethernet",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wired network",
+   "lucide": "ethernet-port",
+   "freedesktop": [
+    "network-wired"
+   ]
+  },
+  {
+   "name": "network",
+   "fill": true,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Network, network location",
+   "lucide": "network",
+   "freedesktop": [
+    "network-workgroup"
+   ]
+  },
+  {
+   "name": "network-offline",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Network disconnected",
+   "lucide": "",
+   "freedesktop": [
+    "network-offline"
+   ]
+  },
+  {
+   "name": "bluetooth",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Bluetooth on",
+   "lucide": "bluetooth",
+   "freedesktop": [
+    "bluetooth"
+   ]
+  },
+  {
+   "name": "bluetooth-off",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Bluetooth off",
+   "lucide": "bluetooth-off",
+   "freedesktop": [
+    "bluetooth-disabled"
+   ]
+  },
+  {
+   "name": "bluetooth-connected",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Connecting to a Bluetooth device",
+   "lucide": "bluetooth-connected",
+   "freedesktop": [
+    "bluetooth-active"
+   ]
+  },
+  {
+   "name": "globe",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Internet, browser",
+   "lucide": "globe",
+   "freedesktop": [
+    "applications-internet"
+   ]
+  },
+  {
+   "name": "volume-mute",
+   "fill": true,
+   "aliases": [],
+   "group": "Sound",
+   "meaning": "Muted or 0%",
+   "lucide": "volume-x",
+   "freedesktop": [
+    "audio-volume-muted"
+   ]
+  },
+  {
+   "name": "volume-low",
+   "fill": true,
+   "aliases": [],
+   "group": "Sound",
+   "meaning": "Low volume (1–49%)",
+   "lucide": "volume-1",
+   "freedesktop": [
+    "audio-volume-low",
+    "audio-volume-medium"
+   ]
+  },
+  {
+   "name": "speaker",
+   "fill": true,
+   "aliases": [],
+   "group": "Sound",
+   "meaning": "Speaker (output device)",
+   "lucide": "speaker",
+   "freedesktop": [
+    "audio-speakers"
+   ]
+  },
+  {
+   "name": "headphones",
+   "fill": true,
+   "aliases": [],
+   "group": "Sound",
+   "meaning": "Headphones",
+   "lucide": "headphones",
+   "freedesktop": [
+    "audio-headphones"
+   ]
+  },
+  {
+   "name": "microphone",
+   "fill": true,
+   "aliases": [],
+   "group": "Sound",
+   "meaning": "Microphone",
+   "lucide": "mic",
+   "freedesktop": [
+    "audio-input-microphone"
+   ]
+  },
+  {
+   "name": "microphone-mute",
+   "fill": true,
+   "aliases": [],
+   "group": "Sound",
+   "meaning": "Mute microphone",
+   "lucide": "mic-off",
+   "freedesktop": [
+    "microphone-sensitivity-muted"
+   ]
+  },
+  {
+   "name": "battery-empty",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "Battery empty or very low (0–10%)",
+   "lucide": "battery",
+   "freedesktop": [
+    "battery-empty",
+    "battery-caution"
+   ]
+  },
+  {
+   "name": "battery-low",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "Battery low (11–30%)",
+   "lucide": "battery-low",
+   "freedesktop": [
+    "battery-low"
+   ]
+  },
+  {
+   "name": "battery-full",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "Battery full (80–100%)",
+   "lucide": "battery-full",
+   "freedesktop": [
+    "battery-full"
+   ]
+  },
+  {
+   "name": "battery-charging",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "Charging, battery 0–10% or unknown",
+   "lucide": "battery-charging",
+   "freedesktop": [
+    "battery-empty-charging",
+    "battery-caution-charging"
+   ]
+  },
+  {
+   "name": "battery-charging-low",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "Charging, battery 11–30%",
+   "lucide": "",
+   "freedesktop": [
+    "battery-low-charging"
+   ]
+  },
+  {
+   "name": "battery-charging-medium",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "Charging, battery 31–79%",
+   "lucide": "",
+   "freedesktop": [
+    "battery-good-charging"
+   ]
+  },
+  {
+   "name": "battery-charging-full",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "Charging, battery 80–100% or full while plugged in",
+   "lucide": "",
+   "freedesktop": [
+    "battery-full-charging",
+    "battery-full-charged"
+   ]
+  },
+  {
+   "name": "battery-warning",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "Battery fault (not detected, overheating, damaged)",
+   "lucide": "battery-warning",
+   "freedesktop": [
+    "battery-missing"
+   ]
+  },
+  {
+   "name": "sun",
+   "fill": true,
+   "aliases": [],
+   "group": "Display",
+   "meaning": "Light appearance",
+   "lucide": "sun",
+   "freedesktop": [
+    "weather-clear"
+   ]
+  },
+  {
+   "name": "moon",
+   "fill": false,
+   "aliases": [],
+   "group": "Display",
+   "meaning": "Dark appearance",
+   "lucide": "moon",
+   "freedesktop": [
+    "weather-clear-night"
+   ]
+  },
+  {
+   "name": "brightness",
+   "fill": false,
+   "aliases": [],
+   "group": "Display",
+   "meaning": "Screen brightness",
+   "lucide": "sun-medium",
+   "freedesktop": [
+    "display-brightness"
+   ]
+  },
+  {
+   "name": "display",
+   "fill": true,
+   "aliases": [],
+   "group": "Display",
+   "meaning": "Monitor",
+   "lucide": "monitor",
+   "freedesktop": [
+    "video-display"
+   ]
+  },
+  {
+   "name": "keyboard",
+   "fill": true,
+   "aliases": [],
+   "group": "Input",
+   "meaning": "Keyboard (device, key layout)",
+   "lucide": "keyboard",
+   "freedesktop": [
+    "input-keyboard"
+   ]
+  },
+  {
+   "name": "language",
+   "fill": false,
+   "aliases": [],
+   "group": "Input",
+   "meaning": "Language",
+   "lucide": "languages",
+   "freedesktop": [
+    "preferences-desktop-locale"
+   ]
+  },
+  {
+   "name": "input-method",
+   "fill": false,
+   "aliases": [],
+   "group": "Input",
+   "meaning": "Input method (for example Vietnamese typing)",
+   "lucide": "",
+   "freedesktop": [
+    "input-method"
+   ]
+  },
+  {
+   "name": "sliders",
+   "fill": false,
+   "aliases": [],
+   "group": "General controls",
+   "meaning": "Adjustments, view filters",
+   "lucide": "sliders-horizontal",
+   "freedesktop": [
+    "configure"
+   ]
+  },
+  {
+   "name": "users",
+   "fill": false,
+   "aliases": [],
+   "group": "General controls",
+   "meaning": "Users (multiple accounts)",
+   "lucide": "users",
+   "freedesktop": [
+    "system-users"
+   ]
+  },
+  {
+   "name": "shield",
+   "fill": true,
+   "aliases": [],
+   "group": "General controls",
+   "meaning": "Security, privacy",
+   "lucide": "shield",
+   "freedesktop": [
+    "security-medium"
+   ]
+  },
+  {
+   "name": "shield-check",
+   "fill": true,
+   "aliases": [],
+   "group": "General controls",
+   "meaning": "Protected / verified",
+   "lucide": "shield-check",
+   "freedesktop": [
+    "security-high"
+   ]
+  },
+  {
+   "name": "palette",
+   "fill": false,
+   "aliases": [],
+   "group": "Appearance",
+   "meaning": "Appearance, colours",
+   "lucide": "palette",
+   "freedesktop": [
+    "preferences-desktop-theme"
+   ]
+  },
+  {
+   "name": "wallpaper",
+   "fill": false,
+   "aliases": [],
+   "group": "Appearance",
+   "meaning": "Wallpaper",
+   "lucide": "wallpaper",
+   "freedesktop": [
+    "preferences-desktop-wallpaper"
+   ]
+  },
+  {
+   "name": "text-size",
+   "fill": false,
+   "aliases": [],
+   "group": "Appearance",
+   "meaning": "Font size",
+   "lucide": "a-large-small",
+   "freedesktop": [
+    "preferences-desktop-font"
+   ]
+  },
+  {
+   "name": "accessibility",
+   "fill": false,
+   "aliases": [],
+   "group": "Appearance",
+   "meaning": "Accessibility",
+   "lucide": "accessibility",
+   "freedesktop": [
+    "preferences-desktop-accessibility"
+   ]
+  },
+  {
+   "name": "mouse",
+   "fill": true,
+   "aliases": [],
+   "group": "Devices",
+   "meaning": "Mouse",
+   "lucide": "mouse",
+   "freedesktop": [
+    "input-mouse"
+   ]
+  },
+  {
+   "name": "touchpad",
+   "fill": false,
+   "aliases": [],
+   "group": "Devices",
+   "meaning": "Touchpad",
+   "lucide": "",
+   "freedesktop": [
+    "input-touchpad"
+   ]
+  },
+  {
+   "name": "printer",
+   "fill": false,
+   "aliases": [],
+   "group": "Devices",
+   "meaning": "Printer",
+   "lucide": "printer",
+   "freedesktop": [
+    "printer"
+   ]
+  },
+  {
+   "name": "camera",
+   "fill": true,
+   "aliases": [],
+   "group": "Devices",
+   "meaning": "Camera",
+   "lucide": "camera",
+   "freedesktop": [
+    "camera-photo"
+   ]
+  },
+  {
+   "name": "cpu",
+   "fill": false,
+   "aliases": [],
+   "group": "Configuration and performance",
+   "meaning": "CPU",
+   "lucide": "cpu",
+   "freedesktop": []
+  },
+  {
+   "name": "memory",
+   "fill": false,
+   "aliases": [],
+   "group": "Configuration and performance",
+   "meaning": "RAM",
+   "lucide": "memory-stick",
+   "freedesktop": []
+  },
+  {
+   "name": "storage",
+   "fill": false,
+   "aliases": [],
+   "group": "Configuration and performance",
+   "meaning": "Storage capacity",
+   "lucide": "database",
+   "freedesktop": [
+    "drive-multidisk"
+   ]
+  },
+  {
+   "name": "chart-line",
+   "fill": false,
+   "aliases": [],
+   "group": "Configuration and performance",
+   "meaning": "Chart over time",
+   "lucide": "chart-line",
+   "freedesktop": []
+  },
+  {
+   "name": "key",
+   "fill": true,
+   "aliases": [],
+   "group": "Account and security",
+   "meaning": "Keys, recovery codes",
+   "lucide": "key-round",
+   "freedesktop": []
+  },
+  {
+   "name": "password",
+   "fill": false,
+   "aliases": [],
+   "group": "Account and security",
+   "meaning": "Password",
+   "lucide": "rectangle-ellipsis",
+   "freedesktop": [
+    "dialog-password"
+   ]
+  },
+  {
+   "name": "package",
+   "fill": false,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Application package",
+   "lucide": "package",
+   "freedesktop": [
+    "package-x-generic"
+   ]
+  },
+  {
+   "name": "install",
+   "fill": false,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Install (unlike download)",
+   "lucide": "package-plus",
+   "freedesktop": []
+  },
+  {
+   "name": "uninstall",
+   "fill": false,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Uninstall",
+   "lucide": "package-minus",
+   "freedesktop": []
+  },
+  {
+   "name": "update",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Update",
+   "lucide": "circle-arrow-up",
+   "freedesktop": [
+    "system-software-update"
+   ]
+  },
+  {
+   "name": "launch",
+   "fill": false,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Launch app",
+   "lucide": "rocket",
+   "freedesktop": [
+    "system-run"
+   ]
+  },
+  {
+   "name": "pause",
+   "fill": true,
+   "aliases": [],
+   "group": "Running tasks",
+   "meaning": "Pause",
+   "lucide": "pause",
+   "freedesktop": [
+    "media-playback-pause"
+   ]
+  },
+  {
+   "name": "resume",
+   "fill": true,
+   "aliases": [],
+   "group": "Running tasks",
+   "meaning": "Resume",
+   "lucide": "play",
+   "freedesktop": [
+    "media-playback-start"
+   ]
+  },
+  {
+   "name": "stop",
+   "fill": true,
+   "aliases": [
+    "end-task"
+   ],
+   "group": "Running tasks",
+   "meaning": "Stop",
+   "lucide": "square",
+   "freedesktop": [
+    "media-playback-stop"
+   ]
+  },
+  {
+   "name": "history",
+   "fill": false,
+   "aliases": [],
+   "group": "Running tasks",
+   "meaning": "History",
+   "lucide": "history",
+   "freedesktop": [
+    "document-open-recent"
+   ]
+  },
+  {
+   "name": "save",
+   "fill": true,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "Save",
+   "lucide": "save",
+   "freedesktop": [
+    "document-save"
+   ]
+  },
+  {
+   "name": "save-as",
+   "fill": false,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "Save as",
+   "lucide": "",
+   "freedesktop": [
+    "document-save-as"
+   ]
+  },
+  {
+   "name": "replace",
+   "fill": false,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "Replace (overwrite an existing item)",
+   "lucide": "replace",
+   "freedesktop": [
+    "edit-find-replace"
+   ]
+  },
+  {
+   "name": "skip",
+   "fill": true,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "Skip",
+   "lucide": "skip-forward",
+   "freedesktop": [
+    "media-skip-forward"
+   ]
+  },
+  {
+   "name": "backup",
+   "fill": false,
+   "aliases": [],
+   "group": "Backup",
+   "meaning": "Backup",
+   "lucide": "database-backup",
+   "freedesktop": []
+  },
+  {
+   "name": "backup-restore",
+   "fill": false,
+   "aliases": [],
+   "group": "Backup",
+   "meaning": "Restore from backup",
+   "lucide": "archive-restore",
+   "freedesktop": []
+  },
+  {
+   "name": "partition",
+   "fill": false,
+   "aliases": [],
+   "group": "OS installation",
+   "meaning": "Disk partitions",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "disk-image",
+   "fill": false,
+   "aliases": [],
+   "group": "OS installation",
+   "meaning": "Disk image, optical disc",
+   "lucide": "disc-3",
+   "freedesktop": [
+    "media-optical"
+   ]
+  },
+  {
+   "name": "startup",
+   "fill": false,
+   "aliases": [],
+   "group": "Running tasks",
+   "meaning": "Apps that start with the session",
+   "lucide": "gauge",
+   "freedesktop": []
+  },
+  {
+   "name": "success",
+   "fill": true,
+   "aliases": [],
+   "group": "Messages",
+   "meaning": "Success",
+   "lucide": "circle-check",
+   "freedesktop": [
+    "dialog-ok"
+   ]
+  },
+  {
+   "name": "error",
+   "fill": true,
+   "aliases": [],
+   "group": "Messages",
+   "meaning": "Error",
+   "lucide": "octagon-x",
+   "freedesktop": [
+    "dialog-error"
+   ]
+  },
+  {
+   "name": "help",
+   "fill": true,
+   "aliases": [],
+   "group": "Messages",
+   "meaning": "Help",
+   "lucide": "circle-help",
+   "freedesktop": [
+    "help-browser"
+   ]
+  },
+  {
+   "name": "more-vertical",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "More actions (vertical)",
+   "lucide": "ellipsis-vertical",
+   "freedesktop": [
+    "view-more"
+   ]
+  },
+  {
+   "name": "book-open",
+   "fill": false,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Read, view a document",
+   "lucide": "book-open",
+   "freedesktop": [
+    "accessories-dictionary"
+   ]
+  },
+  {
+   "name": "brush",
+   "fill": false,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Draw, graphics",
+   "lucide": "brush",
+   "freedesktop": [
+    "applications-graphics"
+   ]
+  },
+  {
+   "name": "system-install",
+   "fill": false,
+   "aliases": [],
+   "group": "OS installation",
+   "meaning": "Install the system to a drive (installing state)",
+   "lucide": "hard-drive-download",
+   "freedesktop": [
+    "system-software-install"
+   ]
+  },
+  {
+   "name": "note",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Notes",
+   "lucide": "sticky-note",
+   "freedesktop": [
+    "accessories-text-editor"
+   ]
+  },
+  {
+   "name": "pin",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Pin (pushpin)",
+   "lucide": "pin",
+   "freedesktop": [
+    "view-pin"
+   ]
+  },
+  {
+   "name": "unpin",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Unpin",
+   "lucide": "pin-off",
+   "freedesktop": []
+  },
+  {
+   "name": "eye",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Show (hidden files, password)",
+   "lucide": "eye",
+   "freedesktop": [
+    "view-reveal"
+   ]
+  },
+  {
+   "name": "eye-off",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Hide",
+   "lucide": "eye-off",
+   "freedesktop": [
+    "view-conceal"
+   ]
+  },
+  {
+   "name": "zoom-in",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Zoom in",
+   "lucide": "zoom-in",
+   "freedesktop": [
+    "zoom-in"
+   ]
+  },
+  {
+   "name": "zoom-out",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Zoom out",
+   "lucide": "zoom-out",
+   "freedesktop": [
+    "zoom-out"
+   ]
+  },
+  {
+   "name": "open-with",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Open with another app",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "copy-path",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Copy path",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "link",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Link",
+   "lucide": "link-2",
+   "freedesktop": [
+    "insert-link"
+   ]
+  },
+  {
+   "name": "move-to",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Move to",
+   "lucide": "folder-input",
+   "freedesktop": []
+  },
+  {
+   "name": "archive-create",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Compress into an archive",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "archive-extract",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Extract",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "connect",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Connect",
+   "lucide": "plug",
+   "freedesktop": []
+  },
+  {
+   "name": "disconnect",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Disconnect",
+   "lucide": "unplug",
+   "freedesktop": []
+  },
+  {
+   "name": "wifi-none-limited",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi with no signal, connected without internet access",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "wifi-none-locked",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi with no signal, password-protected network",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "wifi-low-limited",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi weak signal, connected without internet access",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "wifi-low-locked",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi weak signal, password-protected network",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "wifi-medium-limited",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi medium signal, connected without internet access",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "wifi-medium-locked",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi medium signal, password-protected network",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "wifi-limited",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi strong signal, connected without internet access",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "wifi-locked",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi strong signal, password-protected network",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "ethernet-limited",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wired network connected, connected without internet access",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "ethernet-locked",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wired network connected, password-protected network",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "ethernet-off",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Network cable unplugged",
+   "lucide": "",
+   "freedesktop": [
+    "network-wired-disconnected"
+   ]
+  },
+  {
+   "name": "hotspot",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Wi-Fi hotspot",
+   "lucide": "",
+   "freedesktop": [
+    "network-wireless-hotspot"
+   ]
+  },
+  {
+   "name": "arrow-down",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "Down arrow",
+   "lucide": "arrow-down",
+   "freedesktop": []
+  },
+  {
+   "name": "file-add",
+   "fill": false,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "New document",
+   "lucide": "file-plus",
+   "freedesktop": []
+  },
+  {
+   "name": "share",
+   "fill": false,
+   "aliases": [],
+   "group": "Documents",
+   "meaning": "Share",
+   "lucide": "share-2",
+   "freedesktop": []
+  },
+  {
+   "name": "check-none",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "Deselect all",
+   "lucide": "square-dashed",
+   "freedesktop": []
+  },
+  {
+   "name": "check-invert",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "Invert selection",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "history-clear",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · actions",
+   "meaning": "Clear history",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "clear-all",
+   "fill": false,
+   "aliases": [],
+   "group": "Notifications",
+   "meaning": "Clear all",
+   "lucide": "list-x",
+   "freedesktop": []
+  },
+  {
+   "name": "bell-dot",
+   "fill": false,
+   "aliases": [],
+   "group": "Notifications",
+   "meaning": "New notification (dotted bell)",
+   "lucide": "bell-dot",
+   "freedesktop": []
+  },
+  {
+   "name": "keyboard-virtual",
+   "fill": false,
+   "aliases": [],
+   "group": "Input",
+   "meaning": "Virtual keyboard on",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "keyboard-virtual-off",
+   "fill": false,
+   "aliases": [],
+   "group": "Input",
+   "meaning": "Virtual keyboard off",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "airplane",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Airplane mode on",
+   "lucide": "plane",
+   "freedesktop": []
+  },
+  {
+   "name": "airplane-off",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Airplane mode off",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "vpn",
+   "fill": false,
+   "aliases": [],
+   "group": "Network",
+   "meaning": "Virtual private network (VPN)",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "update-available",
+   "fill": false,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Update available",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "update-important",
+   "fill": false,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Important or security update available",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "restart-update",
+   "fill": false,
+   "aliases": [],
+   "group": "Session and power",
+   "meaning": "Update and restart",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "power-update",
+   "fill": false,
+   "aliases": [],
+   "group": "Session and power",
+   "meaning": "Update and shut down",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "power-save",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "Power saver mode",
+   "lucide": "leaf",
+   "freedesktop": []
+  },
+  {
+   "name": "power-performance",
+   "fill": false,
+   "aliases": [],
+   "group": "Battery",
+   "meaning": "High performance mode",
+   "lucide": "zap",
+   "freedesktop": []
+  },
+  {
+   "name": "moon-off",
+   "fill": false,
+   "aliases": [],
+   "group": "Display",
+   "meaning": "Night light off",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "microphone-active",
+   "fill": false,
+   "aliases": [],
+   "group": "Sound",
+   "meaning": "Microphone in use",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "audio-active",
+   "fill": false,
+   "aliases": [],
+   "group": "Sound",
+   "meaning": "Audio is being recorded",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "window-new",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "New window",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "fullscreen",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "Full screen",
+   "lucide": "maximize",
+   "freedesktop": []
+  },
+  {
+   "name": "tab",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "Tab",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "tab-new",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "New tab",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "tab-close",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "Close tab",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "tab-detach",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "Move tab to a new window",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "tab-close-other",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "Close other tabs",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "folder-lock",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Encrypted folder, locked",
+   "lucide": "folder-lock",
+   "freedesktop": []
+  },
+  {
+   "name": "folder-unlock",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Encrypted folder, unlocked",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "show-in-folder",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Open containing folder",
+   "lucide": "folder-open",
+   "freedesktop": []
+  },
+  {
+   "name": "cloud",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Cloud",
+   "lucide": "cloud",
+   "freedesktop": []
+  },
+  {
+   "name": "cloud-upload",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Upload to cloud",
+   "lucide": "cloud-upload",
+   "freedesktop": []
+  },
+  {
+   "name": "tag",
+   "fill": true,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Tag",
+   "lucide": "tag",
+   "freedesktop": []
+  },
+  {
+   "name": "sort",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Sort (no direction chosen)",
+   "lucide": "arrow-up-down",
+   "freedesktop": []
+  },
+  {
+   "name": "group",
+   "fill": false,
+   "aliases": [],
+   "group": "Files · extended",
+   "meaning": "Group items",
+   "lucide": "",
+   "freedesktop": []
+  },
+  {
+   "name": "drag-handle",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "Drag handle for reordering",
+   "lucide": "grip-vertical",
+   "freedesktop": []
+  },
+  {
+   "name": "layers",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Layers / app suite",
+   "lucide": "layers-3",
+   "freedesktop": []
+  },
+  {
+   "name": "dashboard",
+   "fill": true,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "Dashboard / overview",
+   "lucide": "layout-dashboard",
+   "freedesktop": []
+  },
+  {
+   "name": "building",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Company / building",
+   "lucide": "building-2",
+   "freedesktop": []
+  },
+  {
+   "name": "hotel",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Hotel / lodging",
+   "lucide": "hotel",
+   "freedesktop": []
+  },
+  {
+   "name": "branch",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Branch / flow",
+   "lucide": "git-branch",
+   "freedesktop": []
+  },
+  {
+   "name": "route",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Route",
+   "lucide": "route",
+   "freedesktop": []
+  },
+  {
+   "name": "target",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Target",
+   "lucide": "target",
+   "freedesktop": []
+  },
+  {
+   "name": "megaphone",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Advertising / announcements (Ads)",
+   "lucide": "megaphone",
+   "freedesktop": []
+  },
+  {
+   "name": "radio-tower",
+   "fill": false,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "Distribution channel / OTA",
+   "lucide": "radio-tower",
+   "freedesktop": []
+  },
+  {
+   "name": "sparkles",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "AI / generate",
+   "lucide": "sparkles",
+   "freedesktop": []
+  },
+  {
+   "name": "bot",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Virtual assistant / bot",
+   "lucide": "bot",
+   "freedesktop": []
+  },
+  {
+   "name": "flask",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Experiment",
+   "lucide": "flask-conical",
+   "freedesktop": []
+  },
+  {
+   "name": "scale",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Legal / balance",
+   "lucide": "scale",
+   "freedesktop": []
+  },
+  {
+   "name": "wallet",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Wallet",
+   "lucide": "wallet",
+   "freedesktop": []
+  },
+  {
+   "name": "credit-card",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Card / payment",
+   "lucide": "credit-card",
+   "freedesktop": []
+  },
+  {
+   "name": "calculator",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Accounting / calculator",
+   "lucide": "calculator",
+   "freedesktop": []
+  },
+  {
+   "name": "shopping-bag",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Sales / sales channel",
+   "lucide": "shopping-bag",
+   "freedesktop": []
+  },
+  {
+   "name": "trending-up",
+   "fill": false,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Increase",
+   "lucide": "trending-up",
+   "freedesktop": []
+  },
+  {
+   "name": "trending-down",
+   "fill": false,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Decrease",
+   "lucide": "trending-down",
+   "freedesktop": []
+  },
+  {
+   "name": "arrow-down-left",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "Money in / receive",
+   "lucide": "arrow-down-left",
+   "freedesktop": []
+  },
+  {
+   "name": "phone",
+   "fill": true,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "Call",
+   "lucide": "phone",
+   "freedesktop": []
+  },
+  {
+   "name": "phone-incoming",
+   "fill": false,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "Incoming call",
+   "lucide": "phone-incoming",
+   "freedesktop": []
+  },
+  {
+   "name": "phone-outgoing",
+   "fill": false,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "Outgoing call",
+   "lucide": "phone-outgoing",
+   "freedesktop": []
+  },
+  {
+   "name": "phone-off",
+   "fill": false,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "End / decline call",
+   "lucide": "phone-off",
+   "freedesktop": []
+  },
+  {
+   "name": "smartphone",
+   "fill": true,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "Mobile phone",
+   "lucide": "smartphone",
+   "freedesktop": []
+  },
+  {
+   "name": "chat",
+   "fill": true,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "Chat",
+   "lucide": "message-circle",
+   "freedesktop": []
+  },
+  {
+   "name": "inbox",
+   "fill": true,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "Inbox",
+   "lucide": "inbox",
+   "freedesktop": []
+  },
+  {
+   "name": "enlarge",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "Expand panel",
+   "lucide": "maximize-2",
+   "freedesktop": []
+  },
+  {
+   "name": "shrink",
+   "fill": false,
+   "aliases": [],
+   "group": "Windows",
+   "meaning": "Collapse panel",
+   "lucide": "minimize-2",
+   "freedesktop": []
+  },
+  {
+   "name": "alert",
+   "fill": true,
+   "aliases": [],
+   "group": "Status",
+   "meaning": "Needs attention",
+   "lucide": "circle-alert",
+   "freedesktop": []
+  },
+  {
+   "name": "warehouse",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Warehouse",
+   "lucide": "warehouse",
+   "freedesktop": []
+  },
+  {
+   "name": "cart",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Purchasing / shopping cart",
+   "lucide": "shopping-cart",
+   "freedesktop": []
+  },
+  {
+   "name": "send",
+   "fill": true,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "Send",
+   "lucide": "send",
+   "freedesktop": []
+  },
+  {
+   "name": "contact",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Contacts / customers (CRM)",
+   "lucide": "contact-round",
+   "freedesktop": []
+  },
+  {
+   "name": "store",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Store / point of sale",
+   "lucide": "store",
+   "freedesktop": []
+  },
+  {
+   "name": "truck",
+   "fill": false,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Delivery / shipping",
+   "lucide": "truck",
+   "freedesktop": []
+  },
+  {
+   "name": "factory",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Manufacturing",
+   "lucide": "factory",
+   "freedesktop": []
+  },
+  {
+   "name": "banknote",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Cash / income and expenses",
+   "lucide": "banknote",
+   "freedesktop": []
+  },
+  {
+   "name": "newspaper",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "News / articles",
+   "lucide": "newspaper",
+   "freedesktop": []
+  },
+  {
+   "name": "folder-tree",
+   "fill": true,
+   "aliases": [],
+   "group": "Apps",
+   "meaning": "Tree / categories",
+   "lucide": "folder-tree",
+   "freedesktop": []
+  },
+  {
+   "name": "clipboard-list",
+   "fill": true,
+   "aliases": [],
+   "group": "Business",
+   "meaning": "Task list / stock count",
+   "lucide": "clipboard-list",
+   "freedesktop": []
+  },
+  {
+   "name": "rotate-left",
+   "fill": true,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Rotate left 90°",
+   "lucide": "rotate-ccw-square",
+   "freedesktop": [
+    "object-rotate-left"
+   ]
+  },
+  {
+   "name": "rotate-right",
+   "fill": true,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Rotate right 90°",
+   "lucide": "rotate-cw-square",
+   "freedesktop": [
+    "object-rotate-right"
+   ]
+  },
+  {
+   "name": "flip-horizontal",
+   "fill": true,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Flip horizontally",
+   "lucide": "flip-horizontal-2",
+   "freedesktop": [
+    "object-flip-horizontal"
+   ]
+  },
+  {
+   "name": "flip-vertical",
+   "fill": true,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Flip vertically",
+   "lucide": "flip-vertical-2",
+   "freedesktop": [
+    "object-flip-vertical"
+   ]
+  },
+  {
+   "name": "crop",
+   "fill": false,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Crop image",
+   "lucide": "crop",
+   "freedesktop": [
+    "transform-crop"
+   ]
+  },
+  {
+   "name": "resize",
+   "fill": true,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Resize image",
+   "lucide": "scaling",
+   "freedesktop": [
+    "transform-scale"
+   ]
+  },
+  {
+   "name": "zoom-fit",
+   "fill": true,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Fit to frame",
+   "lucide": "scan",
+   "freedesktop": [
+    "zoom-fit-best"
+   ]
+  },
+  {
+   "name": "zoom-original",
+   "fill": false,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Actual size 1:1",
+   "lucide": "",
+   "freedesktop": [
+    "zoom-original"
+   ]
+  },
+  {
+   "name": "go-first",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "First (first image)",
+   "lucide": "chevron-first",
+   "freedesktop": [
+    "go-first"
+   ]
+  },
+  {
+   "name": "go-last",
+   "fill": false,
+   "aliases": [],
+   "group": "Navigation",
+   "meaning": "Last (last image)",
+   "lucide": "chevron-last",
+   "freedesktop": [
+    "go-last"
+   ]
+  },
+  {
+   "name": "sidetree",
+   "fill": false,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Sidebar folder tree",
+   "lucide": "panel-left",
+   "freedesktop": [
+    "view-sidetree"
+   ]
+  },
+  {
+   "name": "navigator",
+   "fill": true,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Navigator frame while zoomed",
+   "lucide": "",
+   "freedesktop": [
+    "image-navigator"
+   ]
+  },
+  {
+   "name": "bookmark",
+   "fill": true,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Bookmarks",
+   "lucide": "bookmark",
+   "freedesktop": []
+  },
+  {
+   "name": "bookmark-add",
+   "fill": true,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Add bookmark",
+   "lucide": "bookmark-plus",
+   "freedesktop": [
+    "bookmark-new"
+   ]
+  },
+  {
+   "name": "redeyes",
+   "fill": false,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Red-eye removal",
+   "lucide": "",
+   "freedesktop": [
+    "redeyes"
+   ]
+  },
+  {
+   "name": "restoration",
+   "fill": false,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Retouch, clean up a photo",
+   "lucide": "",
+   "freedesktop": [
+    "restoration"
+   ]
+  },
+  {
+   "name": "contrast",
+   "fill": false,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Contrast",
+   "lucide": "contrast",
+   "freedesktop": [
+    "contrast"
+   ]
+  },
+  {
+   "name": "edit-image",
+   "fill": false,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "Edit photo",
+   "lucide": "image-pen",
+   "freedesktop": [
+    "edit-image"
+   ]
+  },
+  {
+   "name": "edit-none",
+   "fill": false,
+   "aliases": [],
+   "group": "Photos",
+   "meaning": "No editing, deselect the tool",
+   "lucide": "pencil-off",
+   "freedesktop": [
+    "edit-none"
+   ]
+  },
+  {
+   "name": "browser-private",
+   "fill": true,
+   "aliases": [],
+   "group": "Browser",
+   "meaning": "Private browsing (incognito)",
+   "lucide": "hat-glasses",
+   "freedesktop": [
+    "view-private"
+   ]
+  },
+  {
+   "name": "site-not-secure",
+   "fill": true,
+   "aliases": [],
+   "group": "Browser",
+   "meaning": "Insecure connection (HTTP)",
+   "lucide": "lock-open",
+   "freedesktop": [
+    "security-low"
+   ]
+  },
+  {
+   "name": "checklist",
+   "fill": true,
+   "aliases": [],
+   "group": "Text",
+   "meaning": "Checklist",
+   "lucide": "list-todo",
+   "freedesktop": []
+  },
+  {
+   "name": "mail-reply",
+   "fill": false,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Reply",
+   "lucide": "reply",
+   "freedesktop": [
+    "mail-reply-sender"
+   ]
+  },
+  {
+   "name": "mail-reply-all",
+   "fill": false,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Reply all",
+   "lucide": "reply-all",
+   "freedesktop": [
+    "mail-reply-all"
+   ]
+  },
+  {
+   "name": "mail-forward",
+   "fill": false,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Forward",
+   "lucide": "forward",
+   "freedesktop": [
+    "mail-forward"
+   ]
+  },
+  {
+   "name": "attachment",
+   "fill": false,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Attachment",
+   "lucide": "paperclip",
+   "freedesktop": [
+    "mail-attachment"
+   ]
+  },
+  {
+   "name": "flag",
+   "fill": true,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Flag",
+   "lucide": "flag",
+   "freedesktop": [
+    "mail-mark-important"
+   ]
+  },
+  {
+   "name": "mail-junk",
+   "fill": true,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Junk mail",
+   "lucide": "mail-warning",
+   "freedesktop": [
+    "mail-mark-junk"
+   ]
+  },
+  {
+   "name": "mail-not-junk",
+   "fill": true,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Not junk",
+   "lucide": "mail-check",
+   "freedesktop": [
+    "mail-mark-notjunk"
+   ]
+  },
+  {
+   "name": "mail-unread",
+   "fill": true,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Mark as unread",
+   "lucide": "mail-dot",
+   "freedesktop": [
+    "mail-mark-unread"
+   ]
+  },
+  {
+   "name": "mail-outbox",
+   "fill": true,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Outbox",
+   "lucide": "",
+   "freedesktop": [
+    "mail-folder-outbox"
+   ]
+  },
+  {
+   "name": "mail-draft",
+   "fill": true,
+   "aliases": [],
+   "group": "Mail",
+   "meaning": "Draft",
+   "lucide": "",
+   "freedesktop": [
+    "mail-folder-drafts"
+   ]
+  },
+  {
+   "name": "repeat",
+   "fill": false,
+   "aliases": [],
+   "group": "Calendar",
+   "meaning": "Repeat (recurring event)",
+   "lucide": "repeat",
+   "freedesktop": [
+    "appointment-recurring",
+    "media-playlist-repeat"
+   ]
+  },
+  {
+   "name": "map-pin",
+   "fill": true,
+   "aliases": [],
+   "group": "Calendar",
+   "meaning": "Place",
+   "lucide": "map-pin",
+   "freedesktop": [
+    "mark-location"
+   ]
+  },
+  {
+   "name": "panel-left",
+   "fill": true,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Toggle the left pane (sidebar)",
+   "lucide": "panel-left",
+   "freedesktop": []
+  },
+  {
+   "name": "panel-right-close",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Close the right pane",
+   "lucide": "panel-right-close",
+   "freedesktop": []
+  },
+  {
+   "name": "panels-top-left",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Layout: top bar and left pane",
+   "lucide": "panels-top-left",
+   "freedesktop": []
+  },
+  {
+   "name": "chevron-up-down",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Choose from a menu (select)",
+   "lucide": "chevrons-up-down",
+   "freedesktop": []
+  },
+  {
+   "name": "enter",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Enter key",
+   "lucide": "corner-down-left",
+   "freedesktop": []
+  },
+  {
+   "name": "slash",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Slash key (quick commands)",
+   "lucide": "slash",
+   "freedesktop": []
+  },
+  {
+   "name": "command",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "⌘ key (keyboard shortcuts)",
+   "lucide": "command",
+   "freedesktop": []
+  },
+  {
+   "name": "chats",
+   "fill": true,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Conversations between agents",
+   "lucide": "messages-square",
+   "freedesktop": []
+  },
+  {
+   "name": "compose",
+   "fill": true,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "New conversation",
+   "lucide": "square-pen",
+   "freedesktop": []
+  },
+  {
+   "name": "pause-circle",
+   "fill": true,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Pending or on hold",
+   "lucide": "pause-circle",
+   "freedesktop": []
+  },
+  {
+   "name": "stop-circle",
+   "fill": true,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Stop the turn",
+   "lucide": "circle-stop",
+   "freedesktop": []
+  },
+  {
+   "name": "loading",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Running (rotated by the app)",
+   "lucide": "loader-circle",
+   "freedesktop": [
+    "process-working"
+   ]
+  },
+  {
+   "name": "folder-open",
+   "fill": true,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Open folder",
+   "lucide": "folder-open",
+   "freedesktop": [
+    "folder-open"
+   ]
+  },
+  {
+   "name": "file-code",
+   "fill": true,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Source code file",
+   "lucide": "file-code",
+   "freedesktop": [
+    "text-x-script"
+   ]
+  },
+  {
+   "name": "compare",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Compare changes (source control)",
+   "lucide": "git-compare-arrows",
+   "freedesktop": []
+  },
+  {
+   "name": "pull-request",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Pull request",
+   "lucide": "git-pull-request",
+   "freedesktop": []
+  },
+  {
+   "name": "map",
+   "fill": true,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Map",
+   "lucide": "map",
+   "freedesktop": []
+  },
+  {
+   "name": "log-in",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Log in",
+   "lucide": "log-in",
+   "freedesktop": []
+  },
+  {
+   "name": "circle",
+   "fill": true,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Status: ring (idle); filled is the status light",
+   "lucide": "circle",
+   "freedesktop": []
+  },
+  {
+   "name": "dot",
+   "fill": false,
+   "aliases": [],
+   "group": "Developer tools",
+   "meaning": "Status: a single dot",
+   "lucide": "dot",
+   "freedesktop": []
+  },
+  {
+   "name": "backspace",
+   "fill": true,
+   "aliases": [],
+   "group": "Input",
+   "meaning": "Delete one character (number pad)",
+   "lucide": "delete",
+   "freedesktop": []
+  },
+  {
+   "name": "phone-missed",
+   "fill": false,
+   "aliases": [],
+   "group": "Communication",
+   "meaning": "Missed call",
+   "lucide": "phone-missed",
+   "freedesktop": []
+  },
+  {
+   "name": "user-remove",
+   "fill": false,
+   "aliases": [],
+   "group": "Account and security",
+   "meaning": "Delete account / remove user",
+   "lucide": "user-round-x",
+   "freedesktop": []
+  },
+  {
+   "name": "smile",
+   "fill": false,
+   "aliases": [],
+   "group": "Chat",
+   "meaning": "Choose an emoji or reaction",
+   "lucide": "smile",
+   "freedesktop": []
+  },
+  {
+   "name": "sticker",
+   "fill": false,
+   "aliases": [],
+   "group": "Chat",
+   "meaning": "Choose a sticker",
+   "lucide": "sticker",
+   "freedesktop": []
+  },
+  {
+   "name": "qr-code",
+   "fill": false,
+   "aliases": [],
+   "group": "Chat",
+   "meaning": "Connect with a QR code",
+   "lucide": "qr-code",
+   "freedesktop": []
+  },
+  {
+   "name": "video-camera",
+   "fill": false,
+   "aliases": [],
+   "group": "Chat",
+   "meaning": "Video call",
+   "lucide": "video",
+   "freedesktop": []
+  }
+ ]
+}

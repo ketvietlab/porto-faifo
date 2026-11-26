@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="whiteSquare" format="2">
+  <advance width="1864"/>
+  <unicode hex="25A1"/>
+  <outline>
+    <contour>
+      <point x="204.0" y="0.0" type="line"/>
+      <point x="1660.0" y="0.0" type="line"/>
+      <point x="1660.0" y="1456.0" type="line"/>
+      <point x="204.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="321.0" y="117.0" type="line"/>
+      <point x="321.0" y="1339.0" type="line"/>
+      <point x="1543.0" y="1339.0" type="line"/>
+      <point x="1543.0" y="117.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>square of the cap height, punctStroke outline</string>
+    </dict>
+  </lib>
+</glyph>

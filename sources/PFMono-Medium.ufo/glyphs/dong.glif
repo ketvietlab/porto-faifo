@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dong" format="2">
+  <advance width="1180"/>
+  <unicode hex="20AB"/>
+  <outline>
+    <contour>
+      <point x="827.0" y="916.0" type="line"/>
+      <point x="791.0" y="990.0" type="line" smooth="yes"/>
+      <point x="741.0" y="1093.0"/>
+      <point x="624.0" y="1163.0"/>
+      <point x="509.0" y="1163.0" type="curve" smooth="yes"/>
+      <point x="307.0" y="1163.0"/>
+      <point x="166.0" y="969.0"/>
+      <point x="166.0" y="697.0" type="curve" smooth="yes"/>
+      <point x="166.0" y="426.0"/>
+      <point x="307.0" y="232.0"/>
+      <point x="509.0" y="232.0" type="curve" smooth="yes"/>
+      <point x="624.0" y="232.0"/>
+      <point x="741.0" y="302.0"/>
+      <point x="791.0" y="405.0" type="curve" smooth="yes"/>
+      <point x="827.0" y="478.0" type="line"/>
+      <point x="850.0" y="636.0" type="line"/>
+      <point x="769.0" y="636.0" type="line"/>
+      <point x="749.0" y="492.0"/>
+      <point x="670.0" y="400.0"/>
+      <point x="578.0" y="400.0" type="curve" smooth="yes"/>
+      <point x="453.0" y="400.0"/>
+      <point x="364.0" y="522.0"/>
+      <point x="364.0" y="697.0" type="curve" smooth="yes"/>
+      <point x="364.0" y="873.0"/>
+      <point x="453.0" y="994.0"/>
+      <point x="578.0" y="994.0" type="curve" smooth="yes"/>
+      <point x="670.0" y="994.0"/>
+      <point x="749.0" y="903.0"/>
+      <point x="769.0" y="759.0" type="curve"/>
+      <point x="850.0" y="759.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="767.0" y="250.0" type="line"/>
+      <point x="958.0" y="250.0" type="line"/>
+      <point x="958.0" y="1491.0" type="line"/>
+      <point x="767.0" y="1491.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="647.0" y="1250.0" type="line"/>
+      <point x="1014.0" y="1250.0" type="line"/>
+      <point x="1014.0" y="1409.0" type="line"/>
+      <point x="647.0" y="1409.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="166.0" y="0.0" type="line"/>
+      <point x="1014.0" y="0.0" type="line"/>
+      <point x="1014.0" y="153.0" type="line"/>
+      <point x="166.0" y="153.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>đ x0.8 (stroke x0.92) on a bar, tabular</string>
+    </dict>
+  </lib>
+</glyph>

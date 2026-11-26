@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="asterisk" format="2">
+  <advance width="1180"/>
+  <unicode hex="002A"/>
+  <outline>
+    <contour>
+      <point x="530.0" y="1092.0" type="line"/>
+      <point x="650.0" y="1092.0" type="line"/>
+      <point x="650.0" y="1456.0" type="line"/>
+      <point x="530.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="650.0" y="1092.0" type="line"/>
+      <point x="530.0" y="1092.0" type="line"/>
+      <point x="530.0" y="728.0" type="line"/>
+      <point x="650.0" y="728.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="560.0" y="1144.0" type="line"/>
+      <point x="620.0" y="1040.0" type="line"/>
+      <point x="905.0" y="1205.0" type="line"/>
+      <point x="905.0" y="1343.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="560.0" y="1040.0" type="line"/>
+      <point x="620.0" y="1144.0" type="line"/>
+      <point x="275.0" y="1343.0" type="line"/>
+      <point x="275.0" y="1205.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="620.0" y="1040.0" type="line"/>
+      <point x="560.0" y="1144.0" type="line"/>
+      <point x="275.0" y="979.0" type="line"/>
+      <point x="275.0" y="841.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="620.0" y="1144.0" type="line"/>
+      <point x="560.0" y="1040.0" type="line"/>
+      <point x="905.0" y="841.0" type="line"/>
+      <point x="905.0" y="979.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>six spokes; vertical ones cut horizontally, slanted ones vertically</string>
+    </dict>
+  </lib>
+</glyph>

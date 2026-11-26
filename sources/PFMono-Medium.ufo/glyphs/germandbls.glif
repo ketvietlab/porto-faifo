@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="germandbls" format="2">
+  <advance width="1180"/>
+  <unicode hex="00DF"/>
+  <anchor x="590" y="0" name="bottom"/>
+  <anchor x="590" y="1088" name="top"/>
+  <outline>
+    <contour>
+      <point x="70.0" y="0.0" type="line"/>
+      <point x="278.0" y="0.0" type="line"/>
+      <point x="278.0" y="1094.0" type="line" smooth="yes"/>
+      <point x="278.0" y="1248.0"/>
+      <point x="383.0" y="1359.0"/>
+      <point x="528.0" y="1359.0" type="curve" smooth="yes"/>
+      <point x="627.0" y="1359.0"/>
+      <point x="699.0" y="1258.0"/>
+      <point x="699.0" y="1118.0" type="curve" smooth="yes"/>
+      <point x="699.0" y="968.0"/>
+      <point x="609.0" y="860.0"/>
+      <point x="486.0" y="860.0" type="curve"/>
+      <point x="486.0" y="698.0" type="line"/>
+      <point x="731.0" y="698.0"/>
+      <point x="902.0" y="870.0"/>
+      <point x="902.0" y="1118.0" type="curve" smooth="yes"/>
+      <point x="902.0" y="1366.0"/>
+      <point x="744.0" y="1538.0"/>
+      <point x="517.0" y="1538.0" type="curve" smooth="yes"/>
+      <point x="254.0" y="1538.0"/>
+      <point x="71.0" y="1356.0"/>
+      <point x="70.0" y="1094.0" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="486.0" y="860.0" type="curve"/>
+      <point x="486.0" y="698.0" type="line"/>
+      <point x="722.0" y="698.0"/>
+      <point x="892.0" y="580.0"/>
+      <point x="892.0" y="419.0" type="curve" smooth="yes"/>
+      <point x="892.0" y="267.0"/>
+      <point x="806.0" y="157.0"/>
+      <point x="686.0" y="157.0" type="curve" smooth="yes"/>
+      <point x="650.0" y="157.0"/>
+      <point x="610.0" y="189.0"/>
+      <point x="588.0" y="240.0" type="curve"/>
+      <point x="362.0" y="240.0" type="line"/>
+      <point x="435.0" y="78.0"/>
+      <point x="560.0" y="-22.0"/>
+      <point x="675.0" y="-22.0" type="curve" smooth="yes"/>
+      <point x="931.0" y="-22.0"/>
+      <point x="1110.0" y="159.0"/>
+      <point x="1110.0" y="419.0" type="curve" smooth="yes"/>
+      <point x="1110.0" y="679.0"/>
+      <point x="854.0" y="860.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>stem rising into an arch; waist ends in a vertical cut; lower bowl cut like s</string>
+    </dict>
+  </lib>
+</glyph>

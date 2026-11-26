@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="leftArrow" format="2">
+  <advance width="1180"/>
+  <unicode hex="2190"/>
+  <outline>
+    <contour>
+      <point x="499.0" y="952.0" type="line"/>
+      <point x="418.0" y="1033.0" type="line"/>
+      <point x="40.0" y="655.0" type="line"/>
+      <point x="121.0" y="574.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="499.0" y="358.0" type="line"/>
+      <point x="197.0" y="661.0" type="line"/>
+      <point x="116.0" y="579.0" type="line"/>
+      <point x="418.0" y="277.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1140.0" y="598.0" type="line"/>
+      <point x="1140.0" y="713.0" type="line"/>
+      <point x="120.0" y="713.0" type="line"/>
+      <point x="120.0" y="598.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>→ mirrored</string>
+    </dict>
+  </lib>
+</glyph>

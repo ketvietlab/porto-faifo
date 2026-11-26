@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="whiteSmallSquare" format="2">
+  <advance width="1180"/>
+  <unicode hex="25AB"/>
+  <outline>
+    <contour>
+      <point x="312.0" y="233.0" type="line"/>
+      <point x="868.0" y="233.0" type="line"/>
+      <point x="868.0" y="789.0" type="line"/>
+      <point x="312.0" y="789.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="396.0" y="317.0" type="line"/>
+      <point x="396.0" y="706.0" type="line"/>
+      <point x="784.0" y="706.0" type="line"/>
+      <point x="784.0" y="317.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>square x0.38 on the bullet, x0.55 outline</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="quotedblright" format="2">
+  <advance width="1180"/>
+  <unicode hex="201D"/>
+  <outline>
+    <contour>
+      <point x="545.0" y="1335.0" type="curve" smooth="yes"/>
+      <point x="545.0" y="1402.0"/>
+      <point x="491.0" y="1456.0"/>
+      <point x="424.0" y="1456.0" type="curve" smooth="yes"/>
+      <point x="357.0" y="1456.0"/>
+      <point x="303.0" y="1402.0"/>
+      <point x="303.0" y="1335.0" type="curve" smooth="yes"/>
+      <point x="303.0" y="1268.0"/>
+      <point x="357.0" y="1214.0"/>
+      <point x="424.0" y="1214.0" type="curve" smooth="yes"/>
+      <point x="491.0" y="1214.0"/>
+      <point x="545.0" y="1268.0"/>
+    </contour>
+    <contour>
+      <point x="537.0" y="1323.0" type="line"/>
+      <point x="376.0" y="1244.0" type="line"/>
+      <point x="319.0" y="886.0" type="line"/>
+      <point x="430.0" y="886.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="877.0" y="1335.0" type="curve" smooth="yes"/>
+      <point x="877.0" y="1402.0"/>
+      <point x="823.0" y="1456.0"/>
+      <point x="756.0" y="1456.0" type="curve" smooth="yes"/>
+      <point x="689.0" y="1456.0"/>
+      <point x="635.0" y="1402.0"/>
+      <point x="635.0" y="1335.0" type="curve" smooth="yes"/>
+      <point x="635.0" y="1268.0"/>
+      <point x="689.0" y="1214.0"/>
+      <point x="756.0" y="1214.0" type="curve" smooth="yes"/>
+      <point x="823.0" y="1214.0"/>
+      <point x="877.0" y="1268.0"/>
+    </contour>
+    <contour>
+      <point x="869.0" y="1323.0" type="line"/>
+      <point x="708.0" y="1244.0" type="line"/>
+      <point x="651.0" y="886.0" type="line"/>
+      <point x="762.0" y="886.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>two ’</string>
+    </dict>
+  </lib>
+</glyph>

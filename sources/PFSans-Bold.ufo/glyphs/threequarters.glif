@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="threequarters" format="2">
+  <advance width="2009"/>
+  <unicode hex="00BE"/>
+  <outline>
+    <component base="three.numr"/>
+    <component base="fraction" xOffset="855"/>
+    <component base="four.dnom" xOffset="1155"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>three.numr + fraction + four.dnom</string>
+    </dict>
+  </lib>
+</glyph>

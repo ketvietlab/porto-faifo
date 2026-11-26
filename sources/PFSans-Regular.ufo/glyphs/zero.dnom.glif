@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="zero.dnom" format="2">
+  <advance width="784"/>
+  <outline>
+    <contour>
+      <point x="680.0" y="386.0" type="curve" smooth="yes"/>
+      <point x="680.0" y="622.0"/>
+      <point x="562.0" y="787.0"/>
+      <point x="392.0" y="787.0" type="curve" smooth="yes"/>
+      <point x="222.0" y="787.0"/>
+      <point x="104.0" y="622.0"/>
+      <point x="104.0" y="386.0" type="curve" smooth="yes"/>
+      <point x="104.0" y="149.0"/>
+      <point x="222.0" y="-15.0"/>
+      <point x="392.0" y="-15.0" type="curve" smooth="yes"/>
+      <point x="562.0" y="-15.0"/>
+      <point x="680.0" y="149.0"/>
+    </contour>
+    <contour>
+      <point x="530.0" y="386.0" type="curve" smooth="yes"/>
+      <point x="530.0" y="222.0"/>
+      <point x="475.0" y="113.0"/>
+      <point x="392.0" y="113.0" type="curve" smooth="yes"/>
+      <point x="309.0" y="113.0"/>
+      <point x="254.0" y="222.0"/>
+      <point x="254.0" y="386.0" type="curve" smooth="yes"/>
+      <point x="254.0" y="550.0"/>
+      <point x="309.0" y="659.0"/>
+      <point x="392.0" y="659.0" type="curve" smooth="yes"/>
+      <point x="475.0" y="659.0"/>
+      <point x="530.0" y="550.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>zero x0.53, stroke x superiorWeight, on the baseline (frac)</string>
+    </dict>
+  </lib>
+</glyph>

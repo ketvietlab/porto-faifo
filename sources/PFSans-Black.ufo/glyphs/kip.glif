@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="kip" format="2">
+  <advance width="1436"/>
+  <unicode hex="20AD"/>
+  <outline>
+    <contour>
+      <point x="168.0" y="0.0" type="line"/>
+      <point x="520.0" y="0.0" type="line"/>
+      <point x="520.0" y="1456.0" type="line"/>
+      <point x="168.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="216.0" y="533.0" type="line"/>
+      <point x="472.0" y="341.0" type="line"/>
+      <point x="1308.0" y="1456.0" type="line"/>
+      <point x="907.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="792.0" y="928.0" type="line"/>
+      <point x="507.0" y="761.0" type="line"/>
+      <point x="955.0" y="0.0" type="line"/>
+      <point x="1338.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="98.0" y="631.0" type="line"/>
+      <point x="1010.0" y="631.0" type="line"/>
+      <point x="1010.0" y="825.0" type="line"/>
+      <point x="98.0" y="825.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>K narrowed + bar at half the cap height; tabular</string>
+    </dict>
+  </lib>
+</glyph>

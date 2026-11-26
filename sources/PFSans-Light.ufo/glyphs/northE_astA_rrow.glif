@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="northEastArrow" format="2">
+  <advance width="1587"/>
+  <unicode hex="2197"/>
+  <outline>
+    <contour>
+      <point x="676.0" y="1201.0" type="line"/>
+      <point x="1383.0" y="1201.0" type="line"/>
+      <point x="1383.0" y="1318.0" type="line"/>
+      <point x="676.0" y="1318.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1266.0" y="610.0" type="line"/>
+      <point x="1383.0" y="610.0" type="line"/>
+      <point x="1383.0" y="1211.0" type="line"/>
+      <point x="1266.0" y="1211.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="204.0" y="221.0" type="line"/>
+      <point x="287.0" y="138.0" type="line"/>
+      <point x="1354.0" y="1206.0" type="line"/>
+      <point x="1272.0" y="1289.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>shaft at 45° into a corner head, 0.81 cap box centred on half the cap height</string>
+    </dict>
+  </lib>
+</glyph>

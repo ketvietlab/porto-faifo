@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="equal" format="2">
+  <advance width="1180"/>
+  <unicode hex="003D"/>
+  <outline>
+    <contour>
+      <point x="150.0" y="745.0" type="line"/>
+      <point x="1030.0" y="745.0" type="line"/>
+      <point x="1030.0" y="913.0" type="line"/>
+      <point x="150.0" y="913.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="150.0" y="397.0" type="line"/>
+      <point x="1030.0" y="397.0" type="line"/>
+      <point x="1030.0" y="565.0" type="line"/>
+      <point x="150.0" y="565.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>two plus bars</string>
+    </dict>
+  </lib>
+</glyph>

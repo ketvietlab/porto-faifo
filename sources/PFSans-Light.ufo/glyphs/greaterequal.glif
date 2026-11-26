@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="greaterequal" format="2">
+  <advance width="1274"/>
+  <unicode hex="2265"/>
+  <outline>
+    <contour>
+      <point x="976.0" y="714.0" type="line"/>
+      <point x="481.0" y="984.0" type="line"/>
+      <point x="237.0" y="984.0" type="line"/>
+      <point x="732.0" y="714.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="732.0" y="714.0" type="line"/>
+      <point x="237.0" y="443.0" type="line"/>
+      <point x="481.0" y="443.0" type="line"/>
+      <point x="976.0" y="714.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1037.0" y="0.0" type="line"/>
+      <point x="1037.0" y="117.0" type="line"/>
+      <point x="237.0" y="117.0" type="line"/>
+      <point x="237.0" y="0.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>≤ mirrored</string>
+    </dict>
+  </lib>
+</glyph>

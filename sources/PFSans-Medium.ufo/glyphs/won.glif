@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="won" format="2">
+  <advance width="2050"/>
+  <unicode hex="20A9"/>
+  <outline>
+    <contour>
+      <point x="304.0" y="1456.0" type="line"/>
+      <point x="100.0" y="1456.0" type="line"/>
+      <point x="468.0" y="0.0" type="line"/>
+      <point x="675.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="468.0" y="0.0" type="line"/>
+      <point x="675.0" y="0.0" type="line"/>
+      <point x="1128.0" y="1456.0" type="line"/>
+      <point x="922.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1128.0" y="1456.0" type="line"/>
+      <point x="922.0" y="1456.0" type="line"/>
+      <point x="1375.0" y="0.0" type="line"/>
+      <point x="1582.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1375.0" y="0.0" type="line"/>
+      <point x="1582.0" y="0.0" type="line"/>
+      <point x="1950.0" y="1456.0" type="line"/>
+      <point x="1746.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="60.0" y="464.0" type="line"/>
+      <point x="1990.0" y="464.0" type="line"/>
+      <point x="1990.0" y="613.0" type="line"/>
+      <point x="60.0" y="613.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="60.0" y="843.0" type="line"/>
+      <point x="1990.0" y="843.0" type="line"/>
+      <point x="1990.0" y="992.0" type="line"/>
+      <point x="60.0" y="992.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>W + two bars; keeps the W width (as SF, Inter)</string>
+    </dict>
+  </lib>
+</glyph>

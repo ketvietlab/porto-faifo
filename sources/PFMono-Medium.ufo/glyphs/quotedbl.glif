@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="quotedbl" format="2">
+  <advance width="1180"/>
+  <unicode hex="0022"/>
+  <outline>
+    <contour>
+      <point x="365.0" y="976.0" type="line"/>
+      <point x="503.0" y="976.0" type="line"/>
+      <point x="530.0" y="1456.0" type="line"/>
+      <point x="338.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="677.0" y="976.0" type="line"/>
+      <point x="815.0" y="976.0" type="line"/>
+      <point x="842.0" y="1456.0" type="line"/>
+      <point x="650.0" y="1456.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>two ticks</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="four.dnom" format="2">
+  <advance width="855"/>
+  <outline>
+    <contour>
+      <point x="512.0" y="0.0" type="line"/>
+      <point x="749.0" y="0.0" type="line"/>
+      <point x="749.0" y="772.0" type="line"/>
+      <point x="512.0" y="772.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="84.0" y="166.0" type="line"/>
+      <point x="771.0" y="166.0" type="line"/>
+      <point x="771.0" y="353.0" type="line"/>
+      <point x="84.0" y="353.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="84.0" y="353.0" type="line"/>
+      <point x="348.0" y="353.0" type="line"/>
+      <point x="512.0" y="513.0" type="line"/>
+      <point x="512.0" y="772.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>four x0.53, stroke x superiorWeight, on the baseline (frac)</string>
+    </dict>
+  </lib>
+</glyph>

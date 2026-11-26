@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="multiply" format="2">
+  <advance width="1180"/>
+  <unicode hex="00D7"/>
+  <outline>
+    <contour>
+      <point x="231.0" y="415.0" type="line"/>
+      <point x="349.0" y="296.0" type="line"/>
+      <point x="949.0" y="896.0" type="line"/>
+      <point x="831.0" y="1015.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="349.0" y="1015.0" type="line"/>
+      <point x="231.0" y="896.0" type="line"/>
+      <point x="831.0" y="296.0" type="line"/>
+      <point x="949.0" y="415.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>plus rotated 45°</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="northWestArrow" format="2">
+  <advance width="1180"/>
+  <unicode hex="2196"/>
+  <outline>
+    <contour>
+      <point x="700.0" y="1121.0" type="line"/>
+      <point x="700.0" y="1278.0" type="line"/>
+      <point x="40.0" y="1278.0" type="line"/>
+      <point x="40.0" y="1121.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="197.0" y="618.0" type="line"/>
+      <point x="197.0" y="1131.0" type="line"/>
+      <point x="40.0" y="1131.0" type="line"/>
+      <point x="40.0" y="618.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1140.0" y="289.0" type="line"/>
+      <point x="189.0" y="1239.0" type="line"/>
+      <point x="79.0" y="1129.0" type="line"/>
+      <point x="1029.0" y="178.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>↗ mirrored</string>
+    </dict>
+  </lib>
+</glyph>

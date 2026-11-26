@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lessequal" format="2">
+  <advance width="1274"/>
+  <unicode hex="2264"/>
+  <outline>
+    <contour>
+      <point x="298.0" y="714.0" type="line"/>
+      <point x="542.0" y="714.0" type="line"/>
+      <point x="1037.0" y="984.0" type="line"/>
+      <point x="793.0" y="984.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="542.0" y="714.0" type="line"/>
+      <point x="298.0" y="714.0" type="line"/>
+      <point x="793.0" y="443.0" type="line"/>
+      <point x="1037.0" y="443.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="237.0" y="0.0" type="line"/>
+      <point x="1037.0" y="0.0" type="line"/>
+      <point x="1037.0" y="117.0" type="line"/>
+      <point x="237.0" y="117.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>&lt; flattened to 560, 300 over a bar on the baseline</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hyphen" format="2">
+  <advance width="1180"/>
+  <unicode hex="002D"/>
+  <outline>
+    <contour>
+      <point x="310.0" y="428.0" type="line"/>
+      <point x="870.0" y="428.0" type="line"/>
+      <point x="870.0" y="595.0" type="line"/>
+      <point x="310.0" y="595.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>bar weight at e-bar height</string>
+    </dict>
+  </lib>
+</glyph>

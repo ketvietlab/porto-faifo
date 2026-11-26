@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="eightsuperior" format="2">
+  <advance width="784"/>
+  <unicode hex="2078"/>
+  <outline>
+    <component base="eight.dnom" yOffset="830"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>eight.dnom raised: bottom at 0.57 cap height</string>
+    </dict>
+  </lib>
+</glyph>

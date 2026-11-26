@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="tenge" format="2">
+  <advance width="1274"/>
+  <unicode hex="20B8"/>
+  <outline>
+    <contour>
+      <point x="197.0" y="1325.0" type="line"/>
+      <point x="1077.0" y="1325.0" type="line"/>
+      <point x="1077.0" y="1456.0" type="line"/>
+      <point x="197.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="197.0" y="1083.0" type="line"/>
+      <point x="1077.0" y="1083.0" type="line"/>
+      <point x="1077.0" y="1214.0" type="line"/>
+      <point x="197.0" y="1214.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="564.0" y="0.0" type="line"/>
+      <point x="710.0" y="0.0" type="line"/>
+      <point x="710.0" y="1093.0" type="line"/>
+      <point x="564.0" y="1093.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>T with a second bar above the stem; tabular</string>
+    </dict>
+  </lib>
+</glyph>

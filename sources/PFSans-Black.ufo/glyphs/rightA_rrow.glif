@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="rightArrow" format="2">
+  <advance width="1864"/>
+  <unicode hex="2192"/>
+  <outline>
+    <contour>
+      <point x="949.0" y="945.0" type="line"/>
+      <point x="1449.0" y="444.0" type="line"/>
+      <point x="1660.0" y="655.0" type="line"/>
+      <point x="1159.0" y="1156.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="949.0" y="366.0" type="line"/>
+      <point x="1159.0" y="155.0" type="line"/>
+      <point x="1456.0" y="452.0" type="line"/>
+      <point x="1245.0" y="662.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="204.0" y="506.0" type="line"/>
+      <point x="1451.0" y="506.0" type="line"/>
+      <point x="1451.0" y="804.0" type="line"/>
+      <point x="204.0" y="804.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>punctStroke shaft, 1 cap long, on the math axis; the diagonal head turned 45°</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="M" format="2">
+  <advance width="1180"/>
+  <unicode hex="004D"/>
+  <anchor x="590" y="0" name="bottom"/>
+  <anchor x="590" y="1456" name="top"/>
+  <outline>
+    <contour>
+      <point x="70.0" y="0.0" type="line"/>
+      <point x="248.0" y="0.0" type="line"/>
+      <point x="248.0" y="1456.0" type="line"/>
+      <point x="70.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="932.0" y="0.0" type="line"/>
+      <point x="1110.0" y="0.0" type="line"/>
+      <point x="1110.0" y="1456.0" type="line"/>
+      <point x="932.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="70.0" y="1456.0" type="line"/>
+      <point x="528.0" y="437.0" type="line"/>
+      <point x="652.0" y="437.0" type="line"/>
+      <point x="193.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1110.0" y="1456.0" type="line"/>
+      <point x="987.0" y="1456.0" type="line"/>
+      <point x="528.0" y="437.0" type="line"/>
+      <point x="652.0" y="437.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>mono: N stems; diagonals x0.74 meet in a flat vertex at 0.3 cap</string>
+    </dict>
+  </lib>
+</glyph>

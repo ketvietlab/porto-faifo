@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="fiveinferior" format="2">
+  <advance width="855"/>
+  <unicode hex="2085"/>
+  <outline>
+    <component base="five.dnom" yOffset="-262"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>five.dnom raised: bottom at -0.18 cap height</string>
+    </dict>
+  </lib>
+</glyph>

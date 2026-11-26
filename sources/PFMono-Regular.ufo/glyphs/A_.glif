@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="A" format="2">
+  <advance width="1180"/>
+  <unicode hex="0041"/>
+  <anchor x="590" y="0" name="bottom"/>
+  <anchor x="1040" y="0" name="ogonek"/>
+  <anchor x="590" y="1456" name="top"/>
+  <outline>
+    <contour>
+      <point x="40.0" y="0.0" type="line"/>
+      <point x="211.0" y="0.0" type="line"/>
+      <point x="334.0" y="400.0" type="line"/>
+      <point x="846.0" y="400.0" type="line"/>
+      <point x="969.0" y="0.0" type="line"/>
+      <point x="1140.0" y="0.0" type="line"/>
+      <point x="693.0" y="1456.0" type="line"/>
+      <point x="487.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="385.0" y="566.0" type="line"/>
+      <point x="590.0" y="1234.0" type="line"/>
+      <point x="795.0" y="566.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>diagonal master; flat apex, low bar</string>
+    </dict>
+  </lib>
+</glyph>

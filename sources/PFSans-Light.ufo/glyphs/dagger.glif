@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dagger" format="2">
+  <advance width="937"/>
+  <unicode hex="2020"/>
+  <outline>
+    <contour>
+      <point x="414.0" y="379.0" type="line"/>
+      <point x="523.0" y="379.0" type="line"/>
+      <point x="537.0" y="1456.0" type="line"/>
+      <point x="400.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="90.0" y="1005.0" type="line"/>
+      <point x="847.0" y="1005.0" type="line"/>
+      <point x="847.0" y="1120.0" type="line"/>
+      <point x="90.0" y="1120.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>tapered stem (176 -&gt; 140) from 0.26 to the cap height + bar, as Inter</string>
+    </dict>
+  </lib>
+</glyph>

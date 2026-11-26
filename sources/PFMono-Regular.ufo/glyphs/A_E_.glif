@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="AE" format="2">
+  <advance width="1180"/>
+  <unicode hex="00C6"/>
+  <anchor x="543" y="0" name="bottom"/>
+  <anchor x="543" y="1456" name="top"/>
+  <outline>
+    <contour>
+      <point x="44.0" y="0.0" type="line"/>
+      <point x="217.0" y="0.0" type="line"/>
+      <point x="737.0" y="1456.0" type="line"/>
+      <point x="564.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="565.0" y="0.0" type="line"/>
+      <point x="736.0" y="0.0" type="line"/>
+      <point x="736.0" y="1456.0" type="line"/>
+      <point x="565.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="565.0" y="1305.0" type="line"/>
+      <point x="1025.0" y="1305.0" type="line"/>
+      <point x="1025.0" y="1456.0" type="line"/>
+      <point x="565.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="726.0" y="670.0" type="line"/>
+      <point x="961.0" y="670.0" type="line"/>
+      <point x="961.0" y="815.0" type="line"/>
+      <point x="726.0" y="815.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="726.0" y="0.0" type="line"/>
+      <point x="1041.0" y="0.0" type="line"/>
+      <point x="1041.0" y="157.0" type="line"/>
+      <point x="726.0" y="157.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="273.0" y="400.0" type="line"/>
+      <point x="575.0" y="400.0" type="line"/>
+      <point x="575.0" y="546.0" type="line"/>
+      <point x="273.0" y="546.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>A left leg + E</string>
+    </dict>
+  </lib>
+</glyph>

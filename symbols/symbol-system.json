@@ -2,8 +2,8 @@
   "meta": {
     "brandName": "Porto Faifo Symbols",
     "familyName": "Porto Faifo Symbols",
-    "version": "1.0.0",
-    "phase": "1.0",
+    "version": "1.1.0",
+    "phase": "1.1",
     "designer": "Két Việt",
     "fontSystem": "../design-system.json",
     "comment": "Parameters of the symbol set. Stroke, tension, dots, flat apexes and keylines are computed from the design-system.json of Porto Faifo Sans, not typed by hand: change the font and the symbols follow."

@@ -1,0 +1,22 @@
+{
+  "name": "porto-faifo-website",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^24.22.3 || >=26.13.1"
+  },
+  "scripts": {
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "dev": "npm run prepare:assets && ket-view dev",
+    "check": "npm run prepare:assets && tsc --noEmit && ket-view check",
+    "build": "npm run prepare:assets && ket-view build",
+    "preview": "ket-view preview"
+  },
+  "dependencies": {
+    "@ketvietlab/ketjs-view": "0.9.0"
+  },
+  "devDependencies": {
+    "@ketvietlab/ketjs-view-tools": "0.9.0",
+    "typescript": "^6.0.3"
+  }
+}

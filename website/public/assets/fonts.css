@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Porto Faifo Sans";
+  src: url("./PortoFaifoSans%5Bopsz%2Cwght%5D.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Porto Faifo Mono";
+  src: url("./PortoFaifoMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Match Porto Faifo's 95.7% ascent, 25.4% descent and zero line gap while WOFF2 loads. */
+@font-face {
+  font-family: "Porto Faifo Sans Fallback";
+  src: local("Arial");
+  font-weight: 300 500;
+  size-adjust: 103.8%;
+  ascent-override: 92.20%;
+  descent-override: 24.47%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Porto Faifo Sans Fallback";
+  src: local("Arial Bold");
+  font-weight: 600 900;
+  size-adjust: 102.5%;
+  ascent-override: 93.37%;
+  descent-override: 24.78%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Porto Faifo Mono Fallback";
+  src: local("Courier New");
+  font-weight: 400 500;
+  size-adjust: 96%;
+  ascent-override: 99.69%;
+  descent-override: 26.46%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Porto Faifo Mono";
+  src: url("./PortoFaifoMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}

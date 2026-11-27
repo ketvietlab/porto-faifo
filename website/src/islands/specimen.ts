@@ -1,6 +1,7 @@
 import { each, html, signal } from '@ketvietlab/ketjs-view'
 import type { IslandFactory } from '@ketvietlab/ketjs-view'
 import { sansWeights } from '../asset-data.ts'
+import { selectControl } from '../select-control.ts'
 
 const samples = [
   { name: 'Vietnamese', lang: 'vi', text: 'Một chiều Hội An.\nNắng đậu trên mái ngói.' },
@@ -25,21 +26,21 @@ const specimen: IslandFactory<{ initialFamily?: 'sans' | 'mono' }> = ({ initialF
           <legend class="sr-only">Type settings</legend>
           <label>
             <span>Typeface</span>
-            <select on:change=${(event: Event) => {
-              const next = (event.currentTarget as HTMLSelectElement).value === 'mono' ? 'mono' : 'sans'
-              family.set(next)
-              if (next === 'mono' && !monoWeights.some(({ value }) => value === weight())) weight.set(500)
-            }}>
+            ${selectControl(html`
               <option value="sans" selected=${initialFamily === 'sans'}>Porto Faifo Sans</option>
               <option value="mono" selected=${initialFamily === 'mono'}>Porto Faifo Mono</option>
-            </select>
+            `, (value) => {
+              const next = value === 'mono' ? 'mono' : 'sans'
+              family.set(next)
+              if (next === 'mono' && !monoWeights.some(({ value: monoWeight }) => monoWeight === weight())) weight.set(500)
+            })}
           </label>
           <label>
             <span>Weight</span>
-            <select on:change=${(event: Event) => weight.set(Number((event.currentTarget as HTMLSelectElement).value))}>
+            ${selectControl(html`
               ${each(family() === 'mono' ? monoWeights : sansWeights, ({ value }) => value, ({ name, value }) =>
                 html`<option value=${value} selected=${value === weight()}>${name} ${value}</option>`)}
-            </select>
+            `, (value) => weight.set(Number(value)))}
           </label>
           <div class="size-control">
             <label for="specimen-size">Size</label>

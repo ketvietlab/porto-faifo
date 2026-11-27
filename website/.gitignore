@@ -2,5 +2,8 @@
 /node_modules/
 /public/assets/*.woff2
 /public/assets/porto-faifo-symbols.svg
+/public/assets/porto-faifo-dashboard-symbols.svg
 /public/assets/OFL.txt
+/public/robots.txt
+/public/sitemap.xml
 /src/asset-data.ts

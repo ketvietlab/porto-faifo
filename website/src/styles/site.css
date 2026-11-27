@@ -29,6 +29,32 @@ button, select, input[type="range"] { cursor: pointer; }
 button:disabled, fieldset:disabled :is(select, input) { cursor: default; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
 
+.select-control { position: relative; display: grid; min-width: 0; color: var(--ink); }
+
+.select-control select {
+  appearance: none;
+  padding: .35rem .55rem;
+  padding-inline-end: 2rem;
+}
+
+.select-control::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: .85rem;
+  width: .45rem;
+  height: .45rem;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+@media (forced-colors: active) {
+  .select-control select { appearance: auto; padding-inline-end: .55rem; }
+  .select-control::after { display: none; }
+}
+
 .wrap { width: min(100% - 2 * var(--edge), 78rem); margin-inline: auto; }
 .section { padding-block: var(--section-space); }
 
@@ -308,7 +334,6 @@ h2 { font-size: clamp(2.8rem, 6vw, 5.75rem); line-height: 1; letter-spacing: -.0
   min-width: 0;
   width: 100%;
   min-height: 2.75rem;
-  padding: .35rem .55rem;
   border-radius: .375rem;
   border: 1px solid var(--line);
   background: var(--sheet);
@@ -562,7 +587,7 @@ h2 { font-size: clamp(2.8rem, 6vw, 5.75rem); line-height: 1; letter-spacing: -.0
   .hero-actions .button-text { padding-inline: .25rem; }
   .plate-footer .meta { font-size: .625rem; }
   .plate-alphabet { font-size: .875rem; }
-  .tester-controls select { padding-inline: .3rem; }
+  .tester-controls select { padding-inline-start: .4rem; font-size: .9375rem; }
   .symbol-toolbar { align-items: stretch; flex-direction: column; }
   .symbol-search { width: 100%; }
   .symbol-count { text-align: start; }

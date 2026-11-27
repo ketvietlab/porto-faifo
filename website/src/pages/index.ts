@@ -4,10 +4,12 @@ import { sizes, symbolData, symbolWeights, version } from '../asset-data.ts'
 import specimen from '../islands/specimen.ts'
 import symbols from '../islands/symbols.ts'
 import { archive, footer, header, pageHead, release } from '../layout.ts'
+import { productionLinks } from '../production-links.ts'
+import { routes } from '../site.ts'
 import { symbol } from '../symbol.ts'
 
-const description = 'Porto Faifo is a free, open-source collection of typefaces and symbols built for digital interfaces, with full Vietnamese support.'
 const iconCount = symbolData.length.toLocaleString('en')
+const description = `Download Porto Faifo, a free collection for digital interfaces. Try Vietnamese Sans and Mono fonts, and browse ${iconCount} open-source SVG icons.`
 const cards = [
   {
     name: 'Sans',
@@ -46,7 +48,8 @@ const downloads = [
 ]
 
 export default definePage({
-  head: pageHead('Porto Faifo — Type and symbols for interfaces', description),
+  path: routes.home,
+  head: pageHead('Porto Faifo | Free Vietnamese Fonts and Interface Icons', description),
   view: () => html`
     ${header()}
 
@@ -55,7 +58,7 @@ export default definePage({
         <div class="hero-copy">
           <p class="meta hero-kicker"><span></span> An open type collection by Két Việt</p>
           <h1 id="hero-title">Porto<br>Faifo<span>.</span></h1>
-          <p class="hero-intro">Type and symbols for digital interfaces, with full Vietnamese support.</p>
+          <p class="hero-intro">Free fonts and icons for digital interfaces, with full Vietnamese support.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#download">Download the collection ${symbol('download')}</a>
             <a class="button button-text" href="#specimen">Try the type ${symbol('arrow-down')}</a>
@@ -138,6 +141,11 @@ export default definePage({
         </div>
         ${island('symbols', symbols, {})}
         <noscript><p class="fallback-note">Enable JavaScript to search the catalogue, or <a href="#download">download the full set</a>.</p></noscript>
+      </section>
+
+      <section class="wrap live-examples home-live-examples" aria-labelledby="live-examples-title">
+        <h2 id="live-examples-title">Explore live websites</h2>
+        ${productionLinks()}
       </section>
 
       <section id="download" class="download-section" aria-labelledby="download-title">

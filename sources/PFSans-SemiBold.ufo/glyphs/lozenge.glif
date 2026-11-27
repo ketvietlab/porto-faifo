@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lozenge" format="2">
+  <advance width="1340"/>
+  <unicode hex="25CA"/>
+  <outline>
+    <contour>
+      <point x="670.0" y="29.0" type="line"/>
+      <point x="1136.0" y="728.0" type="line"/>
+      <point x="670.0" y="1427.0" type="line"/>
+      <point x="204.0" y="728.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="670.0" y="345.0" type="line"/>
+      <point x="414.0" y="728.0" type="line"/>
+      <point x="670.0" y="1111.0" type="line"/>
+      <point x="925.0" y="728.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>narrow diamond 0.64 x 0.96 cap, outlined</string>
+    </dict>
+  </lib>
+</glyph>

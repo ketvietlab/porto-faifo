@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seven.dnom" format="2">
+  <advance width="831"/>
+  <outline>
+    <contour>
+      <point x="102.0" y="603.0" type="line"/>
+      <point x="735.0" y="603.0" type="line"/>
+      <point x="735.0" y="772.0" type="line"/>
+      <point x="102.0" y="772.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="182.0" y="0.0" type="line"/>
+      <point x="407.0" y="0.0" type="line"/>
+      <point x="735.0" y="604.0" type="line"/>
+      <point x="509.0" y="604.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>seven x0.53, stroke x superiorWeight, on the baseline (frac)</string>
+    </dict>
+  </lib>
+</glyph>

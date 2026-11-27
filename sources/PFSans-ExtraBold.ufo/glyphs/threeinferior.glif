@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="threeinferior" format="2">
+  <advance width="861"/>
+  <unicode hex="2083"/>
+  <outline>
+    <component base="three.dnom" yOffset="-262"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>three.dnom raised: bottom at -0.18 cap height</string>
+    </dict>
+  </lib>
+</glyph>

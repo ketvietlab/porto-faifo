@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="two.dnom" format="2">
+  <advance width="831"/>
+  <outline>
+    <contour>
+      <point x="110.0" y="533.0" type="curve"/>
+      <point x="330.0" y="533.0" type="line"/>
+      <point x="343.0" y="587.0"/>
+      <point x="379.0" y="620.0"/>
+      <point x="416.0" y="620.0" type="curve" smooth="yes"/>
+      <point x="473.0" y="620.0"/>
+      <point x="515.0" y="583.0"/>
+      <point x="515.0" y="532.0" type="curve" smooth="yes"/>
+      <point x="515.0" y="529.0"/>
+      <point x="335.0" y="376.0"/>
+      <point x="97.0" y="176.0" type="curve"/>
+      <point x="97.0" y="0.0" type="line"/>
+      <point x="740.0" y="0.0" type="line"/>
+      <point x="740.0" y="176.0" type="line"/>
+      <point x="366.0" y="176.0" type="line"/>
+      <point x="573.0" y="350.0"/>
+      <point x="729.0" y="505.0"/>
+      <point x="729.0" y="540.0" type="curve" smooth="yes"/>
+      <point x="729.0" y="686.0"/>
+      <point x="601.0" y="787.0"/>
+      <point x="416.0" y="787.0" type="curve" smooth="yes"/>
+      <point x="272.0" y="787.0"/>
+      <point x="149.0" y="690.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>two x0.53, stroke x superiorWeight, on the baseline (frac)</string>
+    </dict>
+  </lib>
+</glyph>

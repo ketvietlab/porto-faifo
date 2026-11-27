@@ -282,6 +282,9 @@
       <string>Dcircled</string>
       <string>leftanglebracket-math</string>
       <string>rightanglebracket-math</string>
+      <string>uni25CC</string>
+      <string>uni2028</string>
+      <string>uni2029</string>
       <string>acutecomb</string>
       <string>gravecomb</string>
       <string>circumflexcomb</string>
@@ -1138,6 +1141,8 @@
       <string>base</string>
       <key>iogonek</key>
       <string>base</string>
+      <key>iogonek.dotless</key>
+      <string>base</string>
       <key>itilde</key>
       <string>base</string>
       <key>j</key>
@@ -1657,6 +1662,12 @@
       <key>uni1EF8</key>
       <string>base</string>
       <key>uni1EF9</key>
+      <string>base</string>
+      <key>uni2028</key>
+      <string>base</string>
+      <key>uni2029</key>
+      <string>base</string>
+      <key>uni25CC</key>
       <string>base</string>
       <key>uogonek</key>
       <string>base</string>

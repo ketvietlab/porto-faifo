@@ -282,6 +282,9 @@
       <string>Dcircled</string>
       <string>leftanglebracket-math</string>
       <string>rightanglebracket-math</string>
+      <string>uni25CC</string>
+      <string>uni2028</string>
+      <string>uni2029</string>
       <string>acutecomb</string>
       <string>gravecomb</string>
       <string>circumflexcomb</string>
@@ -587,6 +590,17 @@
       <string>uni1EF9</string>
       <string>iogonek.dotless</string>
       <string>uni1ECB.dotless</string>
+      <string>zero.tnum</string>
+      <string>one.tnum</string>
+      <string>two.tnum</string>
+      <string>three.tnum</string>
+      <string>four.tnum</string>
+      <string>five.tnum</string>
+      <string>six.tnum</string>
+      <string>seven.tnum</string>
+      <string>eight.tnum</string>
+      <string>nine.tnum</string>
+      <string>zero.zero.tnum</string>
     </array>
     <key>public.openTypeCategories</key>
     <dict>
@@ -1138,6 +1152,8 @@
       <string>base</string>
       <key>iogonek</key>
       <string>base</string>
+      <key>iogonek.dotless</key>
+      <string>base</string>
       <key>itilde</key>
       <string>base</string>
       <key>j</key>
@@ -1657,6 +1673,12 @@
       <key>uni1EF8</key>
       <string>base</string>
       <key>uni1EF9</key>
+      <string>base</string>
+      <key>uni2028</key>
+      <string>base</string>
+      <key>uni2029</key>
+      <string>base</string>
+      <key>uni25CC</key>
       <string>base</string>
       <key>uogonek</key>
       <string>base</string>

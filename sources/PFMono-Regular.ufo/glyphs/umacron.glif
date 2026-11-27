@@ -2,6 +2,7 @@
 <glyph name="umacron" format="2">
   <advance width="1180"/>
   <unicode hex="016B"/>
+  <anchor x="574" y="1519" name="top"/>
   <outline>
     <component base="u"/>
     <component base="macroncomb" xOffset="574"/>

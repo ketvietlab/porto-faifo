@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="iogonek.dotless" format="2">
   <advance width="1180"/>
+  <anchor x="630" y="1088" name="top"/>
   <outline>
     <contour>
       <point x="526.0" y="0.0" type="line"/>

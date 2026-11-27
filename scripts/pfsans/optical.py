@@ -40,12 +40,12 @@ def display_spacing(glyphs, system):
         parent = base(name)
         if parent != name:
             return reduction(parent)
-        if name.endswith(".zero"):  # the slashed zero stays on the tabular advance
+        if name.endswith(".zero"):  # match the default zero
             return reduction(name.removesuffix(".zero"))
         char = chr(glyph.unicodes[0]) if glyph.unicodes else ""
         if char == " ":
             return 0, round(glyph.width) - config["spaceAdvance"]
-        if char and char in config["tabularCharacters"]:
+        if name.endswith(".tnum") or (char and not char.isdecimal() and char in config["tabularCharacters"]):
             total = config["tabularAdvanceReduction"]
             return total // 2, total - total // 2
         category = unicodedata.category(char) if char else ""

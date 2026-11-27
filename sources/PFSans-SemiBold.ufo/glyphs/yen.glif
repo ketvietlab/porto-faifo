@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="yen" format="2">
+  <advance width="1334"/>
+  <unicode hex="00A5"/>
+  <outline>
+    <contour>
+      <point x="137.0" y="1456.0" type="line"/>
+      <point x="533.0" y="684.0" type="line"/>
+      <point x="533.0" y="0.0" type="line"/>
+      <point x="801.0" y="0.0" type="line"/>
+      <point x="801.0" y="684.0" type="line"/>
+      <point x="1197.0" y="1456.0" type="line"/>
+      <point x="914.0" y="1456.0" type="line"/>
+      <point x="667.0" y="975.0" type="line"/>
+      <point x="420.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="307.0" y="392.0" type="line"/>
+      <point x="1027.0" y="392.0" type="line"/>
+      <point x="1027.0" y="582.0" type="line"/>
+      <point x="307.0" y="582.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="307.0" y="101.0" type="line"/>
+      <point x="1027.0" y="101.0" type="line"/>
+      <point x="1027.0" y="291.0" type="line"/>
+      <point x="307.0" y="291.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>Y on figure stem + two bars, tabular</string>
+    </dict>
+  </lib>
+</glyph>

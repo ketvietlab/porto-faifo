@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dieresiscomb" format="2">
+  <unicode hex="0308"/>
+  <anchor x="0" y="1088" name="_top"/>
+  <anchor x="0" y="1661" name="top"/>
+  <outline>
+    <contour>
+      <point x="-75.0" y="1379.0" type="curve" smooth="yes"/>
+      <point x="-75.0" y="1456.0"/>
+      <point x="-138.0" y="1519.0"/>
+      <point x="-215.0" y="1519.0" type="curve" smooth="yes"/>
+      <point x="-292.0" y="1519.0"/>
+      <point x="-354.0" y="1456.0"/>
+      <point x="-354.0" y="1379.0" type="curve" smooth="yes"/>
+      <point x="-354.0" y="1302.0"/>
+      <point x="-292.0" y="1240.0"/>
+      <point x="-215.0" y="1240.0" type="curve" smooth="yes"/>
+      <point x="-138.0" y="1240.0"/>
+      <point x="-75.0" y="1302.0"/>
+    </contour>
+    <contour>
+      <point x="354.0" y="1379.0" type="curve" smooth="yes"/>
+      <point x="354.0" y="1456.0"/>
+      <point x="292.0" y="1519.0"/>
+      <point x="215.0" y="1519.0" type="curve" smooth="yes"/>
+      <point x="138.0" y="1519.0"/>
+      <point x="75.0" y="1456.0"/>
+      <point x="75.0" y="1379.0" type="curve" smooth="yes"/>
+      <point x="75.0" y="1302.0"/>
+      <point x="138.0" y="1240.0"/>
+      <point x="215.0" y="1240.0" type="curve" smooth="yes"/>
+      <point x="292.0" y="1240.0"/>
+      <point x="354.0" y="1302.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>Vietnamese mark, markStroke pen</string>
+    </dict>
+  </lib>
+</glyph>

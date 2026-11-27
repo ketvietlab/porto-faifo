@@ -81,10 +81,10 @@ class FigureMixin:
         y_sb = self.sh.get("fiveStemFoot", 0.47) * C
         edge_at = lambda y: xs + w_v + lean * (y - y_sb)
         join, a_join = (edge_at(0.585 * C), 0.585 * C), 62.0
-        crotch, a_crotch = (edge_at(0.50 * C), 0.50 * C), 238.0
-        if self.sh.get("fiveFootBlend", False):
-            # The bowl meets the foot horizontally and continues into its ink.
-            crotch, a_crotch = (edge_at(y_sb) - 36, y_sb), 180.0
+        blend = self.sh.get("fiveFootBlend", 0)
+        crotch_y = 0.50 * C + blend * (y_sb - 0.50 * C)
+        crotch = (edge_at(crotch_y) - 36 * blend, crotch_y)
+        a_crotch = 238 - 58 * blend
         edge = crotch[0]
         y_ap = 0.645 * C
         y_r = 0.31 * C

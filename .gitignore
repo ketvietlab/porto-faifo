@@ -1,5 +1,7 @@
 .venv
 build/
+specimen/data.js
+specimen/ref/
 __pycache__/
 *.pyc
 .DS_Store

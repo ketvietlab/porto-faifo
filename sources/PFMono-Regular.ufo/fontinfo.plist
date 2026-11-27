@@ -7,7 +7,7 @@
     <key>capHeight</key>
     <integer>1456</integer>
     <key>copyright</key>
-    <string>Copyright (c) 2026 The Porto Faifo Project Authors (https://github.com/ketvietlab/porto-faifo)</string>
+    <string>Copyright 2026 The Porto Faifo Project Authors (https://github.com/ketvietlab/porto-faifo)</string>
     <key>descender</key>
     <integer>-420</integer>
     <key>familyName</key>
@@ -48,6 +48,7 @@
     <key>openTypeOS2Selection</key>
     <array>
       <integer>7</integer>
+      <integer>8</integer>
     </array>
     <key>openTypeOS2StrikeoutPosition</key>
     <integer>588</integer>
@@ -79,7 +80,7 @@
       <integer>1528</integer>
     </array>
     <key>postscriptFontName</key>
-    <string>PFMono-Regular</string>
+    <string>PortoFaifoMono-Regular</string>
     <key>postscriptFullName</key>
     <string>Porto Faifo Mono Regular</string>
     <key>postscriptIsFixedPitch</key>
@@ -102,7 +103,7 @@
     <key>postscriptUnderlinePosition</key>
     <integer>-200</integer>
     <key>postscriptUnderlineThickness</key>
-    <integer>115</integer>
+    <integer>114</integer>
     <key>styleMapFamilyName</key>
     <string>Porto Faifo Mono</string>
     <key>styleMapStyleName</key>

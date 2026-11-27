@@ -566,7 +566,8 @@ def compose(cp: int, glyphs: dict[str, Glyph], cmap: dict[int, str], dotless: bo
         width = max(width, max(c.bounds()[2] for c in m.contours) + dx + 60)
     elif tops:
         names = [TOP_MARKS[c] for c in tops]
-        attach("_".join(names) + suffix if len(names) > 1 else names[0] + suffix, "top")
+        upper_mark = "_".join(names) + suffix if len(names) > 1 else names[0] + suffix
+        attach(upper_mark, "top")
     for c in rest:
         if c == 0x0327 and base_ch in CEDILLA_AS_COMMA:
             attach("commaaccentcomb", "bottom")
@@ -585,6 +586,12 @@ def compose(cp: int, glyphs: dict[str, Glyph], cmap: dict[int, str], dotless: bo
         g.components = []
         g.note = "precomposed, attached mark merged into the outline"
     g.anchors = {}
+    if cp in (0x0105, 0x0119, 0x012F, 0x0173):
+        g.anchors["top"] = base.anchors["top"]
+    if cp in (0x0117, 0x016B):
+        mark_name, dx, dy = comps[1]
+        x, y = glyphs[mark_name].anchors["top"]
+        g.anchors["top"] = (x + dx, y + dy)
     return g
 
 

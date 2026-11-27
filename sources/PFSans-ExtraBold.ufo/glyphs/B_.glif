@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="B" format="2">
+  <advance width="1352"/>
+  <unicode hex="0042"/>
+  <anchor x="662" y="0" name="bottom"/>
+  <anchor x="662" y="1456" name="top"/>
+  <outline>
+    <contour>
+      <point x="142.0" y="0.0" type="line"/>
+      <point x="508.0" y="0.0" type="line"/>
+      <point x="508.0" y="1456.0" type="line"/>
+      <point x="142.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="488.0" y="1456.0" type="line"/>
+      <point x="488.0" y="1163.0" type="line"/>
+      <point x="766.0" y="1163.0" type="line" smooth="yes"/>
+      <point x="811.0" y="1163.0"/>
+      <point x="843.0" y="1108.0"/>
+      <point x="843.0" y="1033.0" type="curve" smooth="yes"/>
+      <point x="843.0" y="958.0"/>
+      <point x="811.0" y="903.0"/>
+      <point x="766.0" y="903.0" type="curve" smooth="yes"/>
+      <point x="488.0" y="903.0" type="line"/>
+      <point x="488.0" y="655.0" type="line"/>
+      <point x="799.0" y="655.0" type="line" smooth="yes"/>
+      <point x="1036.0" y="655.0"/>
+      <point x="1200.0" y="819.0"/>
+      <point x="1200.0" y="1055.0" type="curve" smooth="yes"/>
+      <point x="1200.0" y="1292.0"/>
+      <point x="1036.0" y="1456.0"/>
+      <point x="799.0" y="1456.0" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="488.0" y="903.0" type="line"/>
+      <point x="488.0" y="655.0" type="line"/>
+      <point x="817.0" y="655.0" type="line" smooth="yes"/>
+      <point x="870.0" y="655.0"/>
+      <point x="909.0" y="580.0"/>
+      <point x="909.0" y="477.0" type="curve" smooth="yes"/>
+      <point x="909.0" y="374.0"/>
+      <point x="870.0" y="299.0"/>
+      <point x="817.0" y="299.0" type="curve" smooth="yes"/>
+      <point x="488.0" y="299.0" type="line"/>
+      <point x="488.0" y="0.0" type="line"/>
+      <point x="821.0" y="0.0" type="line" smooth="yes"/>
+      <point x="1087.0" y="0.0"/>
+      <point x="1272.0" y="185.0"/>
+      <point x="1272.0" y="451.0" type="curve" smooth="yes"/>
+      <point x="1272.0" y="718.0"/>
+      <point x="1087.0" y="903.0"/>
+      <point x="821.0" y="903.0" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>H stem + two side bowls; upper bowl 72 narrower, waist = bowlWaist</string>
+    </dict>
+  </lib>
+</glyph>

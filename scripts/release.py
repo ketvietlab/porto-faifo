@@ -90,7 +90,7 @@ def zip_(name: str, files: dict[str, bytes]) -> Path:
 
 def package(version: str) -> list[Path]:
     fonts = ROOT / "fonts"
-    ofl = {"LICENSE.txt": (ROOT / "LICENSE.txt").read_bytes()}
+    ofl = {"OFL.txt": (ROOT / "OFL.txt").read_bytes()}
     weights = len(load().masters)
 
     sans = dict(ofl)

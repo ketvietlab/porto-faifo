@@ -85,20 +85,10 @@ def _interpolate(a: dict, b: dict, t: float) -> dict:
 
 def expand_instances(raw: dict) -> dict:
     """Add every ``instances`` entry to ``masters`` (ordered by wght),
-    interpolated between the two drawn masters around its weight."""
-    drawn = dict(raw["masters"])
-    for name, inst in raw.get("instances", {}).items():
-        if name == "comment":
-            continue
-        w = inst["wght"]
-        lo = max((m for m in drawn.values() if m["wght"] <= w), key=lambda m: m["wght"])
-        hi = min((m for m in drawn.values() if m["wght"] >= w), key=lambda m: m["wght"])
-        t = (w - lo["wght"]) / (hi["wght"] - lo["wght"])
-        entry = {"wght": w, "comment": f"Instance at t = {t:.3f} between the drawn masters (see instances).",
-                 "stroke": _interpolate(lo["stroke"], hi["stroke"], t)}
-        for key in LAYERS:
-            entry[key] = _interpolate({**raw[key], **lo.get(key, {})}, {**raw[key], **hi.get(key, {})}, t)
-        raw["masters"][name] = entry
+    using the nearest available endpoints, including earlier instances."""
+    instances = ((name, spec["wght"]) for name, spec in raw.get("instances", {}).items() if name != "comment")
+    for name, weight in sorted(instances, key=lambda item: item[1]):
+        raw["masters"][name] = _pen_at(raw, weight)
     raw["masters"] = dict(sorted(raw["masters"].items(), key=lambda kv: kv[1]["wght"]))
     return raw
 

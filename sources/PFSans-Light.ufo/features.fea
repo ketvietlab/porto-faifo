@@ -86,6 +86,11 @@ feature subs {
     sub @Figures by @FiguresSinf;
 } subs;
 
+feature tnum {
+    sub @Figures by [zero.tnum one.tnum two.tnum three.tnum four.tnum five.tnum six.tnum seven.tnum eight.tnum nine.tnum];
+} tnum;
+
 feature zero {
     sub zero by zero.zero;
+    sub zero.tnum by zero.zero.tnum;
 } zero;

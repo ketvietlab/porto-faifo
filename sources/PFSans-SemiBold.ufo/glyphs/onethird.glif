@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="onethird" format="2">
+  <advance width="1963"/>
+  <unicode hex="2153"/>
+  <outline>
+    <component base="one.numr"/>
+    <component base="fraction" xOffset="831"/>
+    <component base="three.dnom" xOffset="1131"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>one.numr + fraction + three.dnom</string>
+    </dict>
+  </lib>
+</glyph>

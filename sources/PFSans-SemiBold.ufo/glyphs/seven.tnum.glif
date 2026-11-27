@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seven.tnum" format="2">
+  <advance width="1334"/>
+  <outline>
+    <contour>
+      <point x="136.0" y="1236.0" type="line"/>
+      <point x="1208.0" y="1236.0" type="line"/>
+      <point x="1208.0" y="1456.0" type="line"/>
+      <point x="136.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="318.0" y="0.0" type="line"/>
+      <point x="605.0" y="0.0" type="line"/>
+      <point x="1208.0" y="1237.0" type="line"/>
+      <point x="922.0" y="1237.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>top bar + straight diagonal of figure-stem weight</string>
+    </dict>
+  </lib>
+</glyph>

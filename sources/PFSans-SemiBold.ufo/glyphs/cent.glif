@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="cent" format="2">
+  <advance width="1334"/>
+  <unicode hex="00A2"/>
+  <outline>
+    <contour>
+      <point x="1092.0" y="798.0" type="line"/>
+      <point x="1046.0" y="1076.0"/>
+      <point x="893.0" y="1241.0"/>
+      <point x="667.0" y="1241.0" type="curve" smooth="yes"/>
+      <point x="407.0" y="1241.0"/>
+      <point x="227.0" y="982.0"/>
+      <point x="227.0" y="609.0" type="curve" smooth="yes"/>
+      <point x="227.0" y="237.0"/>
+      <point x="407.0" y="-22.0"/>
+      <point x="667.0" y="-22.0" type="curve" smooth="yes"/>
+      <point x="888.0" y="-22.0"/>
+      <point x="1040.0" y="136.0"/>
+      <point x="1090.0" y="405.0" type="curve"/>
+      <point x="821.0" y="405.0" type="line"/>
+      <point x="795.0" y="267.0"/>
+      <point x="741.0" y="188.0"/>
+      <point x="667.0" y="188.0" type="curve" smooth="yes"/>
+      <point x="568.0" y="188.0"/>
+      <point x="497.0" y="365.0"/>
+      <point x="497.0" y="609.0" type="curve" smooth="yes"/>
+      <point x="497.0" y="854.0"/>
+      <point x="568.0" y="1031.0"/>
+      <point x="667.0" y="1031.0" type="curve" smooth="yes"/>
+      <point x="744.0" y="1031.0"/>
+      <point x="799.0" y="945.0"/>
+      <point x="823.0" y="798.0" type="curve"/>
+    </contour>
+    <contour>
+      <point x="572.0" y="-150.0" type="line"/>
+      <point x="762.0" y="-150.0" type="line"/>
+      <point x="762.0" y="1369.0" type="line"/>
+      <point x="572.0" y="1369.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>c at 1.12 x-height + vertical bar, tabular</string>
+    </dict>
+  </lib>
+</glyph>

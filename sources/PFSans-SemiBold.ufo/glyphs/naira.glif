@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="naira" format="2">
+  <advance width="1334"/>
+  <unicode hex="20A6"/>
+  <outline>
+    <contour>
+      <point x="148.0" y="0.0" type="line"/>
+      <point x="376.0" y="0.0" type="line"/>
+      <point x="376.0" y="1456.0" type="line"/>
+      <point x="148.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="958.0" y="0.0" type="line"/>
+      <point x="1186.0" y="0.0" type="line"/>
+      <point x="1186.0" y="1456.0" type="line"/>
+      <point x="958.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="148.0" y="1456.0" type="line"/>
+      <point x="912.0" y="0.0" type="line"/>
+      <point x="1186.0" y="0.0" type="line"/>
+      <point x="422.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="88.0" y="460.0" type="line"/>
+      <point x="1246.0" y="460.0" type="line"/>
+      <point x="1246.0" y="618.0" type="line"/>
+      <point x="88.0" y="618.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="88.0" y="838.0" type="line"/>
+      <point x="1246.0" y="838.0" type="line"/>
+      <point x="1246.0" y="996.0" type="line"/>
+      <point x="88.0" y="996.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>N narrowed + two bars; tabular</string>
+    </dict>
+  </lib>
+</glyph>

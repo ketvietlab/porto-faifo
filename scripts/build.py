@@ -3,7 +3,7 @@
     .venv/bin/python scripts/build.py
 
 1. design-system.json  -> sources/PFSans-<Master>.ufo  (generated, committed;
-                          one per weight: Light, Regular, Medium, Bold, Black)
+                          one per weight, from Light through Black)
 2. fontmake            -> TTF (quadratic) and OTF (CFF), overlaps removed
                           (then pfsans.cleanup drops shapeless points),
                           nested components flattened
@@ -13,8 +13,8 @@
    every weight), fixed timestamps (reproducible)
 6. Text/Display spacing -> one opsz-only TTF/WOFF2 per fixed weight; static
    hinted fonts remain available alongside the optical files
-7. every weight at Text and Display -> PFSansVariable (wght 300-900, opsz
-   8-72; avar holds 600 on 500)
+7. every weight at Text and Display -> PortoFaifoSans[opsz,wght] (wght 300-900, opsz
+   8-72)
 """
 
 from __future__ import annotations
@@ -57,6 +57,16 @@ def fix_metrics(path: Path, y_max: int, y_min: int) -> None:
     font.save(path)
 
 
+def set_script_metadata(font: TTFont) -> None:
+    font["meta"] = newTable("meta")
+    font["meta"].data = {"dlng": "Latn", "slng": "Latn"}
+
+
+def set_unhinted_gasp(font: TTFont) -> None:
+    font["gasp"] = newTable("gasp")
+    font["gasp"].gaspRange = {0xFFFF: 0x000F}
+
+
 def main() -> None:
     styles = load().masters
     raw = {style: compile_master(style) for style in styles}
@@ -71,8 +81,8 @@ def main() -> None:
 
 def compile_master(style: str) -> tuple[Path, Path]:
     system = load(style)
-    family = system.meta.postscriptFamily
-    src = ROOT / "sources" / f"{family}-{style}.ufo"
+    family = system.font_stem
+    src = ROOT / "sources" / f"{system.meta.sourceFamily}-{style}.ufo"
     src.parent.mkdir(parents=True, exist_ok=True)
     master.write(src, style)
     print("wrote", src.relative_to(ROOT))
@@ -88,7 +98,7 @@ def compile_master(style: str) -> tuple[Path, Path]:
         run(
             [
                 VENV_BIN / "fontmake", "-u", src, "-o", fmt,
-                "--output-dir", tmp, "--overlaps-backend", "pathops",
+                "--output-path", tmp / f"{family}-{style}.{fmt}", "--overlaps-backend", "pathops",
                 "--filter", "pfsans.cleanup::CleanupFilter",
                 "--flatten-components", "--verbose", "WARNING",
             ],
@@ -99,7 +109,7 @@ def compile_master(style: str) -> tuple[Path, Path]:
 
 
 def finish_master(style: str, raw_ttf: Path, raw_otf: Path, y_max: int, y_min: int) -> None:
-    family = load(style).meta.postscriptFamily
+    family = load(style).font_stem
     fonts = ROOT / "fonts"
     for sub in ("ttf", "otf", "woff2"):
         (fonts / sub).mkdir(parents=True, exist_ok=True)
@@ -126,6 +136,7 @@ def finish_master(style: str, raw_ttf: Path, raw_otf: Path, y_max: int, y_min: i
     # ttfautohint rewrites tables; restore the fixed timestamp.
     for path in (ttf, otf):
         f = TTFont(path, recalcTimestamp=False)
+        set_script_metadata(f)
         f["head"].modified = f["head"].created
         if path == ttf:
             f["head"].flags |= 1 << 3  # hinted: round ppem to integers
@@ -148,7 +159,7 @@ def build_optical(style: str, y_max: int, y_min: int) -> None:
     """
     system = load(style)
     settings = system.raw["opticalSizing"]["axis"]
-    family = system.meta.postscriptFamily + "Optical"
+    family = system.font_stem + "Optical"
     source_dir = ROOT / "build" / "optical-sources"
     source_dir.mkdir(parents=True, exist_ok=True)
     ds = DesignSpaceDocument()
@@ -191,6 +202,7 @@ def build_optical(style: str, y_max: int, y_min: int) -> None:
         ds.addInstanceDescriptor(
             name=f"{style} {label}", familyName=system.meta.familyName + " Optical",
             styleName=style if label == "Text" else style + " Display",
+            postScriptFontName=f"{family}-{style}" + ("Display" if label == "Display" else ""),
             userLocation={"Optical Size": settings["default"] if label == "Text" else settings["display"]},
         )
     ds_path = source_dir / f"{family}-{style}.designspace"
@@ -206,7 +218,7 @@ def build_optical(style: str, y_max: int, y_min: int) -> None:
     ], env=dict(os.environ, SOURCE_DATE_EPOCH=SOURCE_DATE_EPOCH, PYTHONPATH=str(ROOT / "scripts")), cwd=ROOT)
     fix_metrics(ttf, y_max, y_min)
     font = TTFont(ttf, recalcTimestamp=False)
-    # Static weight axis in STAT helps applications group the four opsz files.
+    # A fixed weight in STAT helps applications group the opsz files.
     buildStatTable(font, [
         {"tag": "wght", "name": "Weight", "ordering": 0,
          "values": [{"value": system.wght, "name": style, "flags": 2 if style == "Regular" else 0}]},
@@ -217,6 +229,8 @@ def build_optical(style: str, y_max: int, y_min: int) -> None:
              {"value": settings["display"], "name": "Display"},
          ]},
     ], macNames=False)
+    set_script_metadata(font)
+    set_unhinted_gasp(font)
     # Smart dropout for monochrome rasterizers, not stem/grid hinting.
     font["prep"] = newTable("prep")
     font["prep"].program = Program()
@@ -256,12 +270,13 @@ def build_variable(styles: list[str], y_max: int, y_min: int) -> None:
     Every weight is a master at Text and at Display spacing, all written from
     the same recipes, so the outlines interpolate point for point. Overlaps are
     kept and flagged: a union per master gives each weight its own topology.
-    avar holds 600 on 500 (SemiBold is Medium). Unhinted, like the optical fonts.
+    The intermediate weights use the same design sources as the static fonts.
+    Unhinted, like the optical fonts.
     """
     system = load()
     var, opt = system.raw["variable"], system.raw["opticalSizing"]["axis"]
-    family = f"{system.meta.familyName} {var['familySuffix']}"
-    ps = system.meta.postscriptFamily + var["familySuffix"]
+    family = system.meta.familyName
+    ps = system.font_stem
     source_dir = ROOT / "build" / "variable-sources"
     shutil.rmtree(source_dir, ignore_errors=True)
     source_dir.mkdir(parents=True)
@@ -297,37 +312,38 @@ def build_variable(styles: list[str], y_max: int, y_min: int) -> None:
             copyInfo=default, copyLib=default, copyFeatures=default,
         )
     for name, wght in var["instances"].items():
-        for label, coord in (("Text", opt["default"]), ("Display", opt["display"])):
-            ds.addInstanceDescriptor(
-                name=f"{name} {label}", familyName=family,
-                styleName=name if label == "Text" else f"{name} Display",
-                userLocation={"Weight": wght, "Optical Size": coord},
-            )
+        ds.addInstanceDescriptor(
+            name=name, familyName=family, styleName=name,
+            postScriptFontName=f"{ps}-{name}",
+            userLocation={"Weight": wght, "Optical Size": opt["default"]},
+        )
     ds_path = source_dir / f"{ps}.designspace"
     ds.write(ds_path)
-    ttf = ROOT / "fonts" / "variable" / f"{ps}.ttf"
+    ttf = ROOT / "fonts" / "variable" / f"{system.variable_stem}.ttf"
     run([
         VENV_BIN / "fontmake", "-m", ds_path, "-o", "variable", "--output-path", ttf,
         "--flatten-components", "--verbose", "WARNING",
     ], env=dict(os.environ, SOURCE_DATE_EPOCH=SOURCE_DATE_EPOCH, PYTHONPATH=str(ROOT / "scripts")), cwd=ROOT)
     fix_metrics(ttf, y_max, y_min)
     font = TTFont(ttf, recalcTimestamp=False)
-    # fontmake maps instance locations to design space and back; 500 is also an
-    # inverse of 600 under the flat avar segment, so restore the named weights.
+    # fontmake round-trips instance positions through the design map. Restore
+    # the exact named weight when the map has a short rounding plateau.
     for inst in font["fvar"].instances:
-        style = font["name"].getDebugName(inst.subfamilyNameID).removesuffix(" Display")
+        style = font["name"].getDebugName(inst.subfamilyNameID)
         inst.coordinates["wght"] = var["instances"][style]
+        if style == "Regular":
+            inst.subfamilyNameID = 2
+            inst.postscriptNameID = 6
     weights = [{"value": w, "name": n, "flags": 2 if n == "Regular" else 0, **({"linkedValue": 700} if n == "Regular" else {})}
                for n, w in var["instances"].items()]
     buildStatTable(font, [
         {"tag": "wght", "name": "Weight", "ordering": 0, "values": weights},
         {"tag": "opsz", "name": "Optical Size", "ordering": 1,
-         "values": [
-             {"nominalValue": opt["default"], "rangeMinValue": opt["minimum"],
-              "rangeMaxValue": opt["default"], "name": "Text", "flags": 2},
-             {"value": opt["display"], "name": "Display"},
-         ]},
+         "values": [{"value": size, "name": f"{size}pt"}
+                    for size in sorted({opt[key] for key in ("minimum", "default", "display", "maximum")})]},
     ], macNames=False)
+    set_script_metadata(font)
+    set_unhinted_gasp(font)
     # Smart dropout for monochrome rasterizers, not stem/grid hinting.
     font["prep"] = newTable("prep")
     font["prep"].program = Program()

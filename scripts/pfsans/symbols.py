@@ -864,6 +864,7 @@ def features(glyphs: dict[str, Glyph]) -> str:
     sinf and zero."""
     figs = " ".join(FIGURES)
     cls = lambda suffix: " ".join(f + suffix for f in FIGURES)
+    tabular = "zero.tnum" in glyphs
     return "\n".join([
         f"@Figures = [{figs}];",
         f"@FiguresNumr = [{cls('.numr')}];",
@@ -895,8 +896,13 @@ def features(glyphs: dict[str, Glyph]) -> str:
         "    sub @Figures by @FiguresSinf;",
         "} subs;",
         "",
+        *(["feature tnum {",
+           f"    sub @Figures by [{cls('.tnum')}];",
+           "} tnum;",
+           ""] if tabular else []),
         "feature zero {",
         "    sub zero by zero.zero;",
+        *(["    sub zero.tnum by zero.zero.tnum;"] if tabular else []),
         "} zero;",
         "",
     ])

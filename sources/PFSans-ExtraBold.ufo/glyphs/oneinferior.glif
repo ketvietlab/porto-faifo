@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="oneinferior" format="2">
+  <advance width="861"/>
+  <unicode hex="2081"/>
+  <outline>
+    <component base="one.dnom" yOffset="-262"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>one.dnom raised: bottom at -0.18 cap height</string>
+    </dict>
+  </lib>
+</glyph>

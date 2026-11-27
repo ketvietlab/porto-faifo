@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="plusminus" format="2">
+  <advance width="1334"/>
+  <unicode hex="00B1"/>
+  <outline>
+    <contour>
+      <point x="227.0" y="0.0" type="line"/>
+      <point x="1107.0" y="0.0" type="line"/>
+      <point x="1107.0" y="200.0" type="line"/>
+      <point x="227.0" y="200.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="227.0" y="658.0" type="line"/>
+      <point x="1107.0" y="658.0" type="line"/>
+      <point x="1107.0" y="858.0" type="line"/>
+      <point x="227.0" y="858.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="567.0" y="380.0" type="line"/>
+      <point x="767.0" y="380.0" type="line"/>
+      <point x="767.0" y="1136.0" type="line"/>
+      <point x="567.0" y="1136.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>plus over a minus with the gap of =, from the baseline to 0.78 cap height</string>
+    </dict>
+  </lib>
+</glyph>

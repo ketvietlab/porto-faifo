@@ -1,4 +1,4 @@
-"""Check PFSansVariable: axes, avar (600 = 500), names, OTS, overlap flags,
+"""Check the Sans variable font: axes, weight midpoints, names, OTS, overlap flags,
 and that every master location reproduces the static and optical fonts.
 
     .venv/bin/python scripts/verify_variable.py
@@ -43,10 +43,10 @@ DIFFICULT = ("ĩ}", "Fĩ", "/Ī", "[Î", "f/", "AV", "Ty", "LT", "r.", "ẤV")
 # location moves edges by tens of units (Regular against Medium n: 40).
 UNITS_PER_PX = 2
 EDGE = 4
-# Medium, Bold and Black share the upper half of the weight axis. varLib's
-# Medium support reaches Black, so at Bold it still weighs 0.5 and integer
-# deltas round Bold by up to 1 unit; the other masters are exact.
-ROUNDED = {"Bold"}
+# Interior masters with overlapping variation supports can accumulate a
+# one-unit rounding difference in advances and positioning. The outer
+# masters and Medium match exactly.
+ROUNDED = {"SemiBold", "Bold", "ExtraBold"}
 
 
 class Mono:
@@ -115,12 +115,6 @@ def positions(face, text):
     return [(i.codepoint, p.x_advance, p.x_offset, p.y_offset) for i, p in face.shape(text)]
 
 
-def glyph_outlines(font):
-    glyf = font["glyf"]
-    return {n: ([tuple(p) for p in glyf[n].getCoordinates(glyf)[0]] if glyf[n].numberOfContours else [], font["hmtx"][n])
-            for n in font.getGlyphOrder()}
-
-
 def ink(font, name):
     gs = font.getGlyphSet()
     rec = DecomposingRecordingPen(gs)
@@ -144,9 +138,9 @@ def main():
     system = load()
     var, opt = system.raw["variable"], system.raw["opticalSizing"]["axis"]
     styles = system.masters
-    path = ROOT / "fonts" / "variable" / f"{system.meta.postscriptFamily}{var['familySuffix']}.ttf"
+    path = ROOT / "fonts" / "variable" / f"{system.variable_stem}.ttf"
     vf = TTFont(path)
-    regular = TTFont(ROOT / "fonts" / "ttf" / f"{system.meta.postscriptFamily}-Regular.ttf")
+    regular = TTFont(ROOT / "fonts" / "ttf" / f"{system.font_stem}-Regular.ttf")
     w = var["weight"]
 
     # ------------------------------------------------------------ structure
@@ -158,22 +152,22 @@ def main():
 
     seg = vf["avar"].segments["wght"]
     norm = lambda v: (v - w["default"]) / ((w["maximum"] - w["default"]) if v >= w["default"] else (w["default"] - w["minimum"]))
-    # One F2Dot14 step is 0.03 units of wght, so the probes outside the flat
-    # segment stand a whole unit away.
-    mapped = {v: piecewiseLinearMap(norm(v), seg) for v in (499, 500, 550, 600, 601)}
-    report.check("variable", "avar maps weight 500-600 onto one point (SemiBold is Medium)",
-                 len({round(mapped[v] * 16384) for v in (500, 550, 600)}) == 1 and mapped[499] < mapped[500] < mapped[601], str(mapped))
+    mapped = {v: piecewiseLinearMap(norm(v), seg) for v in (500, 600, 700, 800, 900)}
+    report.check("variable", "avar maps 600 and 800 to their design midpoints",
+                 all(mapped[lo] < mapped[mid] < mapped[hi]
+                     and abs(mapped[mid] - (mapped[lo] + mapped[hi]) / 2) <= 1 / 16384
+                     for lo, mid, hi in ((500, 600, 700), (700, 800, 900))), str(mapped))
     names = vf["name"]
     got = [(names.getDebugName(i.subfamilyNameID), i.coordinates["wght"], i.coordinates["opsz"]) for i in vf["fvar"].instances]
-    want = [(n if label == "Text" else f"{n} Display", float(v), float(coord))
-            for n, v in var["instances"].items() for label, coord in (("Text", opt["default"]), ("Display", opt["display"]))]
-    report.check("variable", f"{len(want)} named instances, SemiBold at 600", got == want, str(got) if got != want else "")
+    want = [(n, float(v), float(opt["default"])) for n, v in var["instances"].items()]
+    report.check("variable", f"{len(want)} named instances, including SemiBold and ExtraBold", got == want, str(got) if got != want else "")
     stat = vf["STAT"].table
     values = {(stat.DesignAxisRecord.Axis[v.AxisIndex].AxisTag, names.getDebugName(v.ValueNameID)) for v in stat.AxisValueArray.AxisValue}
-    report.check("variable", "STAT names every weight and Text/Display",
-                 all(("wght", n) in values for n in var["instances"]) and {("opsz", "Text"), ("opsz", "Display")} <= values)
+    report.check("variable", "STAT names every weight and optical size",
+                 all(("wght", n) in values for n in var["instances"])
+                 and {("opsz", f"{opt[key]}pt") for key in ("minimum", "default", "display", "maximum")} <= values)
     report.check("variable", "family name, default style and weight class",
-                 names.getDebugName(1) == f"{system.meta.familyName} {var['familySuffix']}" and names.getDebugName(2) == "Regular"
+                 names.getDebugName(1) == system.meta.familyName and names.getDebugName(2) == "Regular"
                  and vf["OS/2"].usWeightClass == 400)
     report.check("variable", "full charset and glyph order of the static fonts",
                  vf.getBestCmap() == regular.getBestCmap() and vf.getGlyphOrder() == regular.getGlyphOrder())
@@ -221,8 +215,8 @@ def main():
         for style in styles:
             wght = load(style).wght
             report.prefix = f"{style} {wght}: "
-            static = ROOT / "fonts" / "ttf" / f"{system.meta.postscriptFamily}-{style}.ttf"
-            optical = ROOT / "fonts" / "variable" / f"{system.meta.postscriptFamily}Optical-{style}.ttf"
+            static = ROOT / "fonts" / "ttf" / f"{system.font_stem}-{style}.ttf"
+            optical = ROOT / "fonts" / "variable" / f"{system.font_stem}Optical-{style}.ttf"
             for label, opsz, ref_path, ref_axes in (("Text", opt["default"], static, None),
                                                    ("Display", opt["display"], optical, {"opsz": opt["display"]})):
                 inst, face = cut(wght, opsz)
@@ -248,24 +242,19 @@ def main():
                 report.check("variable", f"{label}: outlines within {EDGE} units of the {ref_path.parent.name} font ({len(gaps)} glyphs)",
                              not bad, repr(bad[:8]))
 
-        # ------------------------------------------------------- 600 = 500
         report.prefix = ""
-        for opsz in (opt["default"], opt["display"]):
-            a, fa = cut(500, opsz)
-            b, fb = cut(600, opsz)
-            same = glyph_outlines(a) == glyph_outlines(b) and all(positions(fa, t) == positions(fb, t) for t in WORDS + list(DIFFICULT))
-            report.check("variable", f"opsz {opsz}: weight 600 is exactly 500 (outlines, advances, GPOS)", same)
-        live, medium = Face(path, {"wght": 600, "opsz": 16}), Face(path, {"wght": 500, "opsz": 16})
-        report.check("variable", "CSS weight 600 shapes as Medium without instancing (HarfBuzz)",
-                     all(positions(live, t) == positions(medium, t) for t in WORDS + list(DIFFICULT))
-                     and list(live.hb_font.get_var_coords_normalized()) == list(medium.hb_font.get_var_coords_normalized()))
+        for name, weight in (("SemiBold", 600), ("ExtraBold", 800)):
+            live = Face(path, {"wght": weight, "opsz": opt["default"]})
+            _, instance = cut(weight, opt["default"])
+            report.check("variable", f"CSS weight {weight} shapes as {name} without instancing (HarfBuzz)",
+                         all(positions(live, t) == positions(instance, t) for t in WORDS + list(DIFFICULT)))
 
         # -------------------------------------------------- monotonic weight
         steps = [300, 350, 400, 450, 500, 600, 650, 700, 800, 900]
         fonts = {s: cut(s, opt["default"])[0] for s in steps}
         stems = {s: [stem(fonts[s], ch, y) for ch, y in (("n", 330), ("H", 440), ("o", 544), ("O", 728))] for s in steps}
-        heavier = all(all(b > a for a, b in zip(stems[x], stems[y])) for x, y in zip(steps, steps[1:]) if (x, y) != (500, 600))
-        report.check("variable", "n H o O stems grow along the axis (500 = 600)", heavier and stems[500] == stems[600],
+        heavier = all(all(b > a for a, b in zip(stems[x], stems[y])) for x, y in zip(steps, steps[1:]))
+        report.check("variable", "n H o O stems grow along the axis", heavier,
                      "; ".join(f"{s} " + " ".join(f"{v:.0f}" for v in stems[s]) for s in steps))
         thinner = []
         for name in vf.getGlyphOrder():
@@ -292,7 +281,7 @@ def main():
                     mismatch[text] = g
             report.check("variable", f"NFC = base + GPOS marks within {EDGE} units ({len(decomposed)} letters + {len(WORDS)} texts)",
                          not mismatch, repr(list(mismatch.items())[:10]))
-            widths = {sum(p.x_advance for _, p in face.shape(ch)) for ch in TABULAR}
+            widths = {sum(p.x_advance for _, p in face.shape(ch, {"tnum": True})) for ch in TABULAR}
             report.check("variable", "tabular figures, currency and math share one width", len(widths) == 1, str(sorted(widths)))
             lo, hi = max(s for s in steps if s <= wght), min(s for s in steps if s >= wght)
             contacts = {}

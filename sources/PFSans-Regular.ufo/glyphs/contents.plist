@@ -62,6 +62,8 @@
     <string>E_grave.glif</string>
     <key>Emacron</key>
     <string>E_macron.glif</string>
+    <key>Eng</key>
+    <string>E_ng.glif</string>
     <key>Eogonek</key>
     <string>E_ogonek.glif</string>
     <key>Eth</key>
@@ -440,6 +442,8 @@
     <string>eight.dnom.glif</string>
     <key>eight.numr</key>
     <string>eight.numr.glif</string>
+    <key>eight.tnum</key>
+    <string>eight.tnum.glif</string>
     <key>eightinferior</key>
     <string>eightinferior.glif</string>
     <key>eightsuperior</key>
@@ -454,6 +458,8 @@
     <string>emptyset.glif</string>
     <key>endash</key>
     <string>endash.glif</string>
+    <key>eng</key>
+    <string>eng.glif</string>
     <key>eogonek</key>
     <string>eogonek.glif</string>
     <key>equal</key>
@@ -474,6 +480,8 @@
     <string>five.dnom.glif</string>
     <key>five.numr</key>
     <string>five.numr.glif</string>
+    <key>five.tnum</key>
+    <string>five.tnum.glif</string>
     <key>fiveinferior</key>
     <string>fiveinferior.glif</string>
     <key>fivesuperior</key>
@@ -484,6 +492,8 @@
     <string>four.dnom.glif</string>
     <key>four.numr</key>
     <string>four.numr.glif</string>
+    <key>four.tnum</key>
+    <string>four.tnum.glif</string>
     <key>fourinferior</key>
     <string>fourinferior.glif</string>
     <key>foursuperior</key>
@@ -608,6 +618,8 @@
     <string>m.glif</string>
     <key>macron</key>
     <string>macron.glif</string>
+    <key>macronbelowcomb</key>
+    <string>macronbelowcomb.glif</string>
     <key>macroncomb</key>
     <string>macroncomb.glif</string>
     <key>macroncomb.case</key>
@@ -636,6 +648,8 @@
     <string>nine.dnom.glif</string>
     <key>nine.numr</key>
     <string>nine.numr.glif</string>
+    <key>nine.tnum</key>
+    <string>nine.tnum.glif</string>
     <key>nineinferior</key>
     <string>nineinferior.glif</string>
     <key>ninesuperior</key>
@@ -678,6 +692,8 @@
     <string>one.dnom.glif</string>
     <key>one.numr</key>
     <string>one.numr.glif</string>
+    <key>one.tnum</key>
+    <string>one.tnum.glif</string>
     <key>onehalf</key>
     <string>onehalf.glif</string>
     <key>oneinferior</key>
@@ -800,6 +816,8 @@
     <string>seven.dnom.glif</string>
     <key>seven.numr</key>
     <string>seven.numr.glif</string>
+    <key>seven.tnum</key>
+    <string>seven.tnum.glif</string>
     <key>seveninferior</key>
     <string>seveninferior.glif</string>
     <key>sevensuperior</key>
@@ -812,6 +830,8 @@
     <string>six.dnom.glif</string>
     <key>six.numr</key>
     <string>six.numr.glif</string>
+    <key>six.tnum</key>
+    <string>six.tnum.glif</string>
     <key>sixinferior</key>
     <string>sixinferior.glif</string>
     <key>sixsuperior</key>
@@ -842,6 +862,8 @@
     <string>three.dnom.glif</string>
     <key>three.numr</key>
     <string>three.numr.glif</string>
+    <key>three.tnum</key>
+    <string>three.tnum.glif</string>
     <key>threeinferior</key>
     <string>threeinferior.glif</string>
     <key>threequarters</key>
@@ -864,6 +886,8 @@
     <string>two.dnom.glif</string>
     <key>two.numr</key>
     <string>two.numr.glif</string>
+    <key>two.tnum</key>
+    <string>two.tnum.glif</string>
     <key>twoinferior</key>
     <string>twoinferior.glif</string>
     <key>twosuperior</key>
@@ -912,6 +936,8 @@
     <string>uni021A_.glif</string>
     <key>uni021B</key>
     <string>uni021B_.glif</string>
+    <key>uni02BC</key>
+    <string>uni02B_C_.glif</string>
     <key>uni1E9E</key>
     <string>uni1E_9E_.glif</string>
     <key>uni1EA0</key>
@@ -1092,6 +1118,12 @@
     <string>uni1E_F_8.glif</string>
     <key>uni1EF9</key>
     <string>uni1E_F_9.glif</string>
+    <key>uni2028</key>
+    <string>uni2028.glif</string>
+    <key>uni2029</key>
+    <string>uni2029.glif</string>
+    <key>uni25CC</key>
+    <string>uni25C_C_.glif</string>
     <key>uogonek</key>
     <string>uogonek.glif</string>
     <key>upArrow</key>
@@ -1162,8 +1194,12 @@
     <string>zero.dnom.glif</string>
     <key>zero.numr</key>
     <string>zero.numr.glif</string>
+    <key>zero.tnum</key>
+    <string>zero.tnum.glif</string>
     <key>zero.zero</key>
     <string>zero.zero.glif</string>
+    <key>zero.zero.tnum</key>
+    <string>zero.zero.tnum.glif</string>
     <key>zeroinferior</key>
     <string>zeroinferior.glif</string>
     <key>zerosuperior</key>

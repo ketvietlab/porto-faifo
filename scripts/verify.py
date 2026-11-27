@@ -29,7 +29,6 @@ from pfsans.proof import Face, _fill_nonzero, _record_to_polys  # noqa: E402
 from pfsans.system import ROOT, load  # noqa: E402
 
 SYSTEM = load("Regular")
-FAM = SYSTEM.meta.postscriptFamily
 UFO = TTF = OTF = WOFF2 = None
 
 
@@ -37,10 +36,11 @@ def use(style: str) -> None:
     """Point the checks at one master's source and binaries."""
     global SYSTEM, UFO, TTF, OTF, WOFF2
     SYSTEM = load(style)
-    UFO = ROOT / "sources" / f"{FAM}-{style}.ufo"
-    TTF = ROOT / "fonts" / "ttf" / f"{FAM}-{style}.ttf"
-    OTF = ROOT / "fonts" / "otf" / f"{FAM}-{style}.otf"
-    WOFF2 = ROOT / "fonts" / "woff2" / f"{FAM}-{style}.woff2"
+    UFO = ROOT / "sources" / f"{SYSTEM.meta.sourceFamily}-{style}.ufo"
+    stem = f"{SYSTEM.font_stem}-{style}"
+    TTF = ROOT / "fonts" / "ttf" / f"{stem}.ttf"
+    OTF = ROOT / "fonts" / "otf" / f"{stem}.otf"
+    WOFF2 = ROOT / "fonts" / "woff2" / f"{stem}.woff2"
 
 TABULAR = "0123456789$¢£¥€₫#+−×÷=<>±¬≠≤≥≈√∑฿₡₦₭₮₱₲₴₵₸₹₺₼₽₾₿"
 REQUIRED_STRINGS = [
@@ -326,8 +326,8 @@ def typographic(r: Report, fonts):
 
     face = Face(TTF)
 
-    def adv(text):
-        return sum(p.x_advance for _, p in face.shape(text))
+    def adv(text, features=None):
+        return sum(p.x_advance for _, p in face.shape(text, features))
 
     def single(text):
         return sum(adv(c) for c in text)
@@ -336,8 +336,12 @@ def typographic(r: Report, fonts):
     r.check("typographic", "kerning applied, incl. Vietnamese letters via base groups", all(v < 0 for v in kerned.values()), ", ".join(f"{k}:{v}" for k, v in kerned.items()))
     flat = {t: adv(t) - single(t) for t in ["HH", "nn", "oo", "11", "00", "88", "HO", "nu", "ďa"]}
     r.check("typographic", "no kerning between straight/round pairs or tabular figures", all(v == 0 for v in flat.values()), ", ".join(f"{k}:{v}" for k, v in flat.items()))
-    figs = {c: hmtx[cmap[ord(c)]][0] for c in TABULAR}
+    figs = {c: adv(c, {"tnum": True}) for c in TABULAR}
     r.check("typographic", f"figures, currency and math share one tabular advance ({len(TABULAR)} glyphs)", len(set(figs.values())) == 1, str(sorted(set(figs.values()))))
+    r.check("typographic", "default figures are proportional", len({adv(c) for c in "0123456789"}) > 1)
+    r.check("typographic", "slashed zero uses the active figure width",
+            adv("0", {"zero": True}) == adv("0")
+            and adv("0", {"tnum": True, "zero": True}) == figs["0"])
 
     # Kerning never makes neighbours touch: horizontal profiles of every
     # kerned group pair (drawn and precomposed members) keep >= 50 units.

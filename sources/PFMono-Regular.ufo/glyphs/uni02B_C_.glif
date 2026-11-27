@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni02BC" format="2">
+  <advance width="1180"/>
+  <unicode hex="02BC"/>
+  <outline>
+    <contour>
+      <point x="711.0" y="1335.0" type="curve" smooth="yes"/>
+      <point x="711.0" y="1402.0"/>
+      <point x="657.0" y="1456.0"/>
+      <point x="590.0" y="1456.0" type="curve" smooth="yes"/>
+      <point x="523.0" y="1456.0"/>
+      <point x="469.0" y="1402.0"/>
+      <point x="469.0" y="1335.0" type="curve" smooth="yes"/>
+      <point x="469.0" y="1268.0"/>
+      <point x="523.0" y="1214.0"/>
+      <point x="590.0" y="1214.0" type="curve" smooth="yes"/>
+      <point x="657.0" y="1214.0"/>
+      <point x="711.0" y="1268.0"/>
+    </contour>
+    <contour>
+      <point x="703.0" y="1323.0" type="line"/>
+      <point x="542.0" y="1244.0" type="line"/>
+      <point x="485.0" y="886.0" type="line"/>
+      <point x="596.0" y="886.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>modifier letter apostrophe, shaped like the raised comma</string>
+    </dict>
+  </lib>
+</glyph>

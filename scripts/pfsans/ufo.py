@@ -34,8 +34,8 @@ def font_info(font: ufoLib2.Font, system: System, style: str) -> None:
     info.openTypeOS2WeightClass = system.wght
     info.openTypeOS2WidthClass = 5
     info.openTypeOS2Type = []  # installable embedding
-    info.openTypeOS2Selection = [7]  # USE_TYPO_METRICS
-    info.postscriptFontName = f"{meta.postscriptFamily}-{style.replace(' ', '')}"
+    info.openTypeOS2Selection = [7, 8]  # USE_TYPO_METRICS, WWS naming
+    info.postscriptFontName = f"{system.font_stem}-{style.replace(' ', '')}"
     info.postscriptFullName = f"{meta.familyName} {style}"
     info.unitsPerEm = m.unitsPerEm
     info.xHeight = m.xHeight
@@ -93,7 +93,7 @@ def write_master(glyphs: dict[str, Glyph], system: System, style: str, path: Pat
     for name, g in glyphs.items():
         if any(a.startswith("_") for a in g.anchors) or name.endswith("comb") or "comb_" in name or "comb." in name:
             cats[name] = "mark"
-        elif g.unicodes or g.components:
+        elif g.unicodes or g.components or g.anchors:
             cats[name] = "base"
     font.lib["public.openTypeCategories"] = cats
     # Production names stay within the 31-character legacy limit.

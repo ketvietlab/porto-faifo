@@ -1,4 +1,4 @@
-"""Check the four opsz fonts: geometry, spacing, shaping, marks and sanitization.
+"""Check the opsz fonts: geometry, spacing, shaping, marks and sanitization.
 
     .venv/bin/python scripts/verify_optical.py
 
@@ -31,8 +31,8 @@ def outline(font, name):
     return [op for op, _ in pen.value], np.array([p for _, pts in pen.value for p in pts], dtype=float)
 
 
-def advance(face, text):
-    return sum(pos.x_advance for _, pos in face.shape(text))
+def advance(face, text, features=None):
+    return sum(pos.x_advance for _, pos in face.shape(text, features))
 
 
 def pair_gap(font, face, text):
@@ -63,13 +63,14 @@ def pair_gap(font, face, text):
 
 def main():
     report = Report()
-    settings = load().raw["opticalSizing"]["axis"]
+    system = load()
+    settings = system.raw["opticalSizing"]["axis"]
     metrics = {}
     for style in load().masters:
         report.prefix = style + ": "
-        path = ROOT / "fonts" / "variable" / f"PFSansOptical-{style}.ttf"
+        path = ROOT / "fonts" / "variable" / f"{system.font_stem}Optical-{style}.ttf"
         vf = TTFont(path)
-        old = TTFont(ROOT / "fonts" / "ttf" / f"PFSans-{style}.ttf")
+        old = TTFont(ROOT / "fonts" / "ttf" / f"{system.font_stem}-{style}.ttf")
         axis = vf["fvar"].axes
         report.check("optical", "opsz axis and fixed weight", len(axis) == 1 and axis[0].axisTag == "opsz"
                      and (axis[0].minValue, axis[0].defaultValue, axis[0].maxValue)
@@ -133,7 +134,7 @@ def main():
                     report.check("optical", f"opsz {coordinate}: all Text advances unchanged",
                                  instance["hmtx"].metrics == old["hmtx"].metrics)
                 cmap = instance.getBestCmap()
-                widths = [advance(face, char) for char in TABULAR]
+                widths = [advance(face, char, {"tnum": True}) for char in TABULAR]
                 report.check("optical", f"opsz {coordinate}: tabular figures/currency/math",
                              len(set(widths)) == 1, str(sorted(set(widths))))
                 metrics[style][coordinate] = {

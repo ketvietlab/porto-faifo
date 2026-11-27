@@ -17,7 +17,7 @@ import uharfbuzz as hb  # noqa: E402
 from fontTools.pens.svgPathPen import SVGPathPen  # noqa: E402
 from fontTools.ttLib import TTFont  # noqa: E402
 
-from pfsans.system import ROOT  # noqa: E402
+from pfsans.system import ROOT, load  # noqa: E402
 from pfsymbols.kit import pen  # noqa: E402
 from pfsymbols.registry import ICONS  # noqa: E402
 from pfsymbols import svg as out  # noqa: E402
@@ -61,8 +61,9 @@ def page(name: str, height: int, body: list[str]) -> None:
 
 
 def fonts() -> None:
-    sans = {w: Face(f"fonts/otf/PFSans-{w}.otf") for w in ("Light", "Regular", "Medium", "Bold", "Black")}
-    mono = Face("fonts/mono/otf/PFMono-Regular.otf")
+    system = load()
+    sans = {style: Face(f"fonts/otf/{system.font_stem}-{style}.otf") for style in system.masters}
+    mono = Face(f"fonts/mono/otf/{load(mono=True).font_stem}-Regular.otf")
     body = [sans["Bold"].text("Porto Faifo", 48, 150, 112),
             sans["Regular"].text("A typeface family for interfaces, with full Vietnamese support. 1,250,000 ₫", 48, 214, 32, MUTED)]
     y = 300
@@ -89,5 +90,8 @@ def symbols() -> None:
 
 
 if __name__ == "__main__":
+    from specimen_data import main as export_specimen_data
+
     fonts()
     symbols()
+    export_specimen_data()

@@ -78,10 +78,13 @@ class FigureMixin:
         xs = 0.05 * W  # bottom left of the vertical
         lean, w_v = 0.11, S * 0.88  # dx/dy of the vertical (SF 0.10, Inter 0.12, Helvetica 0.15) and its weight
         t_top = top + 4
-        y_sb = 0.47 * C
+        y_sb = self.sh.get("fiveStemFoot", 0.47) * C
         edge_at = lambda y: xs + w_v + lean * (y - y_sb)
         join, a_join = (edge_at(0.585 * C), 0.585 * C), 62.0
-        crotch, a_crotch = (edge_at(0.50 * C), 0.50 * C), 238.0
+        blend = self.sh.get("fiveFootBlend", 0)
+        crotch_y = 0.50 * C + blend * (y_sb - 0.50 * C)
+        crotch = (edge_at(crotch_y) - 36 * blend, crotch_y)
+        a_crotch = 238 - 58 * blend
         edge = crotch[0]
         y_ap = 0.645 * C
         y_r = 0.31 * C

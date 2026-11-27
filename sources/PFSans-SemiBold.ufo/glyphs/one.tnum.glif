@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="one.tnum" format="2">
+  <advance width="1334"/>
+  <outline>
+    <contour>
+      <point x="613.0" y="0.0" type="line"/>
+      <point x="881.0" y="0.0" type="line"/>
+      <point x="881.0" y="1456.0" type="line"/>
+      <point x="613.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="613.0" y="1456.0" type="line"/>
+      <point x="273.0" y="1220.0" type="line"/>
+      <point x="273.0" y="947.0" type="line"/>
+      <point x="747.0" y="1276.0" type="line"/>
+      <point x="747.0" y="1456.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>H stem + straight flag cut vertically; no foot</string>
+    </dict>
+  </lib>
+</glyph>

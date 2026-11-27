@@ -36,7 +36,7 @@ TOP_MARKS = {
     0x030B: "hungarumlautcomb",
     0x030C: "caroncomb",
 }
-BOTTOM_MARKS = {0x0323: "dotbelowcomb", 0x0326: "commaaccentcomb", 0x0327: "cedillacomb"}
+BOTTOM_MARKS = {0x0323: "dotbelowcomb", 0x0326: "commaaccentcomb", 0x0327: "cedillacomb", 0x0331: "macronbelowcomb"}
 OGONEK = 0x0328
 HORN = 0x031B
 # Soft-dotted letters whose dot is part of a precomposed glyph: ccmp swaps in
@@ -130,17 +130,19 @@ class MarkMaker:
     def grave(self, suffix=""):
         return self.acute(suffix, grave=True)
 
-    def circumflex(self, suffix=""):
+    def circumflex(self, suffix="", notch_ratio=None):
         h, w, t = self.h["circ"][suffix], self.w["circ"][suffix], self.t - 6
         flat = 110 * self.mk
         lo = ((-w / 2, 0), (-flat / 2, h))
         ro = ((w / 2, 0), (flat / 2, h))
-        # Legs of perpendicular width t, flat apex, horizontal feet. The inner
-        # notch keeps at least 6 units above the feet (Bold's capital keeps
-        # 8): Black's capital pen is thicker than the mark is tall.
+        # Legs of perpendicular width t, flat apex, horizontal feet.
+        # Keep both feet distinct when the Black stroke fills the mark.
         run = (w - flat) / 2
         cos = run / math.hypot(run, h)
-        t = min(t, (h * (1 + flat / (w - flat)) - 6) * cos)
+        if notch_ratio is None:
+            notch_ratio = self.b.sh.get("circumflexNotchRatio", 0)
+        notch = max(6, h * notch_ratio)
+        t = min(t, (h * (1 + flat / (w - flat)) - notch) * cos)
         from .geometry import intersect_lines, offset_line, x_at_y
 
         li = offset_line(*lo, -t)
@@ -251,6 +253,13 @@ class MarkMaker:
         t = self.t - (22 if suffix == "" else 28)
         return self._place("macroncomb", [rect(-w / 2, 0, w / 2, t)], suffix, t, 0x0304)
 
+    def macronbelow(self):
+        width, thickness = 520 * self.mw, self.t - 22
+        top = -self.gap[""]
+        return Glyph("macronbelowcomb", [0x0331], 0,
+                     [rect(-width / 2, top - thickness, width / 2, top)],
+                     anchors={"_bottom": (0, 0), "bottom": (0, top - thickness - self.gap[""])})
+
     def _dot_d(self, suffix):
         return self.b.st.stemLower * (self.b.sh.markDot if suffix == "" else self.b.sh.markDotCase)
 
@@ -290,7 +299,7 @@ class MarkMaker:
         return self._place("hungarumlautcomb", [one.translated(-sep / 2, 0), one.translated(sep / 2, 0)], suffix, h, 0x030B)
 
     def caron(self, suffix=""):
-        g = self.circumflex(suffix)
+        g = self.circumflex(suffix, notch_ratio=0)
         h = self.h["circ"][suffix]
         y0 = (self.X if suffix == "" else self.C) + self.gap[suffix]
         g.contours = [c.mirrored_y(y0 + h / 2).oriented(True) for c in g.contours]
@@ -409,7 +418,7 @@ class MarkMaker:
                        self.macron, self.dotaccent, self.dieresis, self.ring, self.hungarumlaut, self.caron]:
                 g = fn(suffix)
                 out[g.name] = g
-        for fn in [self.commaaccent, self.commaturnedabove, self.caron_alt, self.cedilla, self.ogonek]:
+        for fn in [self.commaaccent, self.commaturnedabove, self.caron_alt, self.cedilla, self.ogonek, self.macronbelow]:
             g = fn()
             out[g.name] = g
         out["dotbelowcomb"] = self.dotbelow()
@@ -564,7 +573,8 @@ def compose(cp: int, glyphs: dict[str, Glyph], cmap: dict[int, str], dotless: bo
         width = max(width, max(c.bounds()[2] for c in m.contours) + dx + 60)
     elif tops:
         names = [TOP_MARKS[c] for c in tops]
-        attach("_".join(names) + suffix if len(names) > 1 else names[0] + suffix, "top")
+        upper_mark = "_".join(names) + suffix if len(names) > 1 else names[0] + suffix
+        attach(upper_mark, "top")
     for c in rest:
         if c == 0x0327 and base_ch in CEDILLA_AS_COMMA:
             attach("commaaccentcomb", "bottom")
@@ -583,6 +593,12 @@ def compose(cp: int, glyphs: dict[str, Glyph], cmap: dict[int, str], dotless: bo
         g.components = []
         g.note = "precomposed, attached mark merged into the outline"
     g.anchors = {}
+    if cp in (0x0105, 0x0119, 0x012F, 0x0173):
+        g.anchors["top"] = base.anchors["top"]
+    if cp in (0x0117, 0x016B):
+        mark_name, dx, dy = comps[1]
+        x, y = glyphs[mark_name].anchors["top"]
+        g.anchors["top"] = (x + dx, y + dy)
     return g
 
 

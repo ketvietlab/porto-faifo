@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="M" format="2">
+  <advance width="1792"/>
+  <unicode hex="004D"/>
+  <anchor x="896" y="0" name="bottom"/>
+  <anchor x="896" y="1456" name="top"/>
+  <outline>
+    <contour>
+      <point x="162.0" y="0.0" type="line"/>
+      <point x="412.0" y="0.0" type="line"/>
+      <point x="412.0" y="1456.0" type="line"/>
+      <point x="162.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1380.0" y="0.0" type="line"/>
+      <point x="1630.0" y="0.0" type="line"/>
+      <point x="1630.0" y="1456.0" type="line"/>
+      <point x="1380.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="162.0" y="1456.0" type="line"/>
+      <point x="765.0" y="0.0" type="line"/>
+      <point x="1027.0" y="0.0" type="line"/>
+      <point x="424.0" y="1456.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1630.0" y="1456.0" type="line"/>
+      <point x="1368.0" y="1456.0" type="line"/>
+      <point x="765.0" y="0.0" type="line"/>
+      <point x="1027.0" y="0.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>vn.ketviet.construction</key>
+      <string>N stems; two diagonals meet in a flat vertex on the baseline</string>
+    </dict>
+  </lib>
+</glyph>

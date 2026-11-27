@@ -9,7 +9,7 @@ cell, no kerning:
 1. sources/PFMono-<style>.ufo
 2. fontmake -> TTF and OTF, overlaps removed (as build.py)
 3. ttfautohint -> hinted TTF; WOFF2 from it
-4. fonts/mono/{otf,ttf,woff2}/PFMono-<style>.*
+4. fonts/mono/{otf,ttf,woff2}/PortoFaifoMono-<style>.*
 
 The fixed pitch is declared everywhere a client looks: post.isFixedPitch,
 OS/2 PANOSE proportion 9 (monospaced) and one advance in hmtx.
@@ -26,7 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from fontTools.ttLib import TTFont  # noqa: E402
 
-from build import SOURCE_DATE_EPOCH, VENV_BIN, fix_metrics, run  # noqa: E402
+from build import SOURCE_DATE_EPOCH, VENV_BIN, fix_metrics, run, set_script_metadata  # noqa: E402
 from pfsans import master  # noqa: E402
 from pfsans.system import ROOT, load  # noqa: E402
 
@@ -35,11 +35,12 @@ STYLES = ("Regular", "Medium")
 
 def source(STYLE: str) -> Path:
     system = load(STYLE, mono=True)
-    family = system.meta.postscriptFamily
+    family = system.meta.sourceFamily
     src = ROOT / "sources" / f"{family}-{STYLE}.ufo"
     font, _ = master.write(src, STYLE, mono=True)
     info = font.info
     info.postscriptIsFixedPitch = True
+    info.postscriptUnderlineThickness = system.raw["mono"]["underlineThickness"]
     info.openTypeOS2Panose = [2, 11, 5, 9, 0, 0, 0, 0, 0, 0]  # Latin text, sans, book, monospaced
     info.openTypeNameDescription = ("Porto Faifo Mono: the Porto Faifo Sans pen on a fixed 0.576 em cell, for code and "
                                     "tabular text in Vietnamese interfaces.")
@@ -49,26 +50,26 @@ def source(STYLE: str) -> Path:
 
 
 def compile_(src: Path) -> tuple[Path, Path]:
-    family, STYLE = src.stem.split("-")
+    STYLE = src.stem.split("-")[-1]
+    family = load(STYLE, mono=True).font_stem
     tmp = ROOT / "build" / "fontmake" / "mono" / STYLE
     shutil.rmtree(tmp, ignore_errors=True)
     env = dict(os.environ, SOURCE_DATE_EPOCH=SOURCE_DATE_EPOCH, PYTHONPATH=str(ROOT / "scripts"))
     for fmt in ("ttf", "otf"):
-        run([VENV_BIN / "fontmake", "-u", src, "-o", fmt, "--output-dir", tmp, "--overlaps-backend", "pathops",
+        run([VENV_BIN / "fontmake", "-u", src, "-o", fmt,
+             "--output-path", tmp / f"{family}-{STYLE}.{fmt}", "--overlaps-backend", "pathops",
              "--filter", "pfsans.cleanup::CleanupFilter", "--flatten-components", "--verbose", "WARNING"],
             env=env, cwd=ROOT)
     return tmp / f"{family}-{STYLE}.ttf", tmp / f"{family}-{STYLE}.otf"
 
 
-def finish(raw_ttf: Path, raw_otf: Path) -> list[Path]:
+def finish(raw_ttf: Path, raw_otf: Path, y_max: int, y_min: int) -> list[Path]:
     import ttfautohint
 
     family, STYLE = raw_ttf.stem.split("-")
     out = ROOT / "fonts" / "mono"
     for sub in ("ttf", "otf", "woff2"):
         (out / sub).mkdir(parents=True, exist_ok=True)
-    head = TTFont(raw_ttf)["head"]
-    y_max, y_min = head.yMax, head.yMin
     otf, ttf = out / "otf" / f"{family}-{STYLE}.otf", out / "ttf" / f"{family}-{STYLE}.ttf"
     shutil.copy(raw_otf, otf)
     fix_metrics(raw_ttf, y_max, y_min)
@@ -78,6 +79,7 @@ def finish(raw_ttf: Path, raw_otf: Path) -> list[Path]:
                             increase_x_height=14, windows_compatibility=True, no_info=True)
     for path in (ttf, otf):
         f = TTFont(path, recalcTimestamp=False)
+        set_script_metadata(f)
         f["head"].modified = f["head"].created
         if path == ttf:
             f["head"].flags |= 1 << 3
@@ -107,8 +109,11 @@ def check(paths: list[Path]) -> None:
 
 def main() -> None:
     styles = sys.argv[1:] or STYLES
+    raw = {style: compile_(source(style)) for style in dict.fromkeys((*STYLES, *styles))}
+    heads = [TTFont(path)["head"] for pair in raw.values() for path in pair]
+    y_max, y_min = max(head.yMax for head in heads), min(head.yMin for head in heads)
     for style in styles:
-        check(finish(*compile_(source(style))))
+        check(finish(*raw[style], y_max, y_min))
 
 
 if __name__ == "__main__":

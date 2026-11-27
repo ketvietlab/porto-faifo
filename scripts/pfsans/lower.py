@@ -71,6 +71,16 @@ class LowerMixin:
         g.name, g.unicodes, g.note = "j", [0x6A], "dotless j + i dot"
         return g
 
+    def eng(self):
+        g = self.n("eng", 0x014B)
+        width = self.st.stemLowerRight
+        x = self.sp.lowerStraight + self.wd.n - width
+        hook = self.hook_stem(x, width, 64, self.desc, 330, 370, 96, 80,
+                              x + width + 230, self.st.barLower, self.ox)
+        g.contours.append(hook.mirrored_x(x + width / 2).oriented(True))
+        g.note = "n with a hooked right descender"
+        return g
+
     def g(self):
         st, k = self.st, self.ten
         W, S, X, D = self.wd.d, st.stemLower, self.xh, self.desc
@@ -321,5 +331,5 @@ class LowerMixin:
         return self.superior(self.o(), "ordmasculine", 0xBA, weight=self.sh.superiorWeight)
 
 
-LOWER = ["f", "g", "j", "dotlessj", "k", "v", "w", "x", "y", "z", "ae", "oe", "oslash", "eth", "thorn", "hbar",
+LOWER = ["f", "g", "j", "dotlessj", "eng", "k", "v", "w", "x", "y", "z", "ae", "oe", "oslash", "eth", "thorn", "hbar",
          "lslash", "germandbls", "ordfeminine", "ordmasculine"]

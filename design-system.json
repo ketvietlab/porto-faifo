@@ -2,12 +2,12 @@
   "meta": {
     "brandName": "Porto Faifo Sans",
     "familyName": "Porto Faifo Sans",
-    "postscriptFamily": "PFSans",
+    "sourceFamily": "PFSans",
     "version": "1.000",
     "phase": "Release 1.0: GF Latin Core, Plus and Vietnamese; Light to Black; variable wght and opsz",
     "vendorID": "KETV",
     "designer": "Két Việt",
-    "copyright": "Copyright (c) 2026 The Porto Faifo Project Authors (https://github.com/ketvietlab/porto-faifo)",
+    "copyright": "Copyright 2026 The Porto Faifo Project Authors (https://github.com/ketvietlab/porto-faifo)",
     "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
     "licenseURL": "https://openfontlicense.org",
     "vendorURL": "https://ketviet.vn"
@@ -295,7 +295,7 @@
     },
     "Black": {
       "wght": 900,
-      "comment": "Derived from Bold by the Bold→Black change measured on SF Pro (opsz 17, wght 700→1000) and Inter (opsz 14, 700→900) outlines, x-height units, mean of the two: stems ×1.35–1.36, round sides ×1.36, round tops ×1.29 (o) / ×1.31 (O), arch ×1.29 (follows the round tops, as in Bold), capital bars ×1.31, lowercase bars ×1.30, e bar ×1.19, diagonals ×1.31–1.35, M stem ×1.35, figures ×1.30–1.36, marks ×1.24, B waist ×1.20, punctuation ×1.33, hair strokes keep Bold's share of the stem change (×1.24). Body width = Bold + g × added stem, g measured between 700 and 900 (n 0.97, o 0.61, H 0.75, O 0.44, r 0.95 …); tabular advance ×1.056; sidebearings ×0.82 (SF/Inter n 0.83, H 0.82, o 0.78). Shapes keep the measured Bold→Black change of the openings: c and e apertures ×0.73 / ×0.78, counters of A e a æ ×0.63 / 0.51 / 0.45 / 0.48 of Bold (SF/Inter 0.65 / 0.50 / 0.49–0.55 / 0.50–0.54), so the A bar (aBarUpper) and the e bar (barLowerE) drop and the a bowl (aBowlTop) rises; the s terminals stop at the oval extremes (sTerminal 0), so s stays 8 % more open than SF/Inter. Dots: i dot ÷ stem 0.85 on SF/Inter → dotDiameter 0.93. Superiors (ª º) are the plain scaled letters (superiorWeight 0.62), still a touch heavier than Bold's. Symbols whose fixed size would close (% & @ ° € ß, B/R bowls) carry counter minimums in their recipes that only bind in Black.",
+      "comment": "Derived from Bold by the Bold→Black change measured on SF Pro (opsz 17, wght 700→1000) and Inter (opsz 14, 700→900) outlines, x-height units, mean of the two: stems ×1.35–1.36, round sides ×1.36, round tops ×1.29 (o) / ×1.31 (O), arch ×1.29 (follows the round tops, as in Bold), capital bars ×1.31, lowercase bars ×1.30, e bar ×1.19, diagonals ×1.31–1.35, M stem ×1.35, figures ×1.30–1.36, marks ×1.24, B waist ×1.20, punctuation ×1.33, hair strokes keep Bold's share of the stem change (×1.24). Body width = Bold + g × added stem, g measured between 700 and 900 (n 0.97, o 0.61, H 0.75, O 0.44, r 0.95 …); tabular advance ×1.056; sidebearings ×0.82 (SF/Inter n 0.83, H 0.82, o 0.78). Shapes keep the measured Bold→Black change of the openings: c and e apertures ×0.73 / ×0.78, counters of A e a æ ×0.63 / 0.51 / 0.45 / 0.48 of Bold (SF/Inter 0.65 / 0.50 / 0.49–0.55 / 0.50–0.54), so the A bar (aBarUpper) and the e bar (barLowerE) drop and the a bowl (aBowlTop) rises. Black opens the s terminals and relieves the a/e bars, the side-bowl counters and the small enclosed spaces in symbols for legibility. Dots: i dot ÷ stem 0.85 on SF/Inter → dotDiameter 0.93. Superiors (ª º) are the plain scaled letters (superiorWeight 0.62), still a touch heavier than Bold's. Symbols whose fixed size would close (% & @ ° € ß, B/R bowls) carry counter minimums in their recipes that only bind in Black.",
       "stroke": {
         "stemUpper": 421,
         "stemLower": 399,
@@ -303,7 +303,7 @@
         "stemM": 366,
         "barUpper": 332,
         "barLower": 272,
-        "barE": 231,
+        "barE": 215,
         "roundUpperSide": 443,
         "roundUpperTop": 328,
         "roundLowerSide": 421,
@@ -339,10 +339,24 @@
         "cTerminalLower": 0.211,
         "CTerminalUpper": 0.247,
         "CTerminalLower": 0.265,
-        "eTerminalLower": 0.402,
+        "eTerminalLower": 0.425,
         "aTerminal": 0.215,
         "sTerminalUpper": 0.0,
-        "sTerminalLower": 0.0
+        "sTerminalLower": 0.0,
+        "lowerSOpening": 0.055,
+        "lowerSSideRelief": 18,
+        "aBowlBarRelief": 32,
+        "aBowlInnerTurn": 0.16,
+        "aHookRelief": 26,
+        "circumflexNotchRatio": 0.27,
+        "sideBowlCounterRoundness": 0.46,
+        "sideBowlCounterRelief": 26,
+        "euroStrokeRelief": 50,
+        "percentCounterWidth": 110,
+        "divideDotGap": 62,
+        "fiveStemFoot": 0.49,
+        "fiveFootBlend": 1.0,
+        "ampersandCounterRadius": 88
       },
       "proportions": {
         "H": 1308,
@@ -411,9 +425,15 @@
     }
   },
   "instances": {
-    "comment": "Weights between the masters are interpolated from the masters' own parameters, not drawn: every stroke, shape, proportion, spacing and curve value is Regular + t (Bold - Regular) with t = (wght - 400) / (700 - 400), and the same recipes run on the result. SF and Inter put 500 at t 0.29-0.38 on every measured stroke, aperture and advance (rasters, x-height normalised), i.e. linear in wght, so Medium uses t = 1/3. Medium also serves CSS weight 600 (UI semibold): declare its face as font-weight 500 600, otherwise browsers pick Bold for 600. Strokes, widths and spacing round to whole units, shapes to 4 decimals.",
+    "comment": "The builder interpolates stroke, shape, proportion, spacing and curve parameters, then draws each weight from those parameters. Medium is one third of the way from Regular to Bold. SemiBold is halfway from Medium to Bold, and ExtraBold is halfway from Bold to Black.",
     "Medium": {
       "wght": 500
+    },
+    "SemiBold": {
+      "wght": 600
+    },
+    "ExtraBold": {
+      "wght": 800
     }
   },
   "shapes": {
@@ -440,6 +460,20 @@
     "aBowlCorner": 0.55,
     "aBowlJoin": 0.15,
     "aBowlCrotch": 0.36,
+    "aBowlBarRelief": 0,
+    "aBowlInnerTurn": 0.0,
+    "aHookRelief": 0,
+    "circumflexNotchRatio": 0.0,
+    "lowerSOpening": 0.0,
+    "lowerSSideRelief": 0,
+    "sideBowlCounterRoundness": 0.0,
+    "sideBowlCounterRelief": 0,
+    "euroStrokeRelief": 0,
+    "percentCounterWidth": 62,
+    "divideDotGap": 36,
+    "fiveStemFoot": 0.47,
+    "fiveFootBlend": 0.0,
+    "ampersandCounterRadius": 62,
     "dotDiameter": 1.32,
     "dotGap": 0.2,
     "markWidth": 1.0,
@@ -562,8 +596,7 @@
     }
   },
   "variable": {
-    "comment": "One variable font with wght and opsz. Masters: Light 300, Regular 400, Medium 500 (the parametric instance, so the axis passes through the static Medium), Bold 700, Black 900, each at Text 16 and Display 48 spacing (see opticalSizing). avar holds weight 600 on 500: SemiBold is Medium, exactly as the static faces serve CSS 600 with Medium. Design coordinates put Medium at 525 and Bold at 712.5, i.e. normalised 0.25 and 0.625: CSS 500 and 700 normalise to 0.2 and 0.6, which F2Dot14 cannot hold, and HarfBuzz then landed one step past Bold (advances off by 1 unit); exact dyadic peaks and a plateau of one F2Dot14 step (±0.03) round 500 and 700 make every renderer hit the masters. 800 interpolates Bold → Black. Overlaps are kept (OVERLAP_SIMPLE / OVERLAP_COMPOUND set), because independent unions per weight cannot interpolate.",
-    "familySuffix": "Variable",
+    "comment": "Every weight has Text and Display masters. The mapped design coordinates for 600 and 800 are the midpoints of their respective pairs. Short plateaus around each non-default interior master absorb F2Dot14 rounding. Overlaps are kept with OVERLAP_SIMPLE and OVERLAP_COMPOUND because independent unions per weight cannot interpolate.",
     "weight": {
       "minimum": 300,
       "default": 400,
@@ -573,10 +606,16 @@
         [400, 400],
         [499.97, 525],
         [500, 525],
-        [600, 525],
+        [500.03, 525],
+        [599.97, 618.75],
+        [600, 618.75],
+        [600.03, 618.75],
         [699.97, 712.5],
         [700, 712.5],
         [700.03, 712.5],
+        [799.97, 806.25],
+        [800, 806.25],
+        [800.03, 806.25],
         [900, 900]
       ]
     },
@@ -586,6 +625,7 @@
       "Medium": 500,
       "SemiBold": 600,
       "Bold": 700,
+      "ExtraBold": 800,
       "Black": 900
     }
   },
@@ -610,10 +650,11 @@
   "mono": {
     "comment": "Porto Faifo Mono: the same pen, metrics and curves on one fixed advance of 1180 units (0.576 em, a touch under Menlo, JetBrains Mono and Fira Code at 0.6). Body widths are redrawn to fit the cell: capitals narrow to 0.63-0.89 of the cell, lowercase keeps n and o near their proportional widths, m w M W narrow with a lighter middle so they do not darken the line. The narrow letters i j l f t I 1 get the spurs, slabs and tails that fill the cell and tell 1 l I i apart, r a wider arch; zero carries the slash by default. No kerning, no ligatures.",
     "familyName": "Porto Faifo Mono",
-    "postscriptFamily": "PFMono",
+    "sourceFamily": "PFMono",
     "brandName": "Porto Faifo Mono",
     "version": "1.000",
     "advance": 1180,
+    "underlineThickness": 114,
     "minSidebearing": 40,
     "proportions": {
       "H": 900, "O": 1000, "E": 800, "A": 1100, "V": 1080, "N": 900,

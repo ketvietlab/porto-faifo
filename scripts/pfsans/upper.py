@@ -36,6 +36,16 @@ class UpperMixin:
         g.anchors = anchors if anchors is not None else {"top": (W / 2, C), "bottom": (W / 2, 0)}
         return g.shifted(lsb)
 
+    def Eng(self):
+        g = self.N()
+        x, _, right, _ = g.contours[1].bounds()
+        hook = self.hook_stem(x, right - x, 64, self.desc, 330, 370, 96, 80,
+                              right + 230, self.st.barLower, self.ox)
+        g.contours.append(hook.mirrored_x((x + right) / 2).oriented(True))
+        g.name, g.unicodes = "Eng", [0x014A]
+        g.note = "N with a hooked right descender"
+        return g
+
     # ------------------------------------------------------------ stem + bars
     def F(self):
         st, C, sp = self.st, self.cap, self.sp
@@ -63,7 +73,7 @@ class UpperMixin:
         st, C, sp = self.st, self.cap, self.sp
         W, S, T, Tw = self.wd.B, st.stemUpper, st.barUpper, st.bowlWaist
         ym = self.sh.BWaist * C
-        side = st.roundUpperSide - 8
+        side = st.roundUpperSide - 8 - self.sh.get("sideBowlCounterRelief", 0)
         upper = self.side_bowl(S, ym - Tw / 2, C, W - 72, T, Tw, side - 6)
         lower = self.side_bowl(S, 0, ym + Tw / 2, W, Tw, T + 6, side)
         return self._cap_glyph("B", 0x42, W, [rect(0, 0, S, C), upper, lower], sp.upperStraight, sp.upperBowl,
@@ -82,7 +92,8 @@ class UpperMixin:
         st, C, sp = self.st, self.cap, self.sp
         W, S, T = self.wd.P, st.stemUpper, st.barUpper
         y0 = self.sh.PBowlBottom * C
-        bowl = self.side_bowl(S, y0, C, W, T, st.bowlWaist, st.roundUpperSide)
+        side = st.roundUpperSide - self.sh.get("sideBowlCounterRelief", 0)
+        bowl = self.side_bowl(S, y0, C, W, T, st.bowlWaist, side)
         return self._cap_glyph("P", 0x50, W, [rect(0, 0, S, C), bowl], sp.upperStraight, sp.upperBowl,
                                "H stem + side bowl closing at PBowlBottom",
                                {"top": (W * 0.46, C), "bottom": (S / 2 + 40, 0)})
@@ -91,7 +102,8 @@ class UpperMixin:
         st, C, sp = self.st, self.cap, self.sp
         W, S, T, Tw = self.wd.R, st.stemUpper, st.barUpper, st.bowlWaist
         y0 = self.sh.PBowlBottom * C
-        bowl = self.side_bowl(S, y0, C, W - 50, T, Tw, st.roundUpperSide)
+        side = st.roundUpperSide - self.sh.get("sideBowlCounterRelief", 0)
+        bowl = self.side_bowl(S, y0, C, W - 50, T, Tw, side)
         t = st.diagonalUpper
         top = (0.5 * W, y0 + Tw / 2)
         bot = hcut_centre(top, W, 0, t, +1)
@@ -344,5 +356,5 @@ class UpperMixin:
         return self._cap_glyph("uni1E9E", 0x1E9E, W, cs, sp.upperStraight, sp.upperBowl, "stem + top arm + diagonal into a B lower bowl open at the left")
 
 
-UPPER = ["B", "C", "D", "F", "G", "J", "K", "L", "M", "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z",
+UPPER = ["B", "C", "D", "F", "G", "J", "K", "L", "M", "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z", "Eng",
          "AE", "OE", "Oslash", "Dcroat", "Thorn", "Lslash", "Hbar", "Germandbls"]

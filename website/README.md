@@ -42,3 +42,9 @@ so pushes that update fonts, symbols or release data also build the site.
 assets with canonical directory URLs and a `404` response for unknown paths.
 After the first deployment, add `portofaifo.com` under **Settings → Domains & Routes**
 as a custom domain. [Cloudflare Workers Builds configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)
+
+To rebuild without a new commit, create a **Deploy Hook** for the `main` branch
+in the Worker's build settings and save its URL as the GitHub Actions repository
+secret `PORTO_FAIFO_DEPLOY_HOOK`. Run
+[Rebuild website](../.github/workflows/rebuild-website.yml) on `main` from the
+Actions tab. The build and deployment status appear in Cloudflare.

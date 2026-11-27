@@ -1,0 +1,35 @@
+name: Rebuild website
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  rebuild:
+    name: Request Cloudflare build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Trigger Workers Builds
+        env:
+          PORTO_FAIFO_DEPLOY_HOOK: ${{ secrets.PORTO_FAIFO_DEPLOY_HOOK }}
+        run: |
+          if [[ -z "$PORTO_FAIFO_DEPLOY_HOOK" ]]; then
+            echo "::error::Set the PORTO_FAIFO_DEPLOY_HOOK repository secret."
+            exit 1
+          fi
+
+          if ! response=$(curl --fail --silent --max-time 30 --request POST "$PORTO_FAIFO_DEPLOY_HOOK"); then
+            echo "::error::The Cloudflare deploy hook request failed."
+            exit 1
+          fi
+
+          if ! jq -e '.success == true' <<<"$response" >/dev/null 2>&1; then
+            echo "::error::Cloudflare did not confirm the build request."
+            exit 1
+          fi
+
+          echo "Cloudflare accepted the build request."

@@ -20,19 +20,25 @@ The dashboard demos adapt the sample orders in `specimen/index.html`. The build 
 
 Canonical URLs, sharing metadata, structured data, `robots.txt` and `sitemap.xml` target `https://portofaifo.com/`. The build writes the sitemap and robots file to the root of `dist/`.
 
-## Cloudflare Pages
+## Cloudflare Workers Builds
 
-Create a Direct Upload Pages project with production branch `main`. From a terminal authenticated with Wrangler, run:
+In **Workers & Pages → Create application**, connect `ketvietlab/porto-faifo` to a Worker with the following build settings.
 
-```sh
-npx --yes wrangler@4.168.0 pages project create porto-faifo --production-branch main
-```
+| Field | Value |
+| --- | --- |
+| Project name | `porto-faifo` |
+| Production branch | `main` |
+| Root directory | `website` |
+| Build command | `npm ci --ignore-scripts && npm run check && npm run build` |
+| Deploy command | `npx --yes wrangler@4.168.0 deploy` |
+| Enable Preview builds | Off |
+| Protect with Cloudflare Access | Off |
 
-Set `CLOUDFLARE_ACCOUNT_ID` as a GitHub Actions repository variable and
-`CLOUDFLARE_API_TOKEN` as a repository secret. Scope the token to the target
-Cloudflare account with **Account → Cloudflare Pages → Edit**.
+Under **Build variables and secrets**, set `NODE_VERSION` to `26.13.1` and
+`SKIP_DEPENDENCY_INSTALL` to `true`. Keep the repository-wide build watch default
+so pushes that update fonts, symbols or release data also build the site.
 
-[Publish website](../.github/workflows/publish-website.yml) builds and uploads
-`website/dist/` on relevant pushes to `main`. It can also be run manually
-from the Actions tab on `main`. In the Pages project's **Custom domains**
-settings, add `portofaifo.com` to match the site's canonical URLs.
+[The Wrangler configuration](wrangler.jsonc) serves `website/dist/` as static
+assets with canonical directory URLs and a `404` response for unknown paths.
+After the first deployment, add `portofaifo.com` under **Settings → Domains & Routes**
+as a custom domain. [Cloudflare Workers Builds configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)

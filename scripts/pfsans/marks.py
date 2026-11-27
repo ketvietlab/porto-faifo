@@ -130,17 +130,19 @@ class MarkMaker:
     def grave(self, suffix=""):
         return self.acute(suffix, grave=True)
 
-    def circumflex(self, suffix=""):
+    def circumflex(self, suffix="", notch_ratio=None):
         h, w, t = self.h["circ"][suffix], self.w["circ"][suffix], self.t - 6
         flat = 110 * self.mk
         lo = ((-w / 2, 0), (-flat / 2, h))
         ro = ((w / 2, 0), (flat / 2, h))
-        # Legs of perpendicular width t, flat apex, horizontal feet. The inner
-        # notch keeps at least 6 units above the feet (Bold's capital keeps
-        # 8): Black's capital pen is thicker than the mark is tall.
+        # Legs of perpendicular width t, flat apex, horizontal feet.
+        # Keep both feet distinct when the Black stroke fills the mark.
         run = (w - flat) / 2
         cos = run / math.hypot(run, h)
-        t = min(t, (h * (1 + flat / (w - flat)) - 6) * cos)
+        if notch_ratio is None:
+            notch_ratio = self.b.sh.get("circumflexNotchRatio", 0)
+        notch = max(6, h * notch_ratio)
+        t = min(t, (h * (1 + flat / (w - flat)) - notch) * cos)
         from .geometry import intersect_lines, offset_line, x_at_y
 
         li = offset_line(*lo, -t)
@@ -290,7 +292,7 @@ class MarkMaker:
         return self._place("hungarumlautcomb", [one.translated(-sep / 2, 0), one.translated(sep / 2, 0)], suffix, h, 0x030B)
 
     def caron(self, suffix=""):
-        g = self.circumflex(suffix)
+        g = self.circumflex(suffix, notch_ratio=0)
         h = self.h["circ"][suffix]
         y0 = (self.X if suffix == "" else self.C) + self.gap[suffix]
         g.contours = [c.mirrored_y(y0 + h / 2).oriented(True) for c in g.contours]

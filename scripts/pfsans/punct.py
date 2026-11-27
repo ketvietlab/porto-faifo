@@ -336,12 +336,16 @@ class PunctMixin:
     def numbersign(self):
         C = self.cap
         W, t_v, t_h, sl = 1000, 160 * self.wk, 150 * self.wk, 60
+        adv = self.wd.tabularAdvance
+        # Leave white between the slanted stems even at the heaviest weight.
+        # Widen the body within its tabular cell before thinning the stems.
+        W = max(W, min(adv - 220, (t_v + 68) / 0.34))
+        t_v = min(t_v, 0.34 * W - 68)
         cs = []
         for x in (0.34 * W, 0.68 * W):
             cs.append(stroke((x - sl, 0), (x + sl, C), t_v))
         for y in (0.33 * C, 0.65 * C):
             cs.append(rect(0.04 * W, y - t_h / 2, 0.98 * W, y + t_h / 2))
-        adv = self.wd.tabularAdvance
         return self._g("numbersign", 0x23, adv, cs, "slanted stems + bar-weight bars, tabular", (adv - W) / 2)
 
     def percent(self):
@@ -353,8 +357,9 @@ class PunctMixin:
         rw = self.wd.get("percentRing", 400) + 1.6 * grow
         rh = self.wd.get("percentRingHeight", 600) + 0.8 * grow
         # Past Bold that growth no longer keeps the counters open: they stay at
-        # least 62 x 222, and the figure widens to keep white round the slash.
-        rw, rh = max(rw, 2 * side + 62), max(rh, 2 * top + 222)
+        # least 62 x 222, with extra width in Black for small-size legibility.
+        rw = max(rw, 2 * side + self.sh.get("percentCounterWidth", 62))
+        rh = max(rh, 2 * top + 222)
         W = max(self.wd.get("percent", 1460), 2 * rw + 250)
         up = self.ring(rw / 2, C - rh / 2, rw / 2, rh / 2 + self.oc / 2, side, top)
         lo = self.ring(W - rw / 2, rh / 2, rw / 2, rh / 2 + self.oc / 2, side, top)
@@ -374,8 +379,9 @@ class PunctMixin:
         t_leg = t_d = st.diagonalUpper - 8
         side_b, bot_b, t_tail = st.roundUpperSide - 12, st.roundUpperTop - 12, st.stemUpper - 22
         # Loop: the top half of an oval. In Black the loop grows round a
-        # counter of at least 62 x 100 and the figure widens with it.
-        rx, ry = max(0.235 * W, side_l + 62), max(T - 0.78 * C, top_l + 100)
+        # counter with a clear inner turn, and the figure widens with it.
+        counter_radius = self.sh.get("ampersandCounterRadius", 62)
+        rx, ry = max(0.235 * W, side_l + counter_radius), max(T - 0.78 * C, top_l + 100)
         W += rx - 0.235 * W
         lx, ly = 0.39 * W, T - ry
         oq, iq = oval_quadrants(lx, ly, rx, ry, ko), oval_quadrants(lx, ly, rx - side_l, ry - top_l, ki)
@@ -545,14 +551,16 @@ class PunctMixin:
         W = max(1000, 2 * (st.figureSide + 100) + 110)  # Black widens so the C keeps a counter
         rx, ry, cy = (W - 110) / 2, C / 2 + self.oc, C / 2
         cxr = 110 + rx
-        ring = self.cut_ring(cxr, cy, rx, ry, st.figureSide, st.figureTop, cy + self.sh.CTerminalUpper * ry, cy - self.sh.CTerminalLower * ry)
-        tb = st.punctStroke - 14
-        # Black: the bars part to keep Bold's 52 units between them and end
-        # where they do in Bold, 20 and 60 short of the counter's right side.
+        relief = self.sh.get("euroStrokeRelief", 0)
+        side = st.figureSide - relief
+        ring = self.cut_ring(cxr, cy, rx, ry, side, st.figureTop - relief / 2, cy + self.sh.CTerminalUpper * ry, cy - self.sh.CTerminalLower * ry)
+        tb = st.punctStroke - 14 - relief
+        # Keep at least 52 units between the bars. Pull the upper one back
+        # from the curved inner shoulder in Black so it ends in open space.
         part = max(0.0, tb + 52 - 0.18 * C) / 2
-        x_in = cxr + rx - st.figureSide
+        x_in = cxr + rx - side
         y_hi, y_lo = 0.56 * C + part, 0.38 * C - part
-        cs = [ring, rect(0, y_hi, min(0.66 * W, x_in - 20), y_hi + tb), rect(0, y_lo, min(0.62 * W, x_in - 60), y_lo + tb)]
+        cs = [ring, rect(0, y_hi, min(0.66 * W, x_in - 20) - relief, y_hi + tb), rect(0, y_lo, min(0.62 * W, x_in - 60), y_lo + tb)]
         adv = self.wd.tabularAdvance
         return self._g("Euro", 0x20AC, adv, cs, "C on figure strokes + two bars, tabular", (adv - W) / 2)
 
@@ -601,7 +609,10 @@ class PunctMixin:
     def divide(self):
         t, L, ym = self.st.punctStroke, 880, self._ym
         d = 0.9 * self._d
-        cs = [rect(-L / 2, ym - t / 2, L / 2, ym + t / 2), superellipse(0, ym + 290, d / 2, d / 2, self.ten.circle), superellipse(0, ym - 290, d / 2, d / 2, self.ten.circle)]
+        dot_offset = max(290, (t + d) / 2 + self.sh.get("divideDotGap", 36))
+        cs = [rect(-L / 2, ym - t / 2, L / 2, ym + t / 2),
+              superellipse(0, ym + dot_offset, d / 2, d / 2, self.ten.circle),
+              superellipse(0, ym - dot_offset, d / 2, d / 2, self.ten.circle)]
         return self._math("divide", 0xF7, cs, "minus + two dots")
 
     def asciitilde(self):

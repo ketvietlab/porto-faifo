@@ -233,22 +233,25 @@ class Builder:
     def side_bowl(self, xs, y0, y1, xr, t_top, t_bot, side, rh=None, overlap=20) -> Contour:
         """D-type bowl right of a stem edge ``xs``: flat arms (``t_top`` /
         ``t_bot`` thick) turning into a round side whose outer extreme is
-        ``xr``.  Outer and inner curves share their centre so the stroke
-        thins evenly into the corners (B D P R Þ)."""
+        ``xr``. The inner curve can start earlier than the outer curve
+        to keep the small counters in heavy bowls rounded (B D P R Þ)."""
         k_o, k_i = self.ten.outer, self.ten.inner
         rv = (y1 - y0) / 2
         # The round side stays wider than the stroke (Black's upper B and R
         # bowls), or the inner curve would turn back on itself.
         rh = min(max(rh or rv, side + 20), xr - xs - 40)
         xa = xr - rh
+        right_inner = xr - side
+        counter_radius = (right_inner - xs) * self.sh.get("sideBowlCounterRoundness", 0)
+        inner_apex = min(xa, right_inner - counter_radius)
         ym = (y0 + y1) / 2
         yim = (y0 + t_bot + y1 - t_top) / 2
         c = Contour((xs - overlap, y1)).line((xa, y1))
         c.curve((xr, ym), 0, 270, k_o)
         c.curve((xa, y0), 270, 180, k_o)
-        c.line((xs - overlap, y0)).line((xs - overlap, y0 + t_bot)).line((xa, y0 + t_bot))
-        c.curve((xr - side, yim), 0, 90, k_i)
-        c.curve((xa, y1 - t_top), 90, 180, k_i)
+        c.line((xs - overlap, y0)).line((xs - overlap, y0 + t_bot)).line((inner_apex, y0 + t_bot))
+        c.curve((right_inner, yim), 0, 90, k_i)
+        c.curve((inner_apex, y1 - t_top), 90, 180, k_i)
         c.line((xs - overlap, y1 - t_top))
         return c.close().oriented(True)
 
@@ -557,7 +560,7 @@ class Builder:
         g.anchors = {"top": (W / 2, self.xh), "bottom": (W / 2, 0), "ogonek": (W * 0.6, 0)}
         return g.shifted(self.sp.lowerRound)
 
-    def s_shape(self, W, H, o, side, top_t, bot_t) -> Contour:
+    def s_shape(self, W, H, o, side, top_t, bot_t, opening=0) -> Contour:
         """The S master: two ovals stacked (the upper one inset by
         sUpperInset), each cut by a horizontal terminal like c, joined by a
         shallow spine.  The spine edges leave the ovals' vertical extremes
@@ -577,8 +580,8 @@ class Builder:
         ui[0] = list(superellipse(W / 2, yu, urx - side, ury - top_t, k.terminal).beziers())[0]
         lo[2] = list(superellipse(W / 2, yl, lrx, lry, k.terminal).beziers())[2]
         li[2] = list(superellipse(W / 2, yl, lrx - side, lry - bot_t, k.terminal).beziers())[2]
-        y_ut = yu + sh.sTerminalUpper * ury
-        y_lt = yl - sh.sTerminalLower * lry
+        y_ut = yu + (sh.sTerminalUpper + opening) * ury
+        y_lt = yl - (sh.sTerminalLower + opening) * lry
         # Spine: centre between the extremes, edges offset along the normal.
         a = sh.sSpineAngle
         centre = ((inset + W) / 2, (yu + yl) / 2)
@@ -605,7 +608,9 @@ class Builder:
     def s(self):
         st = self.st
         W, X = self.wd.s, self.xh
-        s = self.s_shape(W, X, self.ox, st.sSide, st.roundLowerTop - 4, st.roundLowerTop)
+        side = st.sSide - self.sh.get("lowerSSideRelief", 0)
+        s = self.s_shape(W, X, self.ox, side, st.roundLowerTop - 4, st.roundLowerTop,
+                         opening=self.sh.get("lowerSOpening", 0))
         g = Glyph("s", [0x73], 2 * 92 + W, [s], note="two stacked ovals cut like c + shallow spine of near-stem weight")
         g.anchors = {"top": (W / 2, X), "bottom": (W / 2, 0)}
         return g.shifted(92)
@@ -622,7 +627,8 @@ class Builder:
         # horizontally like the c terminal, just short of turning vertical.
         y_r = sh.archRightTangent * X
         x_l = sh.aHookLeft * W
-        apex, i_apex = ((x_l + W) / 2, T), ((x_l + side + xs) / 2, T - st.archTop)
+        apex = ((x_l + W) / 2, T)
+        i_apex = ((x_l + side + xs) / 2, T - st.archTop + sh.get("aHookRelief", 0))
         left, i_left = (x_l, y_r), (x_l + side, y_r - 12)
         q_o = [apex, *Contour(apex).curve(left, 180, 270, kt).segments[0][1:]]
         q_i = [i_apex, *Contour(i_apex).curve(i_left, 180, 270, kt).segments[0][1:]]
@@ -640,12 +646,19 @@ class Builder:
         # Bowl: a straight top that falls gently from the stem, an o quadrant
         # into the left side, and a long shoulder back up into the stem.
         y_bt = sh.aBowlTop * X
-        y_bti = y_bt - st.barLower
+        y_bti = y_bt - st.barLower + sh.get("aBowlBarRelief", 0)
         y_bj, y_bc = sh.aBowlJoin * X, sh.aBowlCrotch * X
         a_j = sh.bowlJoinAngle
         slope, x_c = sh.aBowlSlope, sh.aBowlCorner * xs
         fall = (xs - x_c) * math.tan(math.radians(slope))
-        b_left, b_i_left = (0, (y_bt - fall + B) / 2), (side, (y_bti - fall + B + top) / 2)
+        # At Black the thick side pushes the inner left edge past the outer
+        # join. Start the straight inner edge farther in to avoid a tight turn.
+        inner_corner = x_c
+        inner_turn = sh.get("aBowlInnerTurn", 0)
+        if inner_turn:
+            inner_corner = max(inner_corner, side + inner_turn * (xs - side))
+        inner_y = y_bti - (xs - inner_corner) * math.tan(math.radians(slope))
+        b_left, b_i_left = (0, (y_bt - fall + B) / 2), (side, (inner_y + B + top) / 2)
         b_apex, b_i_apex = (0.5 * xs, B), (0.5 * (side + xs), B + top)
         bowl = Contour((xs + 60, y_bt))
         bowl.line((xs, y_bt))
@@ -658,7 +671,7 @@ class Builder:
         bowl.line((xs, y_bc))
         bowl.curve(b_i_apex, 270, 180, ki)
         bowl.curve(b_i_left, 180, 90, ki)
-        bowl.curve((x_c, y_bti - fall), 90, slope, ki)
+        bowl.curve((inner_corner, inner_y), 90, slope, ki)
         bowl.line((xs, y_bti))
         bowl = bowl.close().oriented(True)
         g = Glyph("a", [0x61], 92 + W + self.sp.lowerStraightRight, [hook, bowl], note="n shoulder cut like c + straight-topped bowl")

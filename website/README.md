@@ -19,3 +19,20 @@ The build copies the repository's WOFF2 files, symbol sprite and `OFL.txt`. It r
 The dashboard demos adapt the sample orders in `specimen/index.html`. The build extracts the dashboard's icon variants from the original symbol sprites.
 
 Canonical URLs, sharing metadata, structured data, `robots.txt` and `sitemap.xml` target `https://portofaifo.com/`. The build writes the sitemap and robots file to the root of `dist/`.
+
+## Cloudflare Pages
+
+Create a Direct Upload Pages project with production branch `main`. From a terminal authenticated with Wrangler, run:
+
+```sh
+npx --yes wrangler@4.168.0 pages project create porto-faifo --production-branch main
+```
+
+Set `CLOUDFLARE_ACCOUNT_ID` as a GitHub Actions repository variable and
+`CLOUDFLARE_API_TOKEN` as a repository secret. Scope the token to the target
+Cloudflare account with **Account → Cloudflare Pages → Edit**.
+
+[Publish website](../.github/workflows/publish-website.yml) builds and uploads
+`website/dist/` on relevant pushes to `main`. It can also be run manually
+from the Actions tab on `main`. In the Pages project's **Custom domains**
+settings, add `portofaifo.com` to match the site's canonical URLs.

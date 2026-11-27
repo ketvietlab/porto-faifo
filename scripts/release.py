@@ -91,17 +91,20 @@ def zip_(name: str, files: dict[str, bytes]) -> Path:
 def package(version: str) -> list[Path]:
     fonts = ROOT / "fonts"
     ofl = {"OFL.txt": (ROOT / "OFL.txt").read_bytes()}
-    weights = len(load().masters)
+    system = load()
+    weights = len(system.masters)
+    mono_stem = load(mono=True).font_stem
 
     sans = dict(ofl)
     for folder, ext in (("OTF", "otf"), ("TTF", "ttf"), ("WOFF2", "woff2")):
-        sans |= tree(fonts / ext, folder, f"PFSans-*.{ext}")
+        sans |= tree(fonts / ext, folder, f"{system.font_stem}-*.{ext}")
     for ext in ("ttf", "woff2"):
-        sans |= tree(fonts / "variable", "Optical", f"PFSansOptical-*.{ext}")
-        sans |= tree(fonts / "variable", "Variable", f"PFSansVariable.{ext}")
+        sans |= tree(fonts / "variable", "Optical", f"{system.font_stem}Optical-*.{ext}")
+        variable = fonts / "variable" / f"{system.variable_stem}.{ext}"
+        sans[f"Variable/{variable.name}"] = variable.read_bytes()
     mono = dict(ofl)
     for folder, ext in (("OTF", "otf"), ("TTF", "ttf"), ("WOFF2", "woff2")):
-        mono |= tree(fonts / "mono" / ext, folder, f"PFMono-*.{ext}")
+        mono |= tree(fonts / "mono" / ext, folder, f"{mono_stem}-*.{ext}")
     # 3 static formats and the optical TTF/WOFF2 per weight, plus the variable pair.
     assert len(sans) == 1 + 5 * weights + 2, f"Sans: {len(sans)} files"
     assert len(mono) == 1 + 3 * 2, f"Mono: {len(mono)} files"

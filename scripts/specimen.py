@@ -61,8 +61,9 @@ def page(name: str, height: int, body: list[str]) -> None:
 
 
 def fonts() -> None:
-    sans = {style: Face(f"fonts/otf/PFSans-{style}.otf") for style in load().masters}
-    mono = Face("fonts/mono/otf/PFMono-Regular.otf")
+    system = load()
+    sans = {style: Face(f"fonts/otf/{system.font_stem}-{style}.otf") for style in system.masters}
+    mono = Face(f"fonts/mono/otf/{load(mono=True).font_stem}-Regular.otf")
     body = [sans["Bold"].text("Porto Faifo", 48, 150, 112),
             sans["Regular"].text("A typeface family for interfaces, with full Vietnamese support. 1,250,000 ₫", 48, 214, 32, MUTED)]
     y = 300

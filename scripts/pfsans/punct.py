@@ -145,6 +145,12 @@ class PunctMixin:
         cs = [c.translated(0, dy) for c in self._comma_shape()]
         return self._g("quoteright", 0x2019, self.comma().width, cs, "comma raised to the cap height")
 
+    def modifierapostrophe(self):
+        g = self.quoteright()
+        g.name, g.unicodes = "uni02BC", [0x02BC]
+        g.note = "modifier letter apostrophe, shaped like the raised comma"
+        return g
+
     def quoteleft(self):
         g = self.quoteright()
         b = [c.bounds() for c in g.contours]
@@ -685,7 +691,7 @@ class PunctMixin:
 
 PUNCT = [
     "colon", "semicolon", "exclam", "exclamdown", "question", "questiondown", "periodcentered", "bullet", "ellipsis",
-    "quoteright", "quoteleft", "quotesinglbase", "quotedblright", "quotedblleft", "quotedblbase", "quotesingle", "quotedbl",
+    "quoteright", "modifierapostrophe", "quoteleft", "quotesinglbase", "quotedblright", "quotedblleft", "quotedblbase", "quotesingle", "quotedbl",
     "guilsinglleft", "guilsinglright", "guillemotleft", "guillemotright", "endash", "emdash", "underscore",
     "slash", "backslash", "bar", "parenleft", "parenright", "bracketleft", "bracketright", "braceleft", "braceright",
     "asterisk", "numbersign", "percent", "ampersand", "at", "section", "paragraph",

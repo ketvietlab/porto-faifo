@@ -13,7 +13,7 @@
    every weight), fixed timestamps (reproducible)
 6. Text/Display spacing -> one opsz-only TTF/WOFF2 per fixed weight; static
    hinted fonts remain available alongside the optical files
-7. every weight at Text and Display -> PFSansVariable (wght 300-900, opsz
+7. every weight at Text and Display -> PortoFaifoSans[opsz,wght] (wght 300-900, opsz
    8-72)
 """
 
@@ -81,8 +81,8 @@ def main() -> None:
 
 def compile_master(style: str) -> tuple[Path, Path]:
     system = load(style)
-    family = system.meta.postscriptFamily
-    src = ROOT / "sources" / f"{family}-{style}.ufo"
+    family = system.font_stem
+    src = ROOT / "sources" / f"{system.meta.sourceFamily}-{style}.ufo"
     src.parent.mkdir(parents=True, exist_ok=True)
     master.write(src, style)
     print("wrote", src.relative_to(ROOT))
@@ -109,7 +109,7 @@ def compile_master(style: str) -> tuple[Path, Path]:
 
 
 def finish_master(style: str, raw_ttf: Path, raw_otf: Path, y_max: int, y_min: int) -> None:
-    family = load(style).meta.postscriptFamily
+    family = load(style).font_stem
     fonts = ROOT / "fonts"
     for sub in ("ttf", "otf", "woff2"):
         (fonts / sub).mkdir(parents=True, exist_ok=True)
@@ -159,7 +159,7 @@ def build_optical(style: str, y_max: int, y_min: int) -> None:
     """
     system = load(style)
     settings = system.raw["opticalSizing"]["axis"]
-    family = system.meta.postscriptFamily + "Optical"
+    family = system.font_stem + "Optical"
     source_dir = ROOT / "build" / "optical-sources"
     source_dir.mkdir(parents=True, exist_ok=True)
     ds = DesignSpaceDocument()
@@ -202,8 +202,7 @@ def build_optical(style: str, y_max: int, y_min: int) -> None:
         ds.addInstanceDescriptor(
             name=f"{style} {label}", familyName=system.meta.familyName + " Optical",
             styleName=style if label == "Text" else style + " Display",
-            postScriptFontName=f"{system.meta.familyName.replace(' ', '')}Optical-{style}"
-            + ("Display" if label == "Display" else ""),
+            postScriptFontName=f"{family}-{style}" + ("Display" if label == "Display" else ""),
             userLocation={"Optical Size": settings["default"] if label == "Text" else settings["display"]},
         )
     ds_path = source_dir / f"{family}-{style}.designspace"
@@ -277,8 +276,7 @@ def build_variable(styles: list[str], y_max: int, y_min: int) -> None:
     system = load()
     var, opt = system.raw["variable"], system.raw["opticalSizing"]["axis"]
     family = system.meta.familyName
-    ps = family.replace(" ", "")
-    stem = system.meta.postscriptFamily + var["familySuffix"]
+    ps = system.font_stem
     source_dir = ROOT / "build" / "variable-sources"
     shutil.rmtree(source_dir, ignore_errors=True)
     source_dir.mkdir(parents=True)
@@ -321,7 +319,7 @@ def build_variable(styles: list[str], y_max: int, y_min: int) -> None:
         )
     ds_path = source_dir / f"{ps}.designspace"
     ds.write(ds_path)
-    ttf = ROOT / "fonts" / "variable" / f"{stem}.ttf"
+    ttf = ROOT / "fonts" / "variable" / f"{system.variable_stem}.ttf"
     run([
         VENV_BIN / "fontmake", "-m", ds_path, "-o", "variable", "--output-path", ttf,
         "--flatten-components", "--verbose", "WARNING",

@@ -36,7 +36,7 @@ TOP_MARKS = {
     0x030B: "hungarumlautcomb",
     0x030C: "caroncomb",
 }
-BOTTOM_MARKS = {0x0323: "dotbelowcomb", 0x0326: "commaaccentcomb", 0x0327: "cedillacomb"}
+BOTTOM_MARKS = {0x0323: "dotbelowcomb", 0x0326: "commaaccentcomb", 0x0327: "cedillacomb", 0x0331: "macronbelowcomb"}
 OGONEK = 0x0328
 HORN = 0x031B
 # Soft-dotted letters whose dot is part of a precomposed glyph: ccmp swaps in
@@ -253,6 +253,13 @@ class MarkMaker:
         t = self.t - (22 if suffix == "" else 28)
         return self._place("macroncomb", [rect(-w / 2, 0, w / 2, t)], suffix, t, 0x0304)
 
+    def macronbelow(self):
+        width, thickness = 520 * self.mw, self.t - 22
+        top = -self.gap[""]
+        return Glyph("macronbelowcomb", [0x0331], 0,
+                     [rect(-width / 2, top - thickness, width / 2, top)],
+                     anchors={"_bottom": (0, 0), "bottom": (0, top - thickness - self.gap[""])})
+
     def _dot_d(self, suffix):
         return self.b.st.stemLower * (self.b.sh.markDot if suffix == "" else self.b.sh.markDotCase)
 
@@ -411,7 +418,7 @@ class MarkMaker:
                        self.macron, self.dotaccent, self.dieresis, self.ring, self.hungarumlaut, self.caron]:
                 g = fn(suffix)
                 out[g.name] = g
-        for fn in [self.commaaccent, self.commaturnedabove, self.caron_alt, self.cedilla, self.ogonek]:
+        for fn in [self.commaaccent, self.commaturnedabove, self.caron_alt, self.cedilla, self.ogonek, self.macronbelow]:
             g = fn()
             out[g.name] = g
         out["dotbelowcomb"] = self.dotbelow()

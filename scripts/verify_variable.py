@@ -1,4 +1,4 @@
-"""Check PFSansVariable: axes, weight midpoints, names, OTS, overlap flags,
+"""Check the Sans variable font: axes, weight midpoints, names, OTS, overlap flags,
 and that every master location reproduces the static and optical fonts.
 
     .venv/bin/python scripts/verify_variable.py
@@ -138,9 +138,9 @@ def main():
     system = load()
     var, opt = system.raw["variable"], system.raw["opticalSizing"]["axis"]
     styles = system.masters
-    path = ROOT / "fonts" / "variable" / f"{system.meta.postscriptFamily}{var['familySuffix']}.ttf"
+    path = ROOT / "fonts" / "variable" / f"{system.variable_stem}.ttf"
     vf = TTFont(path)
-    regular = TTFont(ROOT / "fonts" / "ttf" / f"{system.meta.postscriptFamily}-Regular.ttf")
+    regular = TTFont(ROOT / "fonts" / "ttf" / f"{system.font_stem}-Regular.ttf")
     w = var["weight"]
 
     # ------------------------------------------------------------ structure
@@ -215,8 +215,8 @@ def main():
         for style in styles:
             wght = load(style).wght
             report.prefix = f"{style} {wght}: "
-            static = ROOT / "fonts" / "ttf" / f"{system.meta.postscriptFamily}-{style}.ttf"
-            optical = ROOT / "fonts" / "variable" / f"{system.meta.postscriptFamily}Optical-{style}.ttf"
+            static = ROOT / "fonts" / "ttf" / f"{system.font_stem}-{style}.ttf"
+            optical = ROOT / "fonts" / "variable" / f"{system.font_stem}Optical-{style}.ttf"
             for label, opsz, ref_path, ref_axes in (("Text", opt["default"], static, None),
                                                    ("Display", opt["display"], optical, {"opsz": opt["display"]})):
                 inst, face = cut(wght, opsz)

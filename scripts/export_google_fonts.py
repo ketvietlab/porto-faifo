@@ -9,10 +9,10 @@ def main() -> None:
     output = ROOT / "build" / "googlefonts" / "ofl"
     families = {
         "portofaifosans": {
-            "PortoFaifoSans[opsz,wght].ttf": "fonts/variable/PFSansVariable.ttf",
+            "PortoFaifoSans[opsz,wght].ttf": "fonts/variable/PortoFaifoSans[opsz,wght].ttf",
         },
         "portofaifomono": {
-            f"PortoFaifoMono-{style}.ttf": f"fonts/mono/ttf/PFMono-{style}.ttf"
+            f"PortoFaifoMono-{style}.ttf": f"fonts/mono/ttf/PortoFaifoMono-{style}.ttf"
             for style in ("Regular", "Medium")
         },
     }

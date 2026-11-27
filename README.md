@@ -24,7 +24,7 @@ Unzip, then install the files in `OTF/` (macOS) or `TTF/` (Windows and Linux, hi
 ```css
 @font-face {
   font-family: "Porto Faifo Sans";
-  src: url("PFSansVariable.woff2") format("woff2");
+  src: url("PortoFaifoSans[opsz,wght].woff2") format("woff2");
   font-weight: 300 900;
   font-display: swap;
 }
@@ -46,10 +46,18 @@ Open `http://127.0.0.1:8000/specimen/` to inspect outlines and compare all seven
 
 ## Google Fonts export
 
-After building Sans and Mono, run `.venv/bin/python scripts/export_google_fonts.py`.
-The export writes the Sans `opsz,wght` variable and both Mono static TTFs under
+Build Sans and Mono with `sh sources/build.sh`, then run `.venv/bin/python scripts/export_google_fonts.py`.
+The export stages `fonts/variable/PortoFaifoSans[opsz,wght].ttf` and the two
+`PortoFaifoMono-*.ttf` files from `fonts/mono/ttf/` under
 `build/googlefonts/ofl/`. Run `fontspector -p googlefonts` with the TTF files and
 `OFL.txt` from each family directory.
+
+For catalog QA, run `gftools add-font` on each staged family and include the
+generated `METADATA.pb` in the Fontspector inputs. The Sans metadata needs an
+`opsz` registry default override of `16` to match the binary. Classify Mono
+as `MONOSPACE`. The catalog entry should reference the upstream commit that
+contains the staged files.
+
 The Sans default figures are proportional. Enable `font-variant-numeric: tabular-nums`
 for equal-width figures in tables.
 

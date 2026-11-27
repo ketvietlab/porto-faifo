@@ -2,7 +2,7 @@
   "meta": {
     "brandName": "Porto Faifo Sans",
     "familyName": "Porto Faifo Sans",
-    "postscriptFamily": "PFSans",
+    "sourceFamily": "PFSans",
     "version": "1.000",
     "phase": "Release 1.0: GF Latin Core, Plus and Vietnamese; Light to Black; variable wght and opsz",
     "vendorID": "KETV",
@@ -597,7 +597,6 @@
   },
   "variable": {
     "comment": "Every weight has Text and Display masters. The mapped design coordinates for 600 and 800 are the midpoints of their respective pairs. Short plateaus around each non-default interior master absorb F2Dot14 rounding. Overlaps are kept with OVERLAP_SIMPLE and OVERLAP_COMPOUND because independent unions per weight cannot interpolate.",
-    "familySuffix": "Variable",
     "weight": {
       "minimum": 300,
       "default": 400,
@@ -651,7 +650,7 @@
   "mono": {
     "comment": "Porto Faifo Mono: the same pen, metrics and curves on one fixed advance of 1180 units (0.576 em, a touch under Menlo, JetBrains Mono and Fira Code at 0.6). Body widths are redrawn to fit the cell: capitals narrow to 0.63-0.89 of the cell, lowercase keeps n and o near their proportional widths, m w M W narrow with a lighter middle so they do not darken the line. The narrow letters i j l f t I 1 get the spurs, slabs and tails that fill the cell and tell 1 l I i apart, r a wider arch; zero carries the slash by default. No kerning, no ligatures.",
     "familyName": "Porto Faifo Mono",
-    "postscriptFamily": "PFMono",
+    "sourceFamily": "PFMono",
     "brandName": "Porto Faifo Mono",
     "version": "1.000",
     "advance": 1180,

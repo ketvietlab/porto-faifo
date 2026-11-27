@@ -36,6 +36,16 @@ class UpperMixin:
         g.anchors = anchors if anchors is not None else {"top": (W / 2, C), "bottom": (W / 2, 0)}
         return g.shifted(lsb)
 
+    def Eng(self):
+        g = self.N()
+        x, _, right, _ = g.contours[1].bounds()
+        hook = self.hook_stem(x, right - x, 64, self.desc, 330, 370, 96, 80,
+                              right + 230, self.st.barLower, self.ox)
+        g.contours.append(hook.mirrored_x((x + right) / 2).oriented(True))
+        g.name, g.unicodes = "Eng", [0x014A]
+        g.note = "N with a hooked right descender"
+        return g
+
     # ------------------------------------------------------------ stem + bars
     def F(self):
         st, C, sp = self.st, self.cap, self.sp
@@ -346,5 +356,5 @@ class UpperMixin:
         return self._cap_glyph("uni1E9E", 0x1E9E, W, cs, sp.upperStraight, sp.upperBowl, "stem + top arm + diagonal into a B lower bowl open at the left")
 
 
-UPPER = ["B", "C", "D", "F", "G", "J", "K", "L", "M", "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z",
+UPPER = ["B", "C", "D", "F", "G", "J", "K", "L", "M", "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z", "Eng",
          "AE", "OE", "Oslash", "Dcroat", "Thorn", "Lslash", "Hbar", "Germandbls"]

@@ -9,7 +9,7 @@ cell, no kerning:
 1. sources/PFMono-<style>.ufo
 2. fontmake -> TTF and OTF, overlaps removed (as build.py)
 3. ttfautohint -> hinted TTF; WOFF2 from it
-4. fonts/mono/{otf,ttf,woff2}/PFMono-<style>.*
+4. fonts/mono/{otf,ttf,woff2}/PortoFaifoMono-<style>.*
 
 The fixed pitch is declared everywhere a client looks: post.isFixedPitch,
 OS/2 PANOSE proportion 9 (monospaced) and one advance in hmtx.
@@ -35,7 +35,7 @@ STYLES = ("Regular", "Medium")
 
 def source(STYLE: str) -> Path:
     system = load(STYLE, mono=True)
-    family = system.meta.postscriptFamily
+    family = system.meta.sourceFamily
     src = ROOT / "sources" / f"{family}-{STYLE}.ufo"
     font, _ = master.write(src, STYLE, mono=True)
     info = font.info
@@ -50,7 +50,8 @@ def source(STYLE: str) -> Path:
 
 
 def compile_(src: Path) -> tuple[Path, Path]:
-    family, STYLE = src.stem.split("-")
+    STYLE = src.stem.split("-")[-1]
+    family = load(STYLE, mono=True).font_stem
     tmp = ROOT / "build" / "fontmake" / "mono" / STYLE
     shutil.rmtree(tmp, ignore_errors=True)
     env = dict(os.environ, SOURCE_DATE_EPOCH=SOURCE_DATE_EPOCH, PYTHONPATH=str(ROOT / "scripts"))

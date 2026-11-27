@@ -56,6 +56,7 @@
       <string>X</string>
       <string>Y</string>
       <string>Z</string>
+      <string>Eng</string>
       <string>AE</string>
       <string>OE</string>
       <string>Oslash</string>
@@ -68,6 +69,7 @@
       <string>g</string>
       <string>j</string>
       <string>dotlessj</string>
+      <string>eng</string>
       <string>k</string>
       <string>v</string>
       <string>w</string>
@@ -101,6 +103,7 @@
       <string>bullet</string>
       <string>ellipsis</string>
       <string>quoteright</string>
+      <string>uni02BC</string>
       <string>quoteleft</string>
       <string>quotesinglbase</string>
       <string>quotedblright</string>
@@ -314,6 +317,7 @@
       <string>caroncomb.alt</string>
       <string>cedillacomb</string>
       <string>ogonekcomb</string>
+      <string>macronbelowcomb</string>
       <string>dotbelowcomb</string>
       <string>horncomb</string>
       <string>circumflexcomb_acutecomb</string>
@@ -661,6 +665,8 @@
       <key>Egrave</key>
       <string>base</string>
       <key>Emacron</key>
+      <string>base</string>
+      <key>Eng</key>
       <string>base</string>
       <key>Eogonek</key>
       <string>base</string>
@@ -1052,6 +1058,8 @@
       <string>base</string>
       <key>endash</key>
       <string>base</string>
+      <key>eng</key>
+      <string>base</string>
       <key>eogonek</key>
       <string>base</string>
       <key>equal</key>
@@ -1202,6 +1210,8 @@
       <string>base</string>
       <key>macron</key>
       <string>base</string>
+      <key>macronbelowcomb</key>
+      <string>mark</string>
       <key>macroncomb</key>
       <string>mark</string>
       <key>macroncomb.case</key>
@@ -1493,6 +1503,8 @@
       <key>uni021A</key>
       <string>base</string>
       <key>uni021B</key>
+      <string>base</string>
+      <key>uni02BC</key>
       <string>base</string>
       <key>uni1E9E</key>
       <string>base</string>

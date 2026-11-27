@@ -35,7 +35,7 @@ def font_info(font: ufoLib2.Font, system: System, style: str) -> None:
     info.openTypeOS2WidthClass = 5
     info.openTypeOS2Type = []  # installable embedding
     info.openTypeOS2Selection = [7, 8]  # USE_TYPO_METRICS, WWS naming
-    info.postscriptFontName = f"{meta.familyName.replace(' ', '')}-{style.replace(' ', '')}"
+    info.postscriptFontName = f"{system.font_stem}-{style.replace(' ', '')}"
     info.postscriptFullName = f"{meta.familyName} {style}"
     info.unitsPerEm = m.unitsPerEm
     info.xHeight = m.xHeight

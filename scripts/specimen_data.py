@@ -23,14 +23,14 @@ from fontTools.ttLib import TTFont  # noqa: E402
 from pfsans.system import ROOT, load  # noqa: E402
 
 
-def export_face(stem: str) -> tuple[list[int], dict]:
-    font = TTFont(ROOT / "fonts" / "otf" / f"{stem}.otf")
+def export_face(otf: Path, source: Path) -> tuple[list[int], dict]:
+    font = TTFont(otf)
     gs = font.getGlyphSet()
     cmap = font.getBestCmap()
     by_name = {}
     for cp, name in cmap.items():
         by_name.setdefault(name, []).append(cp)
-    ufo = ufoLib2.Font.open(ROOT / "sources" / f"{stem}.ufo")
+    ufo = ufoLib2.Font.open(source)
     notes = {g.name: g.lib.get("vn.ketviet.construction", "") for g in ufo}
     production = {v: k for k, v in ufo.lib.get("public.postscriptNames", {}).items()}
     glyphs = {}
@@ -66,7 +66,10 @@ def main() -> None:
     codepoints = None
     for style in system.masters:
         weight = system.raw["masters"][style]["wght"]
-        coverage, glyphs = export_face(f"{system.meta.postscriptFamily}-{style}")
+        coverage, glyphs = export_face(
+            ROOT / "fonts" / "otf" / f"{system.font_stem}-{style}.otf",
+            ROOT / "sources" / f"{system.meta.sourceFamily}-{style}.ufo",
+        )
         if codepoints is None:
             codepoints = coverage
         if coverage != codepoints:

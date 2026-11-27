@@ -93,7 +93,6 @@ def assemble(master: str = "Regular", optical: str | None = None, mono: bool = F
         display_spacing(glyphs, system)
     if optical:
         system.raw["meta"]["familyName"] += " Optical"
-        system.raw["meta"]["postscriptFamily"] += "Optical"
     groups, kerning = K.build(glyphs)
     if optical == "Display":
         kerning.update(K.optical_exceptions(

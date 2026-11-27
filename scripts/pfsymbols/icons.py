@@ -26,7 +26,7 @@ from fontTools.pens.recordingPen import RecordingPen
 import pathops
 
 from pfsans.geometry import Contour, superellipse, untangled
-from pfsans.system import ROOT
+from pfsans.system import ROOT, load
 
 from .kit import BIG, Pen, box, clip, minus, mirrored, region, union
 
@@ -376,7 +376,7 @@ def receipt(p: Pen, fill=False):
 @lru_cache(maxsize=None)
 def _dong(master: str):
     """The ₫ of Porto Faifo Sans ``master`` as contours, and its stem width (font units)."""
-    font = TTFont(ROOT / "fonts" / "otf" / f"PFSans-{master}.otf")
+    font = TTFont(ROOT / "fonts" / "otf" / f"{load().font_stem}-{master}.otf")
     rec = RecordingPen()
     font.getGlyphSet()["dong"].draw(rec)
     out, c = [], None

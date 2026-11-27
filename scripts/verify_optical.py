@@ -63,13 +63,14 @@ def pair_gap(font, face, text):
 
 def main():
     report = Report()
-    settings = load().raw["opticalSizing"]["axis"]
+    system = load()
+    settings = system.raw["opticalSizing"]["axis"]
     metrics = {}
     for style in load().masters:
         report.prefix = style + ": "
-        path = ROOT / "fonts" / "variable" / f"PFSansOptical-{style}.ttf"
+        path = ROOT / "fonts" / "variable" / f"{system.font_stem}Optical-{style}.ttf"
         vf = TTFont(path)
-        old = TTFont(ROOT / "fonts" / "ttf" / f"PFSans-{style}.ttf")
+        old = TTFont(ROOT / "fonts" / "ttf" / f"{system.font_stem}-{style}.ttf")
         axis = vf["fvar"].axes
         report.check("optical", "opsz axis and fixed weight", len(axis) == 1 and axis[0].axisTag == "opsz"
                      and (axis[0].minValue, axis[0].defaultValue, axis[0].maxValue)

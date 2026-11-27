@@ -29,7 +29,6 @@ from pfsans.proof import Face, _fill_nonzero, _record_to_polys  # noqa: E402
 from pfsans.system import ROOT, load  # noqa: E402
 
 SYSTEM = load("Regular")
-FAM = SYSTEM.meta.postscriptFamily
 UFO = TTF = OTF = WOFF2 = None
 
 
@@ -37,10 +36,11 @@ def use(style: str) -> None:
     """Point the checks at one master's source and binaries."""
     global SYSTEM, UFO, TTF, OTF, WOFF2
     SYSTEM = load(style)
-    UFO = ROOT / "sources" / f"{FAM}-{style}.ufo"
-    TTF = ROOT / "fonts" / "ttf" / f"{FAM}-{style}.ttf"
-    OTF = ROOT / "fonts" / "otf" / f"{FAM}-{style}.otf"
-    WOFF2 = ROOT / "fonts" / "woff2" / f"{FAM}-{style}.woff2"
+    UFO = ROOT / "sources" / f"{SYSTEM.meta.sourceFamily}-{style}.ufo"
+    stem = f"{SYSTEM.font_stem}-{style}"
+    TTF = ROOT / "fonts" / "ttf" / f"{stem}.ttf"
+    OTF = ROOT / "fonts" / "otf" / f"{stem}.otf"
+    WOFF2 = ROOT / "fonts" / "woff2" / f"{stem}.woff2"
 
 TABULAR = "0123456789$¢£¥€₫#+−×÷=<>±¬≠≤≥≈√∑฿₡₦₭₮₱₲₴₵₸₹₺₼₽₾₿"
 REQUIRED_STRINGS = [

@@ -30,6 +30,14 @@ class System:
         return Namespace(self.raw["meta"])
 
     @property
+    def font_stem(self) -> str:
+        return self.meta.familyName.replace(" ", "")
+
+    @property
+    def variable_stem(self) -> str:
+        return f"{self.font_stem}[opsz,wght]"
+
+    @property
     def m(self):
         return Namespace(self.raw["metrics"])
 
@@ -131,5 +139,5 @@ def apply_mono(raw: dict, master: str) -> None:
     entry["proportions"] = {**raw["proportions"], **pen.get("proportions", {}), **mono["proportions"]}
     entry["stroke"] = {k: round(v * mono.get("strokeFactor", {}).get(k, 1)) for k, v in pen["stroke"].items()}
     raw["masters"][master] = entry
-    for key in ("familyName", "postscriptFamily", "brandName", "version"):
+    for key in ("familyName", "sourceFamily", "brandName", "version"):
         raw["meta"][key] = mono[key]

@@ -1,0 +1,6 @@
+/dist/
+/node_modules/
+/public/assets/*.woff2
+/public/assets/porto-faifo-symbols.svg
+/public/assets/OFL.txt
+/src/asset-data.ts
